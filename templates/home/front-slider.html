@@ -1,84 +1,84 @@
 {% load static %}
 
+<!-- slider-area-start -->
+<div class="slider-area light-bg-s pt-60">
+  <div class="container custom-conatiner">
+    <div class="row">
+      <div class="col-xl-7">
+        <div class="swiper-container slider__active pb-30">
+          <div class="slider-wrapper swiper-wrapper">
+            <!-- /single-slider -->
 
-    
-    <!-- slider-area-start -->
-    <div class="slider-area light-bg-s pt-60">
-        <div class="container custom-conatiner">
-            <div class="row">
-                <div class="col-xl-7">
-                    <div class="swiper-container slider__active pb-30">
-                        <div class="slider-wrapper swiper-wrapper">
-
-                            <!-- /single-slider -->
-                            
-                            {% for slide in slider %}   
-                            <div class="single-slider swiper-slide b-radius-2 slider-height-2 d-flex align-items-center" data-background="{{slide.image.url}}">
-                                <div class="slider-content slider-content-2">
-                                    <h2 data-animation="fadeInLeft" data-delay="1.5s" class="pt-15 slider-title pb-5">SALE {{slide.discount}}% OFF<br> {{slide.title}} </h2>
-                                    <p class="pr-20 slider_text" data-animation="fadeInLeft" data-delay="1.7s">Discount {{slide.discount}}% On Products & Free Shipping</p>
-                                    <div class="slider-bottom-btn mt-65">
-                                        <a data-animation="fadeInUp" data-delay="1.9s" href="{{slide.product_url}}" class="st-btn-border b-radius-2">Discover now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                            <!-- /single-slider -->
-                            <div class="main-slider-paginations"></div>
-                        </div>
-                    </div>
+            {% for slide in slider %}
+            <div
+              class="single-slider swiper-slide b-radius-2 slider-height-2 d-flex align-items-center"
+              data-background="{{slide.image.url}}"
+            >
+              <div class="slider-content slider-content-2">
+                <h2
+                  data-animation="fadeInLeft"
+                  data-delay="1.5s"
+                  class="pt-15 slider-title pb-5"
+                >
+                  SALE {{slide.discount}}% OFF<br />
+                  {{slide.title}}
+                </h2>
+                <p
+                  class="pr-20 slider_text"
+                  data-animation="fadeInLeft"
+                  data-delay="1.7s"
+                >
+                  Discount {{slide.discount}}% On Products & Free Shipping
+                </p>
+                <div class="slider-bottom-btn mt-65">
+                  <a
+                    data-animation="fadeInUp"
+                    data-delay="1.9s"
+                    href="{{slide.product_url}}"
+                    class="st-btn-border b-radius-2"
+                    >Discover now</a
+                  >
                 </div>
-                <div class="col-xl-5">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6">
-                            <div class="banner__item p-relative w-img mb-30">
-                                <div class="banner__img b-radius-2">
-                                    <a href="product-details.html"><img src="{% static 'assets/img/banner/banner-10.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="banner__content banner__content-2">
-                                    <h6><a href="product-details.html">Canyon <br> Star Raider</a></h6>
-                                    <p>Headphone & Audio</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
-                            <div class="banner__item p-relative w-img mb-30">
-                                <div class="banner__img b-radius-2">
-                                    <a href="product-details.html"><img src="{% static 'assets/img/banner/banner-11.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="banner__content banner__content-2">
-                                    <h6><a href="product-details.html">Phone <br> Galaxy S20</a></h6>
-                                    <p>Cellphone & Tablets</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
-                            <div class="banner__item p-relative w-img mb-30">
-                                <div class="banner__img b-radius-2">
-                                    <a href="product-details.html"><img src="{% static 'assets/img/banner/banner-13.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="banner__content banner__content-2">
-                                    <h6><a href="product-details.html">Galaxy <br> Buds Plus</a></h6>
-                                    <p>Headphone & Audio</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
-                            <div class="banner__item p-relative w-img mb-30">
-                                <div class="banner__img b-radius-2">
-                                    <a href="product-details.html"><img src="{% static 'assets/img/banner/banner-12.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="banner__content banner__content-2">
-                                    <h6><a href="product-details.html">Chair <br>Swoon Lounge</a></h6>
-                                    <p>Headphone & Audio</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            {% endfor %}
+            <!-- /single-slider -->
+            <div class="main-slider-paginations"></div>
+          </div>
         </div>
-    </div>
-    <!-- slider-area-end -->
+      </div>
 
-    
+      <div class="col-xl-5">
+        <div class="row">
+
+          <!--Display hot product in categories-->
+          
+          {% for hot_product in hot_products_in_cate %}
+            
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="banner__item p-relative w-img mb-30">
+              <div class="banner__img b-radius-2">
+                <a href="product-details.html"
+                  ><img
+                    src="{{hot_product.image.url}}"
+                    alt="{{hot_product.title}}"
+                /></a>
+              </div>
+              <div class="banner__content banner__content-2">
+                <h6>
+                  <a href="{{hot_product.product_url}}"
+                    >{{hot_product.title}}</a
+                  >
+                </h6>
+                <p>{{hot_product.categories}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- slider-area-end -->

@@ -3,6 +3,7 @@ from django.utils.text import slugify
 import uuid
 # Create your models here.
 
+#Front Big Slider
 class SliderArea(models.Model):
     image = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=None)
     title = models.CharField(max_length=200)
@@ -12,6 +13,16 @@ class SliderArea(models.Model):
     def __str__(self):
         return self.title
 
+class DisplayHotProductInCategories(models.Model):
+    image = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=None)
+    title = models.CharField(max_length=200)
+    categories = models.ForeignKey("products.Categories",  on_delete=models.DO_NOTHING)
+    product_url = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
+
+    
 
 
 
