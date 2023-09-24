@@ -55,19 +55,19 @@
                                     {% for product in carts %}
                 
                                    <tr>
-                                      <td class="product-thumbnail"><a href="shop-details.html"><img src="{{product.product.productimage_set.first.image}}" alt=""></a></td>
-                                      <td class="product-name"><a href="shop-details.html">{{product.product.title}}</a></td>
-                                      <td class="product-price"><span class="amount">${{product.product.regular_price}}</span></td>
+                                      <td class="product-thumbnail"><a href="#"><img src="{{product.product.productimage_set.first.image}}" alt=""></a></td>
+                                      <td class="product-name"><a href="#">{{product.product.title}}</a></td>
+                                      <td class="product-price"><span class="amount">${{product.product.discounted_price}}</span></td>
                                       <td class="product-quantity">
                                             <div class="d-inline-flex">
-                                                <div class='btn btn-outline-info minus' value='1'>-</div>
-                                                <p class="mx-2 cart-quantity">{{product.quantity}}</p>
-                                                <div class="btn btn-outline-info plus-{{product.id}}" onclick="increase('{{product.id}}')" value="{{product.id}}">+</div>
+                                                <div class='btn btn-outline-info minus' onclick="change_cart_quantity('{{product.id}}',2)">-</div>
+                                                <p class="mx-2 cart-quantity" id="product-quantity-{{product.id}}" >{{product.quantity}}</p>
+                                                <div class="btn btn-outline-info plus-{{product.id}}" onclick="change_cart_quantity('{{product.id}}',1)">+</div>
                                                 
                                             </div>
                                       </td>
-                                      <td class="product-subtotal"><span class="amount">$0.00</span></td>
-                                      <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
+                                      <td class="product-subtotal"><span class="amount" id='total_product_price-{{product.id}}'>$ {{product.total_product_price}}</span></td>
+                                      <td class="product-remove"><a href="#" onclick="change_cart_quantity('{{product.id}}',0)"><i class="fa fa-times"></i></a></td>
                                    </tr>
                                    {% endfor %}
                                 </tbody>

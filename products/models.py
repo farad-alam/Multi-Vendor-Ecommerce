@@ -52,13 +52,20 @@ class Product(models.Model):
     title = models.CharField( max_length=300)
     slug = models.SlugField(unique=True, blank=True, max_length=250)
     regular_price = models.PositiveIntegerField()
-    discounted_price = models.PositiveIntegerField()
+    discounted_parcent = models.PositiveIntegerField()
     description = RichTextField(max_length=2000)
     modle = models.CharField(max_length=50)
     categories = models.ForeignKey(Categories, on_delete=models.DO_NOTHING)
     tag = models.CharField(max_length=50, help_text='enter your tag coma separated')
     details_description = RichTextField(max_length=5000)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+    @property
+    def discounted_price(self):
+        price = self.regular_price - (self.regular_price*self.discounted_parcent)/100
+        price = f"{price:.2f}"
+        return price
 
     #discounted_price
 
@@ -98,6 +105,13 @@ class Cart(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     last_updated = models.DateTimeField(auto_now_add=True)
     quantity = models.IntegerField(default=1)
+
+
+    @property
+    def total_product_price(self):
+        price = self.product.discounted_price*self.quantity
+        price = f"{price:.2f}"
+        return price
     
 
     def __str__(self):
