@@ -22,6 +22,15 @@ class DisplayHotProductInCategories(models.Model):
     def __str__(self):
         return self.title
 
+class PopularCategories(models.Model):
+    image = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=None)
+    categories = models.ForeignKey("products.Categories",  on_delete=models.DO_NOTHING)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.categories.name
+
+    
     
 
 

@@ -16,6 +16,7 @@
         </div>
       </div>
     </div>
+    
     <div class="row">
       <!--Display Trending Product-->
 
@@ -25,9 +26,9 @@
         <div class="product__item product__item-2 b-radius-2 mb-20">
           <div class="product__thumb fix">
             <div class="product-image w-img">
-              <a href="product-details.html">
+              <a href="{% url 'product_details' product.slug %}">
                 <img
-                  src="{% static 'assets/img/product/tp-1.jpg' %}"
+                  src="{{product.productimage_set.first.image}}"
                   alt="product"
                 />
               </a>
@@ -57,8 +58,8 @@
           </div>
           <div class="product__content product__content-2">
             <h6>
-              <a href="product-details.html"
-                >Epple iPad Pro 10.5-inch Cellular 64G</a
+              <a href="{% url 'product_details' product.slug %}"
+                >{{product.title | truncatewords:5}}</a
               >
             </h6>
             <div class="rating mb-5 mt-10">
@@ -82,16 +83,16 @@
               <span>(01 review)</span>
             </div>
             <div class="price">
-              <span>$105-$110</span>
+              <span>${{product.regular_price}}</span>
             </div>
           </div>
           <div class="product__add-cart text-center">
-            <button
-              type="button"
+            <a
+              href="{% url 'add_to_cart' product.id %}"
               class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100"
             >
               Add to Cart
-            </button>
+          </a>
           </div>
         </div>
       </div>

@@ -295,8 +295,21 @@
               </div>
               <div class="col-xl-4 col-lg-5 col-md-8 col-sm-8">
                 <div class="header-action">
+                  {% if request.user.is_authenticated %}
                   <div class="block-userlink">
-                    <a class="icon-link" href="my-account.html">
+                    <a class="icon-link" href="{% url 'user_logout' %}">
+                      <i class="flaticon-user"></i>
+                      <span class="text">
+                        <span class="sub">Logout </span>
+                        My Account
+                      </span>
+                    </a>
+                  </div>
+                  
+                  {% else %}
+                    
+                  <div class="block-userlink">
+                    <a class="icon-link" href="{% url 'user_login' %}">
                       <i class="flaticon-user"></i>
                       <span class="text">
                         <span class="sub">Login </span>
@@ -304,18 +317,10 @@
                       </span>
                     </a>
                   </div>
-                  <div class="block-wishlist action">
-                    <a class="icon-link" href="wishlist.html">
-                      <i class="flaticon-heart"></i>
-                      <span class="count">0</span>
-                      <span class="text">
-                        <span class="sub">Favorite</span>
-                        My Wishlist
-                      </span>
-                    </a>
-                  </div>
+
+                  {% endif %}
                   <div class="block-cart action">
-                    <a class="icon-link" href="cart.html">
+                    <a class="icon-link" href="{% url 'show_cart' %}">
                       <i class="flaticon-shopping-bag"></i>
                       <span class="count">1</span>
                       <span class="text">
@@ -475,10 +480,10 @@
                                   <a href="product-details.html">Checkout</a>
                                 </li>
                                 <li>
-                                  <a href="product-details.html">Login</a>
+                                  <a href="">Login</a>
                                 </li>
                                 <li>
-                                  <a href="product-details.html">Register</a>
+                                  <a href="{% url 'registration_view' %}">Register</a>
                                 </li>
                               </ul>
                             </li>
@@ -526,12 +531,12 @@
                             <li>
                                 
                                 {% for categories in i.categories_set.all %}
-                                    <a href="">{{categories.name}}</a>
+                                    <a href="{% url 'display_categories_post' categories.id %}">{{categories.name}}</a>
                                     <ul class="mega-item">
                                         
                                         {% for subcate in categories.subcategories_set.all %}
                                             <li>
-                                             <a href=""
+                                             <a href="#"
                                                 >{{subcate.name}}</a>
                                             </li>
                                         {% endfor %}
@@ -759,7 +764,7 @@
                             <li
                               class="mega-image hover-effect"
                               style="
-                                background-image: url({% static 'assets/img/bg/menu-item.jpg);
+                                background-image: url({% static 'assets/img/bg/menu-item.jpg' %});
                               "
                             >
                               <ul>
@@ -1071,6 +1076,7 @@
     <script src="{% static 'assets/js/imagesloaded-pkgd.js' %}"></script>
     <script src="{% static 'assets/js/ajax-form.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'cart/cart.js' %}"></script>
   </body>
 
   <!-- Mirrored from themepure.net/template/dukamarket/dukamarket/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Feb 2022 17:22:33 GMT -->

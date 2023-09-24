@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Industry(models.Model):
@@ -50,14 +50,17 @@ class SubCategories(models.Model):
     
 class Product(models.Model):
     title = models.CharField( max_length=300)
-    slug = models.SlugField(unique=True, blank=True)
+    slug = models.SlugField(unique=True, blank=True, max_length=250)
     regular_price = models.PositiveIntegerField()
     discounted_price = models.PositiveIntegerField()
-    description = models.CharField(max_length=500)
+    description = RichTextField(max_length=2000)
     modle = models.CharField(max_length=50)
     categories = models.ForeignKey(Categories, on_delete=models.DO_NOTHING)
     tag = models.CharField(max_length=50, help_text='enter your tag coma separated')
+    details_description = RichTextField(max_length=5000)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    #discounted_price
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -74,4 +77,35 @@ class Product(models.Model):
         return self.title
     
     
+class ProductImage(models.Model):
+    image = models.CharField(max_length=300)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    upload_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.product.title
+
+class ProductAditionalInformation(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    specification = models.CharField(max_length=70)
+    details = models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.product.title
+
+class Cart(models.Model):
+    user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    last_updated = models.DateTimeField(auto_now_add=True)
+    quantity = models.IntegerField(default=1)
+    
+
+    def __str__(self):
+        return self.product.title
+    
+
+# quantity
+# total_price
+
+
     

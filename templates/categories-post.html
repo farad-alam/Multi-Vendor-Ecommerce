@@ -1,0 +1,109 @@
+{% extends "baseFiles/base.html" %}
+{% load static %}
+
+
+{% block bodycontent %}
+    
+<section class="trending-product-area light-bg-s pt-25 pb-15">
+    <div class="container custom-conatiner">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="section__head d-flex justify-content-between mb-30">
+            <div class="section__title section__title-2">
+              <h5 class="st-titile">Showing {{products.first.categories}} Products</h5>
+            </div>
+            <div class="button-wrap button-wrap-2">
+              <a href="product.html"
+                >See All Product <i class="fal fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!--Display Trending Product-->
+  
+        {% for product in products %}
+  
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+          <div class="product__item product__item-2 b-radius-2 mb-20">
+            <div class="product__thumb fix">
+              <div class="product-image w-img">
+                <a href="{% url 'product_details' product.slug %}">
+                  <img
+                    src="{{product.productimage_set.first.image}}"
+                    alt="product"
+                  />
+                </a>
+              </div>
+              <div class="product__offer">
+                <span class="discount">-{{product.discounted_price}}%</span>
+              </div>
+              <div class="product-action product-action-2">
+                <a
+                  href="#"
+                  class="icon-box icon-box-1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModalId"
+                >
+                  <i class="fal fa-eye"></i>
+                  <i class="fal fa-eye"></i>
+                </a>
+                <a href="#" class="icon-box icon-box-1">
+                  <i class="fal fa-heart"></i>
+                  <i class="fal fa-heart"></i>
+                </a>
+                <a href="#" class="icon-box icon-box-1">
+                  <i class="fal fa-layer-group"></i>
+                  <i class="fal fa-layer-group"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product__content product__content-2">
+              <h6>
+                <a href="{% url 'product_details' product.slug %}"
+                  >{{product.title | truncatewords:5}}</a
+                >
+              </h6>
+              <div class="rating mb-5 mt-10">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fal fa-star"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-star"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-star"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-star"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-star"></i></a>
+                  </li>
+                </ul>
+                <span>(01 review)</span>
+              </div>
+              <div class="price">
+                <span>${{product.regular_price}}</span>
+              </div>
+            </div>
+            <div class="product__add-cart text-center">
+              <button
+                type="button"
+                class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <!--Display Trending Product-->
+      </div>
+    </div>
+  </section>
+{% endblock bodycontent %}
+    
