@@ -66,7 +66,7 @@
                                                 
                                             </div>
                                       </td>
-                                      <td class="product-subtotal"><span class="amount" id='total_product_price-{{product.id}}'>$ {{product.total_product_price}}</span></td>
+                                      <td class="product-subtotal"><span class="amount" id='total_product_price-{{product.id}}'>$ {{product.total_product_price|floatformat:2}}</span></td>
                                       <td class="product-remove"><a href="#" onclick="change_cart_quantity('{{product.id}}',0)"><i class="fa fa-times"></i></a></td>
                                    </tr>
                                    {% endfor %}
@@ -92,7 +92,7 @@
                                 <div class="cart-page-total">
                                    <h2>Cart totals</h2>
                                    <ul class="mb-20">
-                                      <li>Subtotal <span>$250.00</span></li>
+                                      <li>Subtotal <span id='sub_total_price'>${{sub_total}}</span></li>
                                       <li>Total <span>$250.00</span></li>
                                    </ul>
                                    <a class="tp-btn-h1" href="checkout.html">Proceed to checkout</a>

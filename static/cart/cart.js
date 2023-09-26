@@ -14,6 +14,7 @@ function change_cart_quantity(cart_id,values) {
          console.log(jsonResponse)
          document.getElementById('product-quantity-'+cart_id).innerText = response['product_quantity']
          document.getElementById('total_product_price-'+cart_id).innerText = '$'+ response['total_product_price']
+         document.getElementById('sub_total_price').innerText = '$'+response['sub_total']
 
          // Get the table element to append product rows
         var table = document.querySelector('table');

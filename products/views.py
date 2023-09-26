@@ -30,7 +30,13 @@ def add_to_cart(request, id):
 @login_required(login_url="user_login")
 def show_cart(request):
     carts = Cart.objects.filter(user=request.user)
-    context = {"carts": carts}
+    sub_total = 0
+    for iteam in carts:
+        sub_total += iteam.total_product_price
+    context = {
+        "carts": carts,
+        "sub_total": format(sub_total, '.2f')
+        }
     return render(request, "products/cart.html", context)
 
 
@@ -43,6 +49,10 @@ def increase_cart(request):
         data = json.loads(data)
         id = int(data['id'])
         values = int(data['values'])
+        carts_product = Cart.objects.filter(user=request.user)
+        sub_total = 0
+        for iteam in carts_product:
+            sub_total += iteam.total_product_price
         product = Cart.objects.get(id=id)
 
         #increse quantity
@@ -56,7 +66,6 @@ def increase_cart(request):
         #remove product
         elif values == 0:
             product.delete()
-            carts_product = Cart.objects.filter(user=request.user)
             if carts_product != None:
                 for product in carts_product:
                     product_details_dict = {}
@@ -82,7 +91,9 @@ def increase_cart(request):
     data = {
         "product_quantity" : product.quantity,
         "total_product_price": product.total_product_price,
-        "carts_product": products_list
+        'sub_total': sub_total,
+        "carts_product": products_list,
+
     }
     # return render(request, "products/cart.html", context)
     return JsonResponse(data)

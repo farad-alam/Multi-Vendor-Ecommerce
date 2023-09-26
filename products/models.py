@@ -64,7 +64,7 @@ class Product(models.Model):
     @property
     def discounted_price(self):
         price = self.regular_price - (self.regular_price*self.discounted_parcent)/100
-        price = f"{price:.2f}"
+        # format(price, ".2f")
         return price
 
     #discounted_price
@@ -110,8 +110,17 @@ class Cart(models.Model):
     @property
     def total_product_price(self):
         price = self.product.discounted_price*self.quantity
-        price = f"{price:.2f}"
+        # price = f"{price:.2f}"
         return price
+    
+    # # SubTotal total ammount calculation
+    # def subtotal_total_price(self):
+    #     carts_iteam = Cart.objects.filter(user=self.user)
+    #     grand_total = 0
+
+    #     for iteam in carts_iteam:
+    #         grand_total += iteam.total_product_price
+    #     return grand_total
     
 
     def __str__(self):
