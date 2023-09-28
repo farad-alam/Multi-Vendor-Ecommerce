@@ -1,20 +1,24 @@
 
 
 function change_cart_quantity(cart_id,values) {
-    console.log(typeof(cart_id))
-    console.log(typeof(values))
+    // console.log(typeof(cart_id))
+    // console.log(typeof(values))
 
     var xhr = new XMLHttpRequest()
 
     xhr.onload= function() {
         var response = xhr.responseText
-         console.log(response)
+         console.log(typeof(response['total_product_price']))
+         console.log(response['total_product_price'])
+         console.log(typeof(response['sub_total']))
          response = JSON.parse(response)
          var jsonResponse = response['carts_product']
-         console.log(jsonResponse)
+        //  console.log(jsonResponse)
+        let formatteTortalProductPrice = response['total_product_price'].toFixed(2);
+        let formattedSubTotal   = response['sub_total'].toFixed(2);
          document.getElementById('product-quantity-'+cart_id).innerText = response['product_quantity']
-         document.getElementById('total_product_price-'+cart_id).innerText = '$'+ response['total_product_price']
-         document.getElementById('sub_total_price').innerText = '$'+response['sub_total']
+         document.getElementById('total_product_price-'+cart_id).innerText = '$'+ formatteTortalProductPrice
+         document.getElementById('sub_total_price').innerText = '$'+ formattedSubTotal 
 
          // Get the table element to append product rows
         var table = document.querySelector('table');

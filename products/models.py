@@ -113,22 +113,55 @@ class Cart(models.Model):
         # price = f"{price:.2f}"
         return price
     
-    # # SubTotal total ammount calculation
-    # def subtotal_total_price(self):
-    #     carts_iteam = Cart.objects.filter(user=self.user)
-    #     grand_total = 0
-
-    #     for iteam in carts_iteam:
-    #         grand_total += iteam.total_product_price
-    #     return grand_total
-    
+    @classmethod
+    def subtotal_product_price(cls,user):   
+        carts = Cart.objects.filter(user=user)
+        subtotal_price = sum(cart.total_product_price for cart in carts)
+        return subtotal_price
 
     def __str__(self):
         return self.product.title
     
+class CustomerAddress(models.Model):
+    user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
+    state = models.CharField(max_length=60)
+    city = models.CharField(max_length=60)
+    zip_code = models.PositiveIntegerField()
+    street_address = models.CharField(max_length=250)
+    mobile = models.PositiveIntegerField(max_length=15)
+    is_billing = models.BooleanField(default=True)
+    is_shipping = models.BooleanField(default=True)
 
-# quantity
-# total_price
+    def __str__(self):
+        return self.user.first_name
+
+class PlacedOder(models.Model):
+    user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
+    shipping_address = models.ForeignKey(CustomerAddress,on_delete=models.CASCADE)
+    sub_total_price = models.FloatField()
+    paid = models.BooleanField(default=False)
+    placed_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.first_name}--{str(self.id)}"
+    
+class PlacedeOderItem(models.Model):
+    placed_oder = models.ForeignKey(PlacedOder,on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.FloatField()
+    total_price = models.FloatField()
+
+    def __str__(self):
+        return f"{self.placed_oder.user.first_name}--{str(self.placed_oder.id)}--{str(self.placed_oder.placed_date)}"
+    
+
+    
+    
+    
+
+
+    
+    
 
 
     

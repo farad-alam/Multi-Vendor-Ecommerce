@@ -305,6 +305,78 @@
                       </span>
                     </a>
                   </div>
+
+                  <div class="block-cart action">
+                    <a class="icon-link" href="{% url 'show_cart' %}">
+                      <i class="flaticon-shopping-bag"></i>
+                      <span class="count">{{carts.count}}</span>
+                      <span class="text">
+                        <span class="sub">Your Cart:</span>
+                        $00.00
+                      </span>
+                    </a>
+                    <div class="cart">
+                      <div class="cart__mini">
+                        <ul>
+                          <li>
+                            <div class="cart__title">
+                              <h4>Your Cart</h4>
+                              <span>({{carts.count}} Item in Cart)</span>
+                            </div>
+                          </li>
+                          
+                          {% for item in carts %}
+
+                          <li>
+                            <div class="cart__item d-flex justify-content-between align-items-center">
+                              <div class="cart__inner d-flex">
+                                <div class="cart__thumb">
+                                  <a href="{% url 'product_details' item.product.slug %}">
+                                    <img
+                                      src="{{item.product.productimage_set.first.image}}"
+                                      alt=""
+                                    />
+                                  </a>
+                                </div>
+                                <div class="cart__details">
+                                  <h6>
+                                    <a href="{% url 'product_details' item.product.slug %}">
+                                     {{item.product.title}}
+                                    </a>
+                                  </h6>
+                                  <div class="cart__price">
+                                    <span>${{item.total_product_price}}</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cart__del">
+                                <a href="#"><i class="fal fa-times"></i></a>
+                              </div>
+                            </div>
+                          </li>
+                          {% endfor %}
+                          <li>
+                            <div
+                              class="cart__sub d-flex justify-content-between align-items-center"
+                            >
+                              <h6>Subtotal</h6>
+                              <span class="cart__sub-total">${{sub_total}}</span>
+                            </div>
+                          </li>
+                          
+
+                          <li>
+                            <a href="cart.html" class="wc-cart mb-10"
+                              >View cart</a
+                            >
+                            <a href="checkout.html" class="wc-checkout"
+                              >Checkout</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                   
                   {% else %}
                     
@@ -319,73 +391,7 @@
                   </div>
 
                   {% endif %}
-                  <div class="block-cart action">
-                    <a class="icon-link" href="{% url 'show_cart' %}">
-                      <i class="flaticon-shopping-bag"></i>
-                      <span class="count">1</span>
-                      <span class="text">
-                        <span class="sub">Your Cart:</span>
-                        $00.00
-                      </span>
-                    </a>
-                    <div class="cart">
-                      <div class="cart__mini">
-                        <ul>
-                          <li>
-                            <div class="cart__title">
-                              <h4>Your Cart</h4>
-                              <span>(1 Item in Cart)</span>
-                            </div>
-                          </li>
-                          <li>
-                            <div
-                              class="cart__item d-flex justify-content-between align-items-center"
-                            >
-                              <div class="cart__inner d-flex">
-                                <div class="cart__thumb">
-                                  <a href="product-details.html">
-                                    <img
-                                      src="{% static 'assets/img/cart/20.jpg"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                                <div class="cart__details">
-                                  <h6>
-                                    <a href="product-details.html">
-                                      Samsung C49J89: £875, Debenhams Plus
-                                    </a>
-                                  </h6>
-                                  <div class="cart__price">
-                                    <span>$255.00</span>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="cart__del">
-                                <a href="#"><i class="fal fa-times"></i></a>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div
-                              class="cart__sub d-flex justify-content-between align-items-center"
-                            >
-                              <h6>Subtotal</h6>
-                              <span class="cart__sub-total">$255.00</span>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="cart.html" class="wc-cart mb-10"
-                              >View cart</a
-                            >
-                            <a href="checkout.html" class="wc-checkout"
-                              >Checkout</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>

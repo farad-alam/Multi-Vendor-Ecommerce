@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.http import JsonResponse
-from .models import Product, Industry, Cart
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
+from .models import Product, Industry, Cart, CustomerAddress, PlacedOder, PlacedeOderItem
+from . forms import CustomerAddressForm
 import json
 
 
@@ -29,10 +31,9 @@ def add_to_cart(request, id):
 
 @login_required(login_url="user_login")
 def show_cart(request):
+    sub_total = Cart.subtotal_product_price(user=request.user)
     carts = Cart.objects.filter(user=request.user)
-    sub_total = 0
-    for iteam in carts:
-        sub_total += iteam.total_product_price
+    
     context = {
         "carts": carts,
         "sub_total": format(sub_total, '.2f')
@@ -44,15 +45,14 @@ def show_cart(request):
 @csrf_exempt
 def increase_cart(request):
     products_list  = []
+
     if request.method == "POST":
         data = request.body
         data = json.loads(data)
         id = int(data['id'])
         values = int(data['values'])
+
         carts_product = Cart.objects.filter(user=request.user)
-        sub_total = 0
-        for iteam in carts_product:
-            sub_total += iteam.total_product_price
         product = Cart.objects.get(id=id)
 
         #increse quantity
@@ -84,10 +84,9 @@ def increase_cart(request):
                     products_list.append(product_details_dict)
             else:
                 products_list.append('no-product')
-            
 
-
-    # print(carts_product[0].product.productimage_set.first().image)
+    sub_total = Cart.subtotal_product_price(user=request.user)
+    print(format(product.total_product_price, ".2f"))
     data = {
         "product_quantity" : product.quantity,
         "total_product_price": product.total_product_price,
@@ -95,5 +94,46 @@ def increase_cart(request):
         "carts_product": products_list,
 
     }
-    # return render(request, "products/cart.html", context)
     return JsonResponse(data)
+
+# Chek Out View
+def check_out(request):
+    if request.method == 'POST':
+        user = request.user
+        address_form = CustomerAddressForm(data=request.POST)
+        if address_form.is_valid():
+            shipping_address = address_form.save(commit=False)
+            shipping_address.user = user
+            shipping_address.save()
+            print(shipping_address)
+
+            place_order = PlacedOder.objects.create(
+                user=user,
+                shipping_address=shipping_address,
+                sub_total_price = Cart.subtotal_product_price(user=user)
+            )
+            # getting the all product of user Cart and save them to PlacedOderItem then remove from Cart
+            carts = Cart.objects.filter(user=user)
+            for item in carts:
+                PlacedeOderItem.objects.create(
+                    placed_oder=place_order,
+                    product=item.product,
+                    quantity=item.quantity,
+                    total_price=item.total_product_price
+                )
+                item.delete()
+            place_order.save()
+            
+            messages.success(request, 'Your Order Placed SuccessFully!!!')
+            return redirect('placed_oder')
+    address_form = CustomerAddressForm()
+    context ={'address_form':address_form}
+    return render(request,'products/checkout.html',context)
+
+def placed_oder(request):
+
+    context ={
+
+    }
+    return render(request, 'accounts/user/user-profile.html',context)
+

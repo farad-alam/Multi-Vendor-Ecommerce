@@ -1,9 +1,14 @@
 from django.shortcuts import render
 from . models import SliderArea, DisplayHotProductInCategories, PopularCategories
-from products.models import Industry, Product, Categories
+from products.models import Industry, Product, Categories, Cart
 # Create your views here.
 
 def home(request):
+    sub_total=0.00
+    carts = ''
+    if request.user.is_authenticated:
+        sub_total = Cart.subtotal_product_price(user=request.user)
+        carts = Cart.objects.filter(user=request.user)
     slider = SliderArea.objects.all()
     industry = Industry.objects.all()
     hot_products_in_cate = DisplayHotProductInCategories.objects.all()[:4]
@@ -11,6 +16,8 @@ def home(request):
     trending_division_title = 'Trending Product'
     popular_categories = PopularCategories.objects.all()
     context = {
+        "carts": carts,
+        "sub_total": format(sub_total, '.2f'),
         'slider':slider,
         'industry':industry,
         'hot_products_in_cate':hot_products_in_cate,
