@@ -26,4 +26,5 @@ admin.site.register(Cart,CartModelAdmin)
 admin.site.register(CustomerAddress)
 admin.site.register(PlacedOder)
 admin.site.register(PlacedeOderItem)
+admin.site.register(CuponCodeGenaration)
 

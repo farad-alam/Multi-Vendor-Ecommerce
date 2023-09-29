@@ -4,7 +4,9 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
-from .models import Product, Industry, Cart, CustomerAddress, PlacedOder, PlacedeOderItem
+from .models import (Product, Industry, Cart, 
+                     CustomerAddress, PlacedOder, 
+                     PlacedeOderItem, CuponCodeGenaration)
 from . forms import CustomerAddressForm
 import json
 
@@ -96,7 +98,7 @@ def increase_cart(request):
     }
     return JsonResponse(data)
 
-# Chek Out View
+@login_required(login_url="user_login")
 def check_out(request):
     if request.method == 'POST':
         user = request.user
@@ -136,4 +138,27 @@ def placed_oder(request):
 
     }
     return render(request, 'accounts/user/user-profile.html',context)
+
+@login_required(login_url="user_login")
+def cupon_apply(request):
+    if request.method =='POST':
+        cupon_code = request.POST.get('cupon_code')
+        print(cupon_code)
+        cupon_obj = CuponCodeGenaration.objects.filter(cupon_code=cupon_code)
+        if cupon_obj.exists():
+            print(cupon_obj[0].cupon_code)
+            print(cupon_obj[0].discoun_parcent)
+            less_ammount_by_cupon = (Cart.subtotal_product_price(user=request.user)*cupon_obj[0].discoun_parcent)/100
+            # checking Limit of discounted ammount
+            user_carts = Cart.objects.filter(user=request.user)
+            if less_ammount_by_cupon <= cupon_obj[0].up_to or less_ammount_by_cupon > cupon_obj[0].up_to:
+                for item in user_carts:
+                    item.cupon_code = CuponCodeGenaration.objects.get(cupon_code=cupon_code)
+                    item.cupon_applaied = True
+                    item.save()
+
+
+
+            
+    return redirect('check_out')
 

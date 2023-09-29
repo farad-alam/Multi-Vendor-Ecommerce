@@ -31,6 +31,7 @@
     </div>
     <!-- page-banner-area-end -->
 
+
     <!-- coupon-area-start -->
     <section class="coupon-area pt-120 pb-30">
         <div class="container">
@@ -68,15 +69,16 @@
                     <!-- ACCORDION END -->
             </div>
         </div>
+
         <div class="col-md-6">
             <div class="coupon-accordion">
                     <!-- ACCORDION START -->
                     <h3>Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
                     <div id="checkout_coupon" class="coupon-checkout-content">
                     <div class="coupon-info">
-                        <form action="#">
+                        <form action="{% url 'cupon_apply' %}" method='POST'> {% csrf_token %}
                                 <p class="checkout-coupon">
-                                <input type="text" placeholder="Coupon Code">
+                                <input type="text" placeholder="cupon_code" id='cupon_code' name='cupon_code'>
                                 <button class="tp-btn-h1" type="submit">Apply Coupon</button>
                                 </p>
                         </form>

@@ -52,6 +52,7 @@ class Product(models.Model):
     title = models.CharField( max_length=300)
     slug = models.SlugField(unique=True, blank=True, max_length=250)
     regular_price = models.PositiveIntegerField()
+    stoc = models.PositiveIntegerField(default=10)
     discounted_parcent = models.PositiveIntegerField()
     description = RichTextField(max_length=2000)
     modle = models.CharField(max_length=50)
@@ -66,8 +67,6 @@ class Product(models.Model):
         price = self.regular_price - (self.regular_price*self.discounted_parcent)/100
         # format(price, ".2f")
         return price
-
-    #discounted_price
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -100,11 +99,24 @@ class ProductAditionalInformation(models.Model):
     def __str__(self):
         return self.product.title
 
+
+class CuponCodeGenaration(models.Model):
+    name = models.CharField(max_length=50)
+    cupon_code = models.CharField(max_length=50)
+    discoun_parcent = models.PositiveIntegerField()
+    up_to = models.PositiveIntegerField(help_text='Limit of Discount Amaount')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
 class Cart(models.Model):
     user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    last_updated = models.DateTimeField(auto_now_add=True)
     quantity = models.IntegerField(default=1)
+    cupon_applaied = models.BooleanField(default=False)
+    cupon_code = models.ForeignKey(CuponCodeGenaration, on_delete=models.CASCADE, null=True, blank=True, default=None)
+    last_updated = models.DateTimeField(auto_now_add=True)
 
 
     @property
@@ -117,6 +129,10 @@ class Cart(models.Model):
     def subtotal_product_price(cls,user):   
         carts = Cart.objects.filter(user=user)
         subtotal_price = sum(cart.total_product_price for cart in carts)
+        cart_item = carts[0]
+        if cart_item.cupon_applaied:
+            subtotal_price = subtotal_price - (cart_item.cupon_code.discoun_parcent*subtotal_price /100)
+
         return subtotal_price
 
     def __str__(self):
@@ -128,12 +144,15 @@ class CustomerAddress(models.Model):
     city = models.CharField(max_length=60)
     zip_code = models.PositiveIntegerField()
     street_address = models.CharField(max_length=250)
-    mobile = models.PositiveIntegerField(max_length=15)
+    mobile = models.PositiveIntegerField()
     is_billing = models.BooleanField(default=True)
     is_shipping = models.BooleanField(default=True)
 
     def __str__(self):
         return self.user.first_name
+    
+
+    
 
 class PlacedOder(models.Model):
     user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
@@ -148,7 +167,7 @@ class PlacedOder(models.Model):
 class PlacedeOderItem(models.Model):
     placed_oder = models.ForeignKey(PlacedOder,on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.FloatField()
+    quantity = models.PositiveIntegerField()
     total_price = models.FloatField()
 
     def __str__(self):

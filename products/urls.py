@@ -7,5 +7,6 @@ urlpatterns = [
     path('increse-cart/', views.increase_cart, name='increase_cart'),
     path('checkout/', views.check_out, name='check_out'),
     path('placed-oder/', views.placed_oder, name='placed_oder'),
+    path('cupon-apply/', views.cupon_apply, name='cupon_apply'),
     
 ]
