@@ -3,6 +3,7 @@ from django.db.models import Q
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from .models import (Product, Industry, Cart, 
                      CustomerAddress, PlacedOder, 
@@ -33,9 +34,10 @@ def add_to_cart(request, id):
 
 @login_required(login_url="user_login")
 def show_cart(request):
-    sub_total = Cart.subtotal_product_price(user=request.user)
     carts = Cart.objects.filter(user=request.user)
-    
+    sub_total = 0.00
+    if carts:
+        sub_total = Cart.subtotal_product_price(user=request.user)
     context = {
         "carts": carts,
         "sub_total": format(sub_total, '.2f')
@@ -100,37 +102,58 @@ def increase_cart(request):
 
 @login_required(login_url="user_login")
 def check_out(request):
+    existing_address = CustomerAddress.objects.filter(user=request.user)
     if request.method == 'POST':
         user = request.user
-        address_form = CustomerAddressForm(data=request.POST)
-        if address_form.is_valid():
-            shipping_address = address_form.save(commit=False)
-            shipping_address.user = user
-            shipping_address.save()
-            print(shipping_address)
+        if not existing_address.exists():
+            address_form = CustomerAddressForm(data=request.POST)
+            if address_form.is_valid():
+                shipping_address = address_form.save(commit=False)
+                shipping_address.user = user
+                shipping_address.save()
+                print(shipping_address)
 
-            place_order = PlacedOder.objects.create(
-                user=user,
-                shipping_address=shipping_address,
-                sub_total_price = Cart.subtotal_product_price(user=user)
+        place_order = PlacedOder.objects.create(
+            user=user,
+            shipping_address=existing_address[0],
+            sub_total_price = Cart.subtotal_product_price(user=user)
+        )
+        # getting the all product of user Cart and save them to PlacedOderItem then remove from Cart
+        carts = Cart.objects.filter(user=user)
+        for item in carts:
+            PlacedeOderItem.objects.create(
+                placed_oder=place_order,
+                product=item.product,
+                quantity=item.quantity,
+                total_price=item.total_product_price
             )
-            # getting the all product of user Cart and save them to PlacedOderItem then remove from Cart
-            carts = Cart.objects.filter(user=user)
-            for item in carts:
-                PlacedeOderItem.objects.create(
-                    placed_oder=place_order,
-                    product=item.product,
-                    quantity=item.quantity,
-                    total_price=item.total_product_price
-                )
-                item.delete()
-            place_order.save()
-            
-            messages.success(request, 'Your Order Placed SuccessFully!!!')
-            return redirect('placed_oder')
-    address_form = CustomerAddressForm()
-    context ={'address_form':address_form}
+            item.delete()
+        place_order.save()
+        messages.success(request, 'Your Order Placed SuccessFully!!!')
+        return redirect('placed_oder')
+        
+    # Removing Cupon Code
+    data = request.GET.get('remove_cupon')
+    carts = Cart.objects.filter(user=request.user)
+    if data: 
+        for item in carts:
+            item.cupon_applaied = False
+            item.cupon_code = None
+            item.save()
+    cupon = False
+    if carts[0].cupon_applaied:
+        cupon = True
+    #Calculate the subtotal after Removing the cupon code
+    sub_total = Cart.subtotal_product_price(user=request.user)
+    #checking the existing address and retur it to the template as form
+    if existing_address.exists():
+        address_form  = CustomerAddressForm(instance=existing_address[0])
+    else:       
+        address_form = CustomerAddressForm()
+    # address_form = CustomerAddressForm()
+    context ={'address_form':address_form,'cupon':cupon,'carts':carts,'sub_total':sub_total}
     return render(request,'products/checkout.html',context)
+
 
 def placed_oder(request):
 

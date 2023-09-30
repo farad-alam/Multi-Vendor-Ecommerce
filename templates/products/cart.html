@@ -52,6 +52,7 @@
                                 </thead>
                                 <tbody>
                                     
+                                    {% if carts %}   
                                     {% for product in carts %}
                 
                                    <tr>
@@ -70,6 +71,7 @@
                                       <td class="product-remove"><a href="#" onclick="change_cart_quantity('{{product.id}}',0)"><i class="fa fa-times"></i></a></td>
                                    </tr>
                                    {% endfor %}
+                                   {% endif %}
                                 </tbody>
                           </table>
                        </div>

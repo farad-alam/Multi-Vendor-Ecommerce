@@ -7,8 +7,9 @@ def home(request):
     sub_total=0.00
     carts = ''
     if request.user.is_authenticated:
-        sub_total = Cart.subtotal_product_price(user=request.user)
         carts = Cart.objects.filter(user=request.user)
+        if carts:
+            sub_total = Cart.subtotal_product_price(user=request.user)
     slider = SliderArea.objects.all()
     industry = Industry.objects.all()
     hot_products_in_cate = DisplayHotProductInCategories.objects.all()[:4]

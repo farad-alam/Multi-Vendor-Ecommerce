@@ -128,7 +128,9 @@ class Cart(models.Model):
     @classmethod
     def subtotal_product_price(cls,user):   
         carts = Cart.objects.filter(user=user)
-        subtotal_price = sum(cart.total_product_price for cart in carts)
+        subtotal_price = 0.00
+        if carts:
+            subtotal_price = sum(cart.total_product_price for cart in carts)
         cart_item = carts[0]
         if cart_item.cupon_applaied:
             subtotal_price = subtotal_price - (cart_item.cupon_code.discoun_parcent*subtotal_price /100)
@@ -149,7 +151,7 @@ class CustomerAddress(models.Model):
     is_shipping = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.user.first_name
+        return f"{self.user.first_name}--{self.id}"
     
 
     
@@ -162,7 +164,7 @@ class PlacedOder(models.Model):
     placed_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.user.first_name}--{str(self.id)}"
+        return f"{self.user.first_name}--{str(self.id)}--{PlacedeOderItem.quantity}"
     
 class PlacedeOderItem(models.Model):
     placed_oder = models.ForeignKey(PlacedOder,on_delete=models.CASCADE)
