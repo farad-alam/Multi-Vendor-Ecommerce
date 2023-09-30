@@ -113,24 +113,25 @@ def check_out(request):
                 shipping_address.save()
                 print(shipping_address)
 
-        place_order = PlacedOder.objects.create(
-            user=user,
-            shipping_address=existing_address[0],
-            sub_total_price = Cart.subtotal_product_price(user=user)
-        )
-        # getting the all product of user Cart and save them to PlacedOderItem then remove from Cart
         carts = Cart.objects.filter(user=user)
-        for item in carts:
-            PlacedeOderItem.objects.create(
-                placed_oder=place_order,
-                product=item.product,
-                quantity=item.quantity,
-                total_price=item.total_product_price
+        if carts.exists():
+            place_order = PlacedOder.objects.create(
+                user=user,
+                shipping_address=existing_address[0],
+                sub_total_price = Cart.subtotal_product_price(user=user)
             )
-            item.delete()
-        place_order.save()
+            # getting the all product of user Cart and save them to PlacedOderItem then remove from Cart
+            for item in carts:
+                PlacedeOderItem.objects.create(
+                    placed_oder=place_order,
+                    product=item.product,
+                    quantity=item.quantity,
+                    total_price=item.total_product_price
+                )
+                item.delete()
+            place_order.save()
         messages.success(request, 'Your Order Placed SuccessFully!!!')
-        return redirect('placed_oder')
+        return redirect('user_profile')
         
     # Removing Cupon Code
     data = request.GET.get('remove_cupon')
@@ -141,7 +142,7 @@ def check_out(request):
             item.cupon_code = None
             item.save()
     cupon = False
-    if carts[0].cupon_applaied:
+    if carts and carts[0].cupon_applaied:
         cupon = True
     #Calculate the subtotal after Removing the cupon code
     sub_total = Cart.subtotal_product_price(user=request.user)
@@ -169,8 +170,6 @@ def cupon_apply(request):
         print(cupon_code)
         cupon_obj = CuponCodeGenaration.objects.filter(cupon_code=cupon_code)
         if cupon_obj.exists():
-            print(cupon_obj[0].cupon_code)
-            print(cupon_obj[0].discoun_parcent)
             less_ammount_by_cupon = (Cart.subtotal_product_price(user=request.user)*cupon_obj[0].discoun_parcent)/100
             # checking Limit of discounted ammount
             user_carts = Cart.objects.filter(user=request.user)
@@ -178,10 +177,8 @@ def cupon_apply(request):
                 for item in user_carts:
                     item.cupon_code = CuponCodeGenaration.objects.get(cupon_code=cupon_code)
                     item.cupon_applaied = True
-                    item.save()
-
-
-
-            
+                    item.save()         
     return redirect('check_out')
+
+
 

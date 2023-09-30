@@ -219,7 +219,7 @@
                                                     {{item.product.title|truncatewords:6}} <strong class="product-quantity"> × {{item.quantity}}</strong>
                                                 </td>
                                                 <td class="product-total">
-                                                    <span class="amount">${{item.total_product_price}}</span>
+                                                    <span class="amount">${{item.total_product_price | floatformat:2}}</span>
                                                 </td>
                                             </tr>
                                         {% endfor %}
@@ -229,7 +229,7 @@
                                     <tfoot>
                                         <tr class="cart-subtotal">
                                             <th>Cart Subtotal</th>
-                                            <td><span class="amount">${{sub_total}}</span></td>
+                                            <td><span class="amount">${{sub_total | floatformat:2}}</span></td>
                                         </tr>
                                         <tr class="shipping">
                                             <th>Shipping</th>

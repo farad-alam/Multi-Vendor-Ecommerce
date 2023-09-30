@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from . models import CustomUser
 from .forms import RegistrationForm
+from products.models import PlacedOder
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
@@ -42,7 +43,17 @@ def login_view(request):
 
 @login_required(login_url='user_login')
 def user_profile(request):
-    return render(request,'accounts/user/user-profile.html')
+    placed_oders = PlacedOder.objects.filter(user=request.user)
+    if placed_oders:
+        print(placed_oders)
+        print(placed_oders[0])
+        placed_oders = placed_oders[0].order_items.all()
+    else:
+        placed_oders = None
+    context = {
+        'placed_oders':placed_oders
+    }
+    return render(request,'accounts/user/user-profile.html', context)
 
 @login_required(login_url='user_login')
 def user_logout(request):

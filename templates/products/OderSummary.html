@@ -1,0 +1,36 @@
+<div class="container row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+               <tr>
+                  <th class="product-thumbnail">Images</th>
+                  <th class="cart-product-name">Title</th>
+                  <th class="product-quantity">Quantity</th>
+                  <th class="product-status">Status</th>
+                  <th class="product-subtotal">Total Price</th>
+
+               </tr>
+            </thead>
+            <tbody>
+                
+                {% if placed_oders %}   
+                {% for item in placed_oders %}
+
+               <tr>
+                  <td class="product-thumbnail"><a href="#"><img src="{{item.product.productimage_set.first.image}}" alt=""></a></td>
+                  <td class="product-name"><a href="#">{{item.product.title}}</a></td>
+                  <td class="product-quantity">
+                        <div class="d-inline-flex">
+                            <p class="mx-2 cart-quantity" id="product-quantity-{{product.id}}" >{{item.quantity}}</p>                           
+                        </div>
+                  </td>
+                  <td class="product-status"> <p class='btn btn-success' >Recived</p> </td>
+               </tr>
+               <td>$1000</td>
+               {% endfor %}
+               {% endif %}
+            </tbody>
+      </table>
+    </div>
+
+</div>
