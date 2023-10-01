@@ -174,6 +174,7 @@ class PlacedOder(models.Model):
         ("Oder OnTheWay", "Oder OnTheWay"),
         ("Oder Shipped", "Oder Shipped"),
     ]
+    # order_number = models.BigAutoField()
     user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
     shipping_address = models.ForeignKey(CustomerAddress, on_delete=models.CASCADE)
     sub_total_price = models.FloatField()
@@ -181,6 +182,52 @@ class PlacedOder(models.Model):
     paid = models.BooleanField(default=False)
     placed_date = models.DateTimeField(auto_now_add=True)
 
+    @property
+    def oder_id(self):
+        return f'OID{str(self.id).zfill(6)}'
+    
+    @classmethod
+    def placed_oders_by_user(cls, user):
+        oders = PlacedOder.objects.filter(user=user)
+        placed_oder_items_dict = {}
+
+        for oder in oders:
+            placed_oder_list = []
+
+            placed_oder_details = {}
+            placed_oder_details['sub_total_price'] = oder.sub_total_price
+            placed_oder_details['status'] = oder.status
+            placed_oder_details['placed_date'] = oder.placed_date
+            placed_oder_list.append(placed_oder_details)
+
+            oder_items = PlacedeOderItem.objects.filter(placed_oder=oder)
+
+            for item in oder_items:
+                oder_items_list = []
+                print(item.product.title)
+                image = item.product.productimage_set.first().image
+                title = item.product.title
+                quantity = item.quantity
+                total_price = item.total_price
+                oder_items_list.append(image)
+                oder_items_list.append(title)
+                oder_items_list.append(quantity)
+                oder_items_list.append(total_price)
+                placed_oder_list.append(oder_items_list)
+
+            placed_oder_items_dict[oder.oder_id] = placed_oder_list
+        return placed_oder_items_dict
+        # return 'fg'
+
+    @classmethod
+    def all_placed_oder_items(cls,user):
+        user_placed_orders = PlacedOder.objects.filter(user=user)
+        # print(user_placed_orders)
+        if user_placed_orders:            
+            user_placed_order_items  = PlacedeOderItem.objects.filter(placed_oder__in=user_placed_orders)
+            return user_placed_order_items
+        return None
+    
     def __str__(self):
         return f"{self.user.first_name}--{str(self.id)}--{self.order_items.all()[0].product.title}"
 
