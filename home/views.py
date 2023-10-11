@@ -4,7 +4,7 @@ from products.models import Industry, Product, Categories, Cart
 # Create your views here.
 
 def home(request):
-    sub_total=0.00
+    sub_total= 0.00
     carts = ''
     if request.user.is_authenticated:
         carts = Cart.objects.filter(user=request.user)

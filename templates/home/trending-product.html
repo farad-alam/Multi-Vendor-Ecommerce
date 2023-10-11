@@ -85,15 +85,39 @@
             <div class="price">
               <span>${{product.discounted_price}}</span>
             </div>
+            <div class="progress mb-5">
+              <div
+                class="progress-bar bg-danger"
+                role="progressbar"
+                style="width: 50%"
+                aria-valuenow="100"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+            <div class="progress-rate mb-15">
+              <span>Avilable Item: {{product.stoc}}</span>
+            </div>
           </div>
+          
+          {% if product.stoc != 0 %}
           <div class="product__add-cart text-center">
-            <a
+            <a 
               href="{% url 'add_to_cart' product.id %}"
               class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100"
             >
               Add to Cart
-          </a>
+            </a>
           </div>
+          {% else %}            
+          <div class="product__add-cart text-center">
+            <p 
+              class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100"
+            >
+              Out of Stock
+           </p>
+          </div>
+          {% endif %}
         </div>
       </div>
       {% endfor %}

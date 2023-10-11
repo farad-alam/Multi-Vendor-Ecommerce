@@ -27,4 +27,6 @@ admin.site.register(CustomerAddress)
 admin.site.register(PlacedOder)
 admin.site.register(PlacedeOderItem)
 admin.site.register(CuponCodeGenaration)
+admin.site.register(CompletedOder)
+admin.site.register(CompletedOderItems)
 

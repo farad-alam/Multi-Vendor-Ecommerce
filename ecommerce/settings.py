@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'accounts',
-    'products',
-    'ckeditor'
+    'products.apps.ProductsConfig',
+    'AdminPanel',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
