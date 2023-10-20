@@ -1,10 +1,17 @@
-{% extends "baseFiles/base.html" %}
+{% extends "admin-panel/admin-base.html" %}
+{% load static %}
 
-{% block bodycontent %}
+{% block admin-page-title %}
+    Placed Oder List
+{% endblock admin-page-title %}
+    
+{% block admin-body %}
+
 <div class="container my-5">
     {% include 'baseFiles/messages.html' %}
-
-
+    <div class="head-area">
+        <h3>Placed Oder List - <small>Showing {{placed_oder_list|length}} Placed Oder</small></h3> 
+    </div>
     <div class="table-responsive">
         <table class="table table-primary">
             <thead>
@@ -30,5 +37,5 @@
 
 
 </div>
-{% endblock bodycontent %}
+{% endblock admin-body %}
     

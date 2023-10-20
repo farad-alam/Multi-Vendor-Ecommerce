@@ -44,7 +44,7 @@ def login_view(request):
 
 
 @login_required(login_url='user_login')
-def user_profile(request):
+def user_dashboard(request):
     placed_oders_by_oder_id = PlacedOder.placed_oders_by_user(user=request.user)
     # print(placed_oders_by_oder_id)
     placede_oder_obj = PlacedOder.objects.filter(user=request.user)
@@ -57,7 +57,7 @@ def user_profile(request):
         'placed_oders_by_oder_id':placed_oders_by_oder_id,
         "shipping_addesss":shipping_addess,
     }
-    return render(request,'accounts/user/user-profile.html', context)
+    return render(request,'accounts/user/user-dashboard.html', context)
 
 @login_required(login_url='user_login')
 def user_logout(request):

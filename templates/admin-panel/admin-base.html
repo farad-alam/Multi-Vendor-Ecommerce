@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from preschool.dreamguystech.com/html-template/students.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:43 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <title>
+    {% block admin-page-title %}
+      
+    {% endblock admin-page-title %}
+   </title>
+    
+    <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="{% static 'assets/img/android-chrome-512x512.png' %}"
+  />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'admin-panel/assets/plugins/bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'admin-panel/assets/plugins/fontawesome/css/fontawesome.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'admin-panel/assets/plugins/fontawesome/css/all.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'admin-panel/assets/css/style.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+
+      {% include 'admin-panel/includes/header.html' %} 
+      {% include 'admin-panel/includes/sidebar.html' %}
+      
+      {% comment %} Contetnt Body {% endcomment %}
+
+      <div class="page-wrapper">
+        <div class="content container-fluid">
+          {% block admin-body %} 
+          {% include 'baseFiles/messages.html' %}
+
+          {% endblock admin-body %}
+        </div>
+        {% include 'admin-panel/includes/footer.html' %}
+      </div>
+
+      {% comment %} Fotter Here {% endcomment %}
+    </div>
+    
+    {% block scripts %}
+      
+    {% endblock scripts %}
+      
+    <script src="{% static 'admin-panel/assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'admin-panel/assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'admin-panel/assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'admin-panel/assets/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'admin-panel/assets/plugins/datatables/datatables.min.js' %}"></script>
+    <script src="{% static 'admin-panel/assets/js/script.js' %}"></script>
+
+    
+    
+  </body>
+  <!-- Mirrored from preschool.dreamguystech.com/html-template/students.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:49 GMT -->
+</html>

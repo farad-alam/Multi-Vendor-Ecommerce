@@ -1,11 +1,15 @@
-{% extends "baseFiles/base.html" %}
+{% extends "admin-panel/admin-base.html" %}
 
 
-{% block bodycontent %}
+{% block admin-page-title %}
+    Placed Oder Item Details
+{% endblock admin-page-title %}
+    
+{% block admin-body %}
 <div class="container my-5">
     {% include 'baseFiles/messages.html' %}
     <div class="row"> 
-        <div class="col-8">
+        <div class="col-8 border rounded border-2 border-warning">
             <h3>Order Summary - ID: {{order_number}}</h3>
             
             <table class="table">
@@ -38,14 +42,15 @@
         
         
         </div>
-        <div class="col-4">
+
+        <div class="col-4  border rounded border-2  border-info pl-2">
             <div class="row subtotal my-5">
                 <div class="col-6">
-                    <h5>SubTotal ( {% if placed_oder.paid %} <small class="fw-bold text-success"> Paid</small> {% else %}<small class="fw-bold text-danger"> Due </small> {% endif %} )</h5>
+                    <h6>SubTotal ( {% if placed_oder.paid %} <small class="fw-bold text-success"> Paid</small> {% else %}<small class="fw-bold text-danger"> Due </small> {% endif %} )</h6>
                     <p>${{placed_oder.sub_total_price|floatformat:2}}</p>
                 </div>
                 <div class="col-6">
-                    <h5>Oder Status</h5>
+                    <h6>Oder Status</h6>
                     <p class='btn btn-success'>{{placed_oder.status}}</p>
                 </div>
             </div>
@@ -60,14 +65,19 @@
                 </textarea>
             </div>
             <div class="oder-placed-date">
-                <h6>Oder Placed</h6>
-                <p>{{placed_oder.placed_date}}</p>
+                <h6>Oder Placed: <small>{{placed_oder.placed_date}}</small></h6>
+                
             </div>
             
         </div>
     </div>
+
     <hr>
-    <div class="col-sm-9 offset-sm-1 mb-5">
+
+    <div class="col-sm-9 offset-sm-1 mb-5 mt-5">
+        <div>
+            <h3>Oder Details:</h3>
+        </div>
 
         <form method="POST">
           {% csrf_token %} 
@@ -85,10 +95,7 @@
 
           </div>
           {% endfor %}
-          <br>
-          
-
-          <button type="submit" class="btn btn-primary mt-3">Submit</button>
+          <button type="submit" class="btn btn-primary">Update Oder</button>
         </form>
   
         {% if placed_oder_form.non_field_errors %} {% for error in placed_oder_form.non_field_errors %}
@@ -98,5 +105,5 @@
       </div>
       
 </div>
-{% endblock bodycontent %}
+{% endblock admin-body %}
     

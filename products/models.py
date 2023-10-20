@@ -116,7 +116,7 @@ class CuponCodeGenaration(models.Model):
 
 
 class Cart(models.Model):
-    user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
+    user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE, related_name='customer_with_product_in_cart')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     cupon_applaied = models.BooleanField(default=False)

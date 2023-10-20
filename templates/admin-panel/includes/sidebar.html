@@ -1,0 +1,167 @@
+{% load static %} 
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-inner slimscroll">
+    <div id="sidebar-menu" class="sidebar-menu">
+      <ul>
+        <li class="menu-title">
+          <span>Main Menu</span>
+        </li>
+
+        <li class="">
+          <a href="{% url 'dashboard' %}"
+            ><i class="fas fa-solid fa-chart-line" style="color: #068e5a;"></i> <span> Dashboard</span>
+            <span class="menu-arrow"></span
+          ></a>
+
+        </li>
+
+        <li class="submenu">
+          <a href="#">
+            <i class="fas fa-solid fa-gears" style="color: #068e5a;"></i> <span>Manage Oders</span><span class="menu-arrow"></span>
+          </a>
+
+          <ul>
+            <li>
+              <a
+                href="{% url 'show_placed_oder_list' %}"
+                class=""
+                >Oder Placed</a
+              >
+            </li>
+    
+            <li>
+              <a
+                href="{% url 'show_completed_oder_list' %}"
+                class=""
+                >Completed Oder List</a
+              >
+            </li>
+    {% comment %} 
+            <li>
+              <a
+                href="{% url 'addwebsite' %}"
+                class=""
+                >Add Wordpress Site</a
+              >
+            </li>
+    
+            <li>
+              <a
+                href="{% url 'singlepost' %}"
+                class=""
+                >Test Websites</a
+              >
+            </li>
+    
+            <li>
+              <a
+                href="{% url 'openaiTest' %}"
+                class=""
+                >Test OpenAi</a
+              >
+            </li> {% endcomment %}
+          </ul>
+
+        </li>
+        
+{% comment %} 
+        <li class="submenu">
+          <a href="#">
+            <i class="far fa-file-alt" style="color: #08782f;"></i> <span>Info Article Genarator</span><span class="menu-arrow"></span>
+          </a>
+          <ul>
+            <li>
+              <a
+                href="{% url 'sort_form_info' %}"
+                class=""
+                >Sort Form Info</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+ {% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- <li class="submenu">
+          <a href="#"
+            ><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span>
+            <span class="menu-arrow"></span
+          ></a>
+          <ul>
+            <li>
+              <a
+                
+                >Add Teacher</a
+              >
+            </li>
+            <li>
+              <a
+                
+                >View Teacher</a
+              >
+            </li>
+          </ul>
+        </li> -->
+
+        <!-- <li class="submenu">
+          <a href="#"
+            ><i class="fas fa-building"></i> <span> Classes</span>
+            <span class="menu-arrow"></span
+          ></a>
+          <ul>
+            <li>
+              <a
+                
+                >Add Class</a
+              >
+            </li>
+            <li>
+              <a
+                
+                >View Class</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><i class="fas fa-book-reader"></i> <span> Subjects</span>
+            <span class="menu-arrow"></span
+          ></a>
+          <ul>
+            <li>
+              <a
+                
+                >Add Subject</a
+              >
+            </li>
+            <li>
+              <a
+                
+                >View Subject</a
+              >
+            </li>
+          </ul>
+        </li> -->
+
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
