@@ -1,7 +1,7 @@
 # Django specific
 *.sqlite3
 media/
-staticfiles/
+ecommerce/staticfiles/
 
 # IDE/Editor specific
 .vscode/
