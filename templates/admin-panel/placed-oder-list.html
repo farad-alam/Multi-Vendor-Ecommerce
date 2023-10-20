@@ -1,0 +1,41 @@
+{% extends "admin-panel/admin-base.html" %}
+{% load static %}
+
+{% block admin-page-title %}
+    Placed Oder List
+{% endblock admin-page-title %}
+    
+{% block admin-body %}
+
+<div class="container my-5">
+    {% include 'baseFiles/messages.html' %}
+    <div class="head-area">
+        <h3>Placed Oder List - <small>Showing {{placed_oder_list|length}} Placed Oder</small></h3> 
+    </div>
+    <div class="table-responsive">
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th scope="col">Oder</th>
+                    <th scope="col">Placed Date</th>
+                    <th scope="col">Customer</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for oder in placed_oder_list %}
+                    <tr class="">
+                        <td scope="row"><a href="{% url 'show_placed_oder_item_list' oder.id %}">{{oder.order_number}} <small>({{oder.order_items.count}})</small></a></td>
+                        <td>{{oder.placed_date}}</td>
+                        <td>{{oder.user.first_name}}</td>
+                    </tr>
+                {% endfor %}                   
+ 
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+{% endblock admin-body %}
+    

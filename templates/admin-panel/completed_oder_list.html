@@ -1,0 +1,41 @@
+{% extends "admin-panel/admin-base.html" %}
+{% load static %}
+
+{% block admin-page-title %}
+    Completed Oder List
+{% endblock admin-page-title %}
+    
+{% block admin-body %}
+
+<div class="container my-5">
+    {% include 'baseFiles/messages.html' %}
+    <h3>Completed Oder List - <small>Showing {{completed_oder_list|length}} Completed Oder</small></h3> 
+
+
+    <div class="table-responsive">
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th scope="col">Oder</th>
+                    <th scope="col">Completed Date</th>
+                    <th scope="col">Customer</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for oder in completed_oder_list %}
+                    <tr class="">
+                        <td scope="row"><a href="{% url 'show_completed_oder_item_list' oder.id %}">{{oder.oder_number}} <small>({{oder.delivered_items.count}})</small></a></td>
+                        <td>{{oder.complete_date}}</td>
+                        <td>{{oder.user.first_name}}</td>
+                    </tr>
+                {% endfor %}                   
+ 
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+{% endblock admin-body %}
+    

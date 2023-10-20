@@ -3,9 +3,11 @@
 
 
 {% block bodycontent %}
+
     <!-- page-banner-area-start -->
     <div class="page-banner-area page-banner-height-2" data-background="{% static 'assets/img/banner/page-banner-4.jpg' %}">
         <div class="container">
+            {% include 'baseFiles/messages.html' %}
             <div class="row">
                 <div class="col-xl-12">
                     <div class="page-banner-content text-center">
@@ -32,63 +34,14 @@
     <!-- page-banner-area-end -->
 
 
-    <!-- coupon-area-start -->
-    <section class="coupon-area pt-120 pb-30">
-        <div class="container">
-        <div class="row">
-        <div class="col-md-6">
-            <div class="coupon-accordion">
-                    <!-- ACCORDION START -->
-                    <h3>Returning customer? <span id="showlogin">Click here to login</span></h3>
-                    <div id="checkout-login" class="coupon-content">
-                    <div class="coupon-info">
-                        <p class="coupon-text">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est
-                                sit amet ipsum luctus.</p>
-                        <form action="#">
-                                <p class="form-row-first">
-                                <label>Username or email <span class="required">*</span></label>
-                                <input type="text">
-                                </p>
-                                <p class="form-row-last">
-                                <label>Password <span class="required">*</span></label>
-                                <input type="text">
-                                </p>
-                                <p class="form-row">
-                                <button class="tp-btn-h1" type="submit">Login</button>
-                                <label>
-                                    <input type="checkbox">
-                                    Remember me
-                                </label>
-                                </p>
-                                <p class="lost-password">
-                                <a href="#">Lost your password?</a>
-                                </p>
-                        </form>
-                    </div>
-                    </div>
-                    <!-- ACCORDION END -->
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="coupon-accordion">
-                    <!-- ACCORDION START -->
-                    <h3>Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
-                                                                
-                    <!-- ACCORDION END -->
-            </div>
-        </div>
-      </div>
-    </div>
-    </section>
-    <!-- coupon-area-end -->
-
-    
 
     <!-- checkout-area-start -->
-    <section class="checkout-area pb-85">
-        <div class="container">
-            <form action="" method='POST'>
+    <section class="checkout-area pb-85 mt-50">
+        <div class='container border-top border-2 border-info mb-10'>
+
+        </div>
+        <div class="container ">
+            <form class='mt-10' action="" method='POST'>
                 {% csrf_token %}
                 <div class="row">
                     <div class="col-lg-6">
@@ -219,7 +172,7 @@
                                                     {{item.product.title|truncatewords:6}} <strong class="product-quantity"> × {{item.quantity}}</strong>
                                                 </td>
                                                 <td class="product-total">
-                                                    <span class="amount">${{item.total_product_price}}</span>
+                                                    <span class="amount">${{item.total_product_price | floatformat:2}}</span>
                                                 </td>
                                             </tr>
                                         {% endfor %}
@@ -229,7 +182,7 @@
                                     <tfoot>
                                         <tr class="cart-subtotal">
                                             <th>Cart Subtotal</th>
-                                            <td><span class="amount">${{sub_total}}</span></td>
+                                            <td><span class="amount">${{sub_total | floatformat:2}}</span></td>
                                         </tr>
                                         <tr class="shipping">
                                             <th>Shipping</th>

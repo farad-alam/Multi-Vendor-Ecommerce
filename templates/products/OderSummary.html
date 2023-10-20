@@ -1,0 +1,74 @@
+{% load custom_filters %}
+<div class="container">
+
+     
+    {% for key, value in placed_oders_by_oder_id.items %}
+    <div class="row"> 
+        <div class="col-8">
+            <h3>Order Summary - ID: {{key}}</h3>
+            <table class="table">
+                <thead>
+                   <tr>
+                      <th class="product-thumbnail">Images</th>
+                      <th class="cart-product-name">Title</th>
+                      <th class="product-quantity">Quantity</th>
+                      <th class="product-subtotal">Total Price</th>
+    
+                   </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for items in value|slice:"1:" %}                   
+                        <tr>
+                            <td class="product-thumbnail"><a href="#"><img style="max-width: 80px; max-height: 110px;" src="{{items.0}}" alt=""></a></td>
+                            <td class="product-name"><a href="#">{{ items.1|truncatewords:10 }}</a></td>
+                            <td class="product-quantity">
+                                <div class="d-inline-flex">
+                                    <p class="mx-2 cart-quantity" id="product-quantity" >{{items.2}}</p>                           
+                                </div>
+                            </td>                            
+                            <td class="product-subtotal"><p>{{items.3|floatformat:2}}</p></td>
+                        </tr>
+                   {% endfor %}
+                   
+                </tbody>
+          </table>
+          
+        
+        </div>
+        <div class="col-4">
+            <div class="row subtotal my-5">
+                <div class="col-6">
+                    <h5>SubTotal ( {% if value.0.paid %} <small class="fw-bold text-success"> Paid</small> {% else %}<small class="fw-bold text-danger"> Due </small> {% endif %} )</h5>
+                    <p>${{value.0.sub_total_price|floatformat:2}}</p>
+                </div>
+                <div class="col-6">
+                    <h5>Oder Status</h5>
+                    <p class='btn btn-success'>{{value.0.status}}</p>
+                </div>
+            </div>
+            <div class="shipping-address">
+                <h5>Shipping Address</h5>
+                <textarea name="" id="" cols="30" rows="5" disabled>
+                {{shipping_addesss.state}},
+                {{shipping_addesss.city}},
+                {{shipping_addesss.zip_code}}, 
+                {{shipping_addesss.mobile}},
+                {{shipping_addesss.street_address}},               
+                </textarea>
+            </div>
+            <div class="oder-placed-date">
+                <h6>Oder Placed</h6>
+                <p>{{value.0.placed_date}}</p>
+            </div>
+            
+        </div>
+    </div>
+    <hr>
+    {% endfor %}
+    
+
+
+
+
+</div>

@@ -1,0 +1,39 @@
+# Django specific
+*.sqlite3
+media/
+staticfiles/
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.pyc
+*.pyo
+
+# Virtual Environment
+venv/
+env/
+
+# Local Settings
+*.local.py
+
+# Secrets and Configuration
+.env
+.secret-key
+settings.ini
+
+# Logs and Temporary Files
+*.log
+*.log.*
+*.tmp
+
+# Dependency and Cache Directories
+__pycache__/
+*.egg-info/
+node_modules/
+
+# Compiled Python Files
+*.pyc
+
+# IDE/Editor Backup Files
+*~
+.*.swp

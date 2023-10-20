@@ -1,0 +1,109 @@
+{% extends "admin-panel/admin-base.html" %}
+
+
+{% block admin-page-title %}
+    Placed Oder Item Details
+{% endblock admin-page-title %}
+    
+{% block admin-body %}
+<div class="container my-5">
+    {% include 'baseFiles/messages.html' %}
+    <div class="row"> 
+        <div class="col-8 border rounded border-2 border-warning">
+            <h3>Order Summary - ID: {{order_number}}</h3>
+            
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="product-thumbnail">Images</th>
+                    <th class="cart-product-name">Title</th>
+                    <th class="product-quantity">Quantity</th>
+                    <th class="product-subtotal">Total Price</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for items in oder_item_list %}                   
+                        <tr>
+                            <td class="product-thumbnail"><a href="#"><img style="max-width: 80px; max-height: 110px;" src="{{items.product.productimage_set.first.image}}" alt=""></a></td>
+                            <td class="product-name"><a href="#">{{ items.product.title|truncatewords:10 }}</a></td>
+                            <td class="product-quantity">
+                                <div class="d-inline-flex">
+                                    <p class="mx-2 cart-quantity" id="product-quantity" >{{items.quantity}}</p>                           
+                                </div>
+                            </td>                            
+                            <td class="product-subtotal"><p>{{items.total_price|floatformat:2}}</p></td>
+                        </tr>
+                {% endfor %}
+                
+                </tbody>
+        </table>
+        
+        
+        </div>
+
+        <div class="col-4  border rounded border-2  border-info pl-2">
+            <div class="row subtotal my-5">
+                <div class="col-6">
+                    <h6>SubTotal ( {% if placed_oder.paid %} <small class="fw-bold text-success"> Paid</small> {% else %}<small class="fw-bold text-danger"> Due </small> {% endif %} )</h6>
+                    <p>${{placed_oder.sub_total_price|floatformat:2}}</p>
+                </div>
+                <div class="col-6">
+                    <h6>Oder Status</h6>
+                    <p class='btn btn-success'>{{placed_oder.status}}</p>
+                </div>
+            </div>
+            <div class="shipping-address">
+                <h5>Shipping Address</h5>
+                <textarea name="" id="" cols="30" rows="5" disabled>
+                    {{placed_oder.shipping_address.state}}
+                    {{placed_oder.shipping_address.city}}               
+                    {{placed_oder.shipping_address.zip_code}}               
+                    {{placed_oder.shipping_address.mobile}}               
+                    {{placed_oder.shipping_address.street_address}}               
+                </textarea>
+            </div>
+            <div class="oder-placed-date">
+                <h6>Oder Placed: <small>{{placed_oder.placed_date}}</small></h6>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="col-sm-9 offset-sm-1 mb-5 mt-5">
+        <div>
+            <h3>Oder Details:</h3>
+        </div>
+
+        <form method="POST">
+          {% csrf_token %} 
+
+          {% for field in placed_oder_form %}
+
+          <div class="form-group mt-1">
+            
+            {{ field.label_tag }} <br> 
+            {{ field }} <br> 
+            {% if field.errors %}
+            <small class="alert-danger">{{ field.errors |striptags }}</small>
+            <br />
+            {% endif %}
+
+          </div>
+          {% endfor %}
+          <button type="submit" class="btn btn-primary">Update Oder</button>
+        </form>
+  
+        {% if placed_oder_form.non_field_errors %} {% for error in placed_oder_form.non_field_errors %}
+        <p class="alert alert-danger my-3">{{error}}</p>
+        {% endfor %} {% endif %}
+        
+      </div>
+      
+</div>
+{% endblock admin-body %}
+    

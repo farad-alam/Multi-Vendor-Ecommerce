@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include("accounts.urls") ),
     path('', include('products.urls')),
     path('', include('home.urls')),
+    path('', include('AdminPanel.urls')),
 ]

@@ -258,10 +258,13 @@
                 <div class="header__info">
                   <div class="logo">
                     <a href="{% url 'home' %}" class="logo-image"
-                      ><img
+                      >
+                      {% comment %} <img
                         src="{% static 'assets/img/logo/logo1.svg' %}"
                         alt="logo"
-                    /></a>
+                    /> {% endcomment %}
+                    <h4 class='text-white fw-bold'>MultiVendorEshop</h4>
+                  </a>
                   </div>
                 </div>
               </div>

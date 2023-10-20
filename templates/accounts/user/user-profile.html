@@ -1,10 +1,10 @@
 {% extends "accounts/user/dashboard-base.html" %}
 
-
-
 {% block dashboard-content %}
 <section style="background-color: #eee;">
-    <div class="container py-5">
+  
+    <div class="container py-5 my-5">
+      {% include 'products/OderSummary.html' %}
       {% include 'baseFiles/messages.html' %}
       <div class="row">
         <div class="col">
