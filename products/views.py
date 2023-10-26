@@ -176,7 +176,7 @@ def check_out(request):
 
                 place_order.save()
             messages.success(request, 'Your Order Placed SuccessFully!!!')
-            return redirect('user_profile')
+            return redirect('user_dashboard')
             
         # Removing Cupon Code
         data = request.GET.get('remove_cupon')

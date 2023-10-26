@@ -32,7 +32,7 @@ def login_view(request):
             user = authenticate(username=email,password=password)
             if user is not None:
                 login(request, user)
-            return redirect('user_profile')
+            return redirect('user_dashboard')
     else:
         login_form = AuthenticationForm()
     context={

@@ -1,6 +1,8 @@
+from collections.abc import Iterable
 from django.db import models
 from django.utils.text import slugify
 from ckeditor.fields import RichTextField
+from django.core.validators import MinValueValidator
 
 # Create your models here.
 
@@ -116,7 +118,11 @@ class CuponCodeGenaration(models.Model):
 
 
 class Cart(models.Model):
-    user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE, related_name='customer_with_product_in_cart')
+    user = models.ForeignKey(
+        "accounts.CustomUser",
+        on_delete=models.CASCADE,
+        related_name="customer_with_product_in_cart",
+    )
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     cupon_applaied = models.BooleanField(default=False)
@@ -178,22 +184,23 @@ class PlacedOder(models.Model):
     ]
     # order_number = models.BigAutoField()
     user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
-    shipping_address = models.ForeignKey(CustomerAddress, on_delete=models.DO_NOTHING, related_name='shipping_address')
-    sub_total_price = models.FloatField()
+    shipping_address = models.ForeignKey(
+        CustomerAddress, on_delete=models.DO_NOTHING, related_name="shipping_address"
+    )
+    sub_total_price = models.FloatField(blank=True, null=True)
     status = models.CharField(max_length=50, choices=STATUS, default="Oder Recived")
     paid = models.BooleanField(default=False)
     placed_date = models.DateTimeField(auto_now_add=True)
     order_number = models.CharField(max_length=12, blank=True, null=True)
-    sample = models.OneToOneField(CustomerAddress, on_delete=models.CASCADE, default=None, blank=True, null=True)
 
     @property
     def oder_id(self):
-        return f'OID{str(self.id).zfill(6)}'
-    
+        return f"OID{str(self.id).zfill(6)}"
+
     def save(self, *args, **kwargs):
         self.order_number = self.oder_id
         super(PlacedOder, self).save(*args, **kwargs)
-    
+
     @classmethod
     def placed_oders_by_user(cls, user):
         oders = PlacedOder.objects.filter(user=user)
@@ -203,10 +210,10 @@ class PlacedOder(models.Model):
             placed_oder_list = []
 
             placed_oder_details = {}
-            placed_oder_details['sub_total_price'] = oder.sub_total_price
-            placed_oder_details['status'] = oder.status
-            placed_oder_details['placed_date'] = oder.placed_date
-            placed_oder_details['paid'] = oder.paid
+            placed_oder_details["sub_total_price"] = oder.sub_total_price
+            placed_oder_details["status"] = oder.status
+            placed_oder_details["placed_date"] = oder.placed_date
+            placed_oder_details["paid"] = oder.paid
             placed_oder_list.append(placed_oder_details)
 
             oder_items = PlacedeOderItem.objects.filter(placed_oder=oder)
@@ -228,19 +235,25 @@ class PlacedOder(models.Model):
         return placed_oder_items_dict
         # return 'fg'
 
-    
     def __str__(self):
         return self.order_number
-    
+
 
 class PlacedeOderItem(models.Model):
-    placed_oder = models.ForeignKey(PlacedOder, on_delete=models.CASCADE, related_name='order_items')
+    placed_oder = models.ForeignKey(
+        PlacedOder, on_delete=models.CASCADE, related_name="order_items"
+    )
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField()
-    total_price = models.FloatField()
+    quantity = models.PositiveIntegerField(validators=[MinValueValidator(1)], default=1)
+    total_price = models.FloatField(blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        self.total_price = self.quantity * self.product.discounted_price
+        super(PlacedeOderItem, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.placed_oder.user.first_name}--{str(self.placed_oder.id)}--{str(self.placed_oder.placed_date)}"
+
 
 class CompletedOder(models.Model):
     user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
@@ -253,14 +266,15 @@ class CompletedOder(models.Model):
 
     def __str__(self):
         return self.oder_number
-    
+
+
 class CompletedOderItems(models.Model):
-    completed_oder = models.ForeignKey(CompletedOder, on_delete=models.CASCADE, related_name='delivered_items')
+    completed_oder = models.ForeignKey(
+        CompletedOder, on_delete=models.CASCADE, related_name="delivered_items"
+    )
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
     total_price = models.FloatField()
 
     def __str__(self):
         return self.product.title[:20] + str(self.product.id)
-
-

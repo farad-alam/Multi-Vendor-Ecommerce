@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin, AbstractUser
 from django.db import models
 from django.utils import timezone
 
@@ -32,7 +32,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     mobile = models.PositiveIntegerField()
     date_joined = models.DateTimeField(default=timezone.now)
     is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=True)
 
 
     objects = CustomUserManager()

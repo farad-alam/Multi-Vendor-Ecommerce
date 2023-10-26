@@ -1,0 +1,5520 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2023-09-18T17:59:11.889Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "SliderArea object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2023-09-18T18:00:17.590Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "Brilliant Lighting Effect",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2023-09-18T18:01:00.769Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "SAMSUNG GALAXY BUDS",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2023-09-18T18:01:41.669Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "Red Special Edition",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2023-09-18T18:24:51.810Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "1",
+            "object_repr": "Beauty & Fashion",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2023-09-18T18:25:08.088Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "2",
+            "object_repr": "Electronics",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2023-09-18T18:29:25.466Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "2",
+            "object_repr": "Electronics & Gadgets",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2023-09-18T18:29:40.473Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "3",
+            "object_repr": "Home & Furniture",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2023-09-18T18:29:50.113Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "4",
+            "object_repr": "Sports & Fitness",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2023-09-18T18:29:57.082Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "5",
+            "object_repr": "Health & Wellness",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2023-09-18T18:30:09.366Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "6",
+            "object_repr": "Toys & Games",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2023-09-18T18:30:17.653Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "7",
+            "object_repr": "Books & Media",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2023-09-18T18:30:26.434Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "8",
+            "object_repr": "Jewelry & Accessories",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2023-09-18T18:30:33.649Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "9",
+            "object_repr": "Automotive & Tools",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2023-09-18T18:30:41.478Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "10",
+            "object_repr": "Food & Groceries",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2023-09-18T18:30:49.092Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "11",
+            "object_repr": "Pets & Pet Supplies",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2023-09-18T18:31:19.350Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "Smartphones & Accessories",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2023-09-18T18:31:34.728Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "2",
+            "object_repr": "Furniture",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2023-09-18T18:31:43.308Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "3",
+            "object_repr": "Home Decor",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2023-09-18T18:31:56.107Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "4",
+            "object_repr": "Fitness Equipment",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2023-09-18T18:32:08.039Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "5",
+            "object_repr": "Sports Apparel",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2023-09-18T18:32:20.037Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "6",
+            "object_repr": "Vitamins & Supplements",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2023-09-18T18:32:30.374Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "7",
+            "object_repr": "Personal Care",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2023-09-18T18:32:40.038Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "8",
+            "object_repr": "Toys for Kids",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2023-09-18T18:32:49.899Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "9",
+            "object_repr": "Outdoor & Sports Toys",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 26,
+        "fields": {
+            "action_time": "2023-09-18T18:33:04.451Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "10",
+            "object_repr": "Movies & Music",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 27,
+        "fields": {
+            "action_time": "2023-09-18T18:33:22.878Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "11",
+            "object_repr": "Books",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 28,
+        "fields": {
+            "action_time": "2023-09-18T18:33:43.602Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "12",
+            "object_repr": "Fashion Accessories",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 29,
+        "fields": {
+            "action_time": "2023-09-18T18:33:52.629Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "13",
+            "object_repr": "Fine Jewelry",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 30,
+        "fields": {
+            "action_time": "2023-09-18T18:34:05.094Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "14",
+            "object_repr": "Auto Parts & Accessories",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 31,
+        "fields": {
+            "action_time": "2023-09-18T18:34:13.727Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "15",
+            "object_repr": "Tools & Equipment",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 32,
+        "fields": {
+            "action_time": "2023-09-18T18:34:34.891Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "16",
+            "object_repr": "Pantry Staples",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 33,
+        "fields": {
+            "action_time": "2023-09-18T18:34:45.268Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "17",
+            "object_repr": "Fresh Produce",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 34,
+        "fields": {
+            "action_time": "2023-09-18T18:35:22.059Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "1",
+            "object_repr": "Mobile Phones",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 35,
+        "fields": {
+            "action_time": "2023-09-18T18:35:35.149Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "2",
+            "object_repr": "Phone Cases & Covers",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 36,
+        "fields": {
+            "action_time": "2023-09-18T18:35:48.880Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "3",
+            "object_repr": "Chargers & Cables",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 37,
+        "fields": {
+            "action_time": "2023-09-18T18:36:04.169Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "4",
+            "object_repr": "Headphones & Earbuds",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 38,
+        "fields": {
+            "action_time": "2023-09-18T18:36:22.865Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "5",
+            "object_repr": "Living Room",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 39,
+        "fields": {
+            "action_time": "2023-09-18T18:36:34.787Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "6",
+            "object_repr": "Bedroom",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 40,
+        "fields": {
+            "action_time": "2023-09-18T18:36:42.412Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "7",
+            "object_repr": "Dining Room",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 41,
+        "fields": {
+            "action_time": "2023-09-18T18:36:59.802Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "8",
+            "object_repr": "Wall Art",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 42,
+        "fields": {
+            "action_time": "2023-09-18T18:37:14.453Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "9",
+            "object_repr": "Lighting",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 43,
+        "fields": {
+            "action_time": "2023-09-18T18:37:24.143Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "10",
+            "object_repr": "Rugs & Carpets",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 44,
+        "fields": {
+            "action_time": "2023-09-18T18:37:50.749Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "11",
+            "object_repr": "Treadmills",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 45,
+        "fields": {
+            "action_time": "2023-09-18T18:38:01.795Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "12",
+            "object_repr": "Dumbbells",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 46,
+        "fields": {
+            "action_time": "2023-09-18T18:38:10.532Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "13",
+            "object_repr": "Yoga Mats",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 47,
+        "fields": {
+            "action_time": "2023-09-20T17:29:52.169Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "1",
+            "object_repr": "Thrilling Gaming Headphone",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 48,
+        "fields": {
+            "action_time": "2023-09-20T17:30:20.957Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "2",
+            "object_repr": "Galaxy S20 Ultra",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 49,
+        "fields": {
+            "action_time": "2023-09-20T17:32:24.379Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "3",
+            "object_repr": "Relax With Pleaser in Lounge",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 50,
+        "fields": {
+            "action_time": "2023-09-20T17:34:26.052Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "4",
+            "object_repr": "Air Buds Pro 2.0",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 51,
+        "fields": {
+            "action_time": "2023-09-21T02:21:58.803Z",
+            "user": 1,
+            "content_type": 13,
+            "object_id": "18",
+            "object_repr": "Computer & Accessories",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 52,
+        "fields": {
+            "action_time": "2023-09-21T02:24:47.228Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "1",
+            "object_repr": "Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 53,
+        "fields": {
+            "action_time": "2023-09-21T02:26:47.623Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "2",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 54,
+        "fields": {
+            "action_time": "2023-09-21T02:34:38.647Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "3",
+            "object_repr": "Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 55,
+        "fields": {
+            "action_time": "2023-09-21T06:06:51.981Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "1",
+            "object_repr": "Smartphones & Accessories",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 56,
+        "fields": {
+            "action_time": "2023-09-21T06:07:17.788Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "2",
+            "object_repr": "Home Decor",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 57,
+        "fields": {
+            "action_time": "2023-09-21T06:07:36.954Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "3",
+            "object_repr": "Fashion Accessories",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 58,
+        "fields": {
+            "action_time": "2023-09-21T06:07:52.898Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "4",
+            "object_repr": "Movies & Music",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 59,
+        "fields": {
+            "action_time": "2023-09-21T06:08:06.415Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "5",
+            "object_repr": "Outdoor & Sports Toys",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 60,
+        "fields": {
+            "action_time": "2023-09-21T06:08:17.512Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "6",
+            "object_repr": "Computer & Accessories",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 61,
+        "fields": {
+            "action_time": "2023-09-21T16:46:55.077Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "4",
+            "object_repr": "ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"product image\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 62,
+        "fields": {
+            "action_time": "2023-09-21T16:48:44.391Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "4",
+            "object_repr": "ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out",
+            "action_flag": 2,
+            "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 63,
+        "fields": {
+            "action_time": "2023-09-21T16:52:38.624Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "3",
+            "object_repr": "Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB",
+            "action_flag": 2,
+            "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 64,
+        "fields": {
+            "action_time": "2023-09-21T16:54:14.077Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "2",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 2,
+            "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Skytech Gaming Chronos Mini Gaming PC Desktop \\u2013 Intel Core i3 10100F 3.6 GHz, GTX 1650,\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Skytech Gaming Chronos Mini Gaming PC Desktop \\u2013 Intel Core i3 10100F 3.6 GHz, GTX 1650,\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Skytech Gaming Chronos Mini Gaming PC Desktop \\u2013 Intel Core i3 10100F 3.6 GHz, GTX 1650,\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Skytech Gaming Chronos Mini Gaming PC Desktop \\u2013 Intel Core i3 10100F 3.6 GHz, GTX 1650,\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Skytech Gaming Chronos Mini Gaming PC Desktop \\u2013 Intel Core i3 10100F 3.6 GHz, GTX 1650,\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Skytech Gaming Chronos Mini Gaming PC Desktop \\u2013 Intel Core i3 10100F 3.6 GHz, GTX 1650,\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Skytech Gaming Chronos Mini Gaming PC Desktop \\u2013 Intel Core i3 10100F 3.6 GHz, GTX 1650,\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Skytech Gaming Chronos Mini Gaming PC Desktop \\u2013 Intel Core i3 10100F 3.6 GHz, GTX 1650,\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Skytech Gaming Chronos Mini Gaming PC Desktop \\u2013 Intel Core i3 10100F 3.6 GHz, GTX 1650,\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 65,
+        "fields": {
+            "action_time": "2023-09-21T16:55:23.069Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "1",
+            "object_repr": "Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard",
+            "action_flag": 2,
+            "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard\"}}, {\"added\": {\"name\": \"product aditional information\", \"object\": \"Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 66,
+        "fields": {
+            "action_time": "2023-09-22T03:56:21.301Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "4",
+            "object_repr": "ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 67,
+        "fields": {
+            "action_time": "2023-09-22T04:14:54.833Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "4",
+            "object_repr": "ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Details description\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 68,
+        "fields": {
+            "action_time": "2023-09-22T13:53:41.037Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "2",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 69,
+        "fields": {
+            "action_time": "2023-09-22T13:54:45.948Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "2",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Is staff\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 70,
+        "fields": {
+            "action_time": "2023-09-22T13:56:24.710Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "2",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 71,
+        "fields": {
+            "action_time": "2023-09-22T13:56:25.216Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "2",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 72,
+        "fields": {
+            "action_time": "2023-09-22T14:03:03.285Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "3",
+            "object_repr": "gary@sawrush.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 73,
+        "fields": {
+            "action_time": "2023-09-22T14:17:19.844Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "3",
+            "object_repr": "gary@sawrush.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 74,
+        "fields": {
+            "action_time": "2023-09-22T18:03:07.114Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "2",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 75,
+        "fields": {
+            "action_time": "2023-09-22T18:05:54.336Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Is staff\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 76,
+        "fields": {
+            "action_time": "2023-09-23T06:35:02.647Z",
+            "user": 1,
+            "content_type": 21,
+            "object_id": "1",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 77,
+        "fields": {
+            "action_time": "2023-09-23T06:48:27.182Z",
+            "user": 1,
+            "content_type": 21,
+            "object_id": "4",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 78,
+        "fields": {
+            "action_time": "2023-09-23T06:48:27.599Z",
+            "user": 1,
+            "content_type": 21,
+            "object_id": "3",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 79,
+        "fields": {
+            "action_time": "2023-09-23T06:48:27.738Z",
+            "user": 1,
+            "content_type": 21,
+            "object_id": "2",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 80,
+        "fields": {
+            "action_time": "2023-09-24T17:19:48.342Z",
+            "user": 1,
+            "content_type": 21,
+            "object_id": "17",
+            "object_repr": "Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 81,
+        "fields": {
+            "action_time": "2023-09-28T15:26:30.954Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "3",
+            "object_repr": "farad",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 82,
+        "fields": {
+            "action_time": "2023-09-28T15:26:31.077Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "2",
+            "object_repr": "farad",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 83,
+        "fields": {
+            "action_time": "2023-09-28T15:26:31.204Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "1",
+            "object_repr": "farad",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 84,
+        "fields": {
+            "action_time": "2023-09-28T16:06:47.949Z",
+            "user": 1,
+            "content_type": 24,
+            "object_id": "2",
+            "object_repr": "farad--2--2023-09-28 15:58:00.292505+00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 85,
+        "fields": {
+            "action_time": "2023-09-28T16:06:48.417Z",
+            "user": 1,
+            "content_type": 24,
+            "object_id": "1",
+            "object_repr": "farad--2--2023-09-28 15:58:00.292505+00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 86,
+        "fields": {
+            "action_time": "2023-09-28T16:07:16.615Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "2",
+            "object_repr": "farad--2",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 87,
+        "fields": {
+            "action_time": "2023-09-28T16:07:16.820Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "1",
+            "object_repr": "farad--1",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 88,
+        "fields": {
+            "action_time": "2023-09-29T02:43:49.520Z",
+            "user": 1,
+            "content_type": 25,
+            "object_id": "1",
+            "object_repr": "first cupon code",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 89,
+        "fields": {
+            "action_time": "2023-09-29T11:56:46.066Z",
+            "user": 1,
+            "content_type": 25,
+            "object_id": "1",
+            "object_repr": "first cupon code",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 90,
+        "fields": {
+            "action_time": "2023-09-29T11:57:26.158Z",
+            "user": 1,
+            "content_type": 25,
+            "object_id": "2",
+            "object_repr": "test Cupon One",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 91,
+        "fields": {
+            "action_time": "2023-09-30T03:55:25.992Z",
+            "user": 1,
+            "content_type": 25,
+            "object_id": "3",
+            "object_repr": "Test cupon 20%",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 92,
+        "fields": {
+            "action_time": "2023-09-30T04:06:19.636Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "17",
+            "object_repr": "farad--17",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 93,
+        "fields": {
+            "action_time": "2023-09-30T04:06:20.108Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "16",
+            "object_repr": "farad--16",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 94,
+        "fields": {
+            "action_time": "2023-09-30T04:06:20.236Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "15",
+            "object_repr": "farad--15",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 95,
+        "fields": {
+            "action_time": "2023-09-30T04:06:20.363Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "14",
+            "object_repr": "farad--14",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 96,
+        "fields": {
+            "action_time": "2023-09-30T04:06:20.492Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "13",
+            "object_repr": "farad--13",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 97,
+        "fields": {
+            "action_time": "2023-09-30T04:06:20.631Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "12",
+            "object_repr": "farad--12",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 98,
+        "fields": {
+            "action_time": "2023-09-30T04:06:20.736Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "11",
+            "object_repr": "farad--11",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 99,
+        "fields": {
+            "action_time": "2023-09-30T04:06:20.854Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "10",
+            "object_repr": "farad--10",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 100,
+        "fields": {
+            "action_time": "2023-09-30T04:06:20.982Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "9",
+            "object_repr": "farad--9",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 101,
+        "fields": {
+            "action_time": "2023-09-30T04:06:21.108Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "8",
+            "object_repr": "farad--8",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 102,
+        "fields": {
+            "action_time": "2023-09-30T04:06:21.238Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "7",
+            "object_repr": "farad--7",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 103,
+        "fields": {
+            "action_time": "2023-09-30T04:06:21.364Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "6",
+            "object_repr": "farad--6",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 104,
+        "fields": {
+            "action_time": "2023-09-30T04:06:21.493Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "5",
+            "object_repr": "farad--5",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 105,
+        "fields": {
+            "action_time": "2023-09-30T04:06:21.610Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "4",
+            "object_repr": "farad--4",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 106,
+        "fields": {
+            "action_time": "2023-09-30T04:06:21.739Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "3",
+            "object_repr": "farad--3",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 107,
+        "fields": {
+            "action_time": "2023-09-30T06:49:46.448Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "11",
+            "object_repr": "farad--11",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 108,
+        "fields": {
+            "action_time": "2023-09-30T06:49:46.663Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "10",
+            "object_repr": "farad--10",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 109,
+        "fields": {
+            "action_time": "2023-09-30T06:56:24.236Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "12",
+            "object_repr": "farad--12",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 110,
+        "fields": {
+            "action_time": "2023-09-30T08:22:09.958Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "16",
+            "object_repr": "jahid--16",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 111,
+        "fields": {
+            "action_time": "2023-09-30T08:24:31.837Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "19",
+            "object_repr": "farad--19",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 112,
+        "fields": {
+            "action_time": "2023-10-01T02:08:47.638Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "20",
+            "object_repr": "farad--20--ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 113,
+        "fields": {
+            "action_time": "2023-10-01T02:08:47.877Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "18",
+            "object_repr": "farad--18--ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 114,
+        "fields": {
+            "action_time": "2023-10-01T02:08:48.006Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "17",
+            "object_repr": "jahid--17--Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 115,
+        "fields": {
+            "action_time": "2023-10-01T02:08:48.124Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "15",
+            "object_repr": "jahid--15--Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 116,
+        "fields": {
+            "action_time": "2023-10-01T02:08:48.242Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "14",
+            "object_repr": "farad--14--Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 117,
+        "fields": {
+            "action_time": "2023-10-01T02:08:48.370Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "13",
+            "object_repr": "Ahmod--13--ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 118,
+        "fields": {
+            "action_time": "2023-10-01T17:35:59.528Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "23",
+            "object_repr": "farad--23--Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 119,
+        "fields": {
+            "action_time": "2023-10-01T18:21:21.150Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "21",
+            "object_repr": "farad--21--ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 120,
+        "fields": {
+            "action_time": "2023-10-02T09:28:36.478Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "27",
+            "object_repr": "farad--27--Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Paid\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 121,
+        "fields": {
+            "action_time": "2023-10-03T01:17:53.834Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "36",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 122,
+        "fields": {
+            "action_time": "2023-10-03T01:17:53.980Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "35",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 123,
+        "fields": {
+            "action_time": "2023-10-03T01:52:09.689Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "47",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 124,
+        "fields": {
+            "action_time": "2023-10-11T00:30:38.861Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "3",
+            "object_repr": "Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Stoc\", \"Description\", \"Details description\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 125,
+        "fields": {
+            "action_time": "2023-10-11T00:30:56.341Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "2",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Stoc\", \"Description\", \"Details description\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 126,
+        "fields": {
+            "action_time": "2023-10-11T00:40:01.307Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "2",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Stoc\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 127,
+        "fields": {
+            "action_time": "2023-10-11T00:42:55.449Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "2",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Stoc\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 128,
+        "fields": {
+            "action_time": "2023-10-11T00:44:10.378Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "2",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 129,
+        "fields": {
+            "action_time": "2023-10-11T00:44:20.900Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "2",
+            "object_repr": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Out of stoc\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 130,
+        "fields": {
+            "action_time": "2023-10-11T00:51:48.371Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "69",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 131,
+        "fields": {
+            "action_time": "2023-10-11T00:51:48.513Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "68",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 132,
+        "fields": {
+            "action_time": "2023-10-11T00:51:48.640Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "67",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 133,
+        "fields": {
+            "action_time": "2023-10-11T00:51:48.768Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "66",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 134,
+        "fields": {
+            "action_time": "2023-10-11T00:51:48.886Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "65",
+            "object_repr": "OID000065",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 135,
+        "fields": {
+            "action_time": "2023-10-11T00:51:49.012Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "63",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 136,
+        "fields": {
+            "action_time": "2023-10-11T00:51:49.163Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "62",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 137,
+        "fields": {
+            "action_time": "2023-10-11T00:51:49.268Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "61",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 138,
+        "fields": {
+            "action_time": "2023-10-11T00:51:49.396Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "58",
+            "object_repr": "OID000046",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 139,
+        "fields": {
+            "action_time": "2023-10-11T00:51:49.524Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "57",
+            "object_repr": "OID000029",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 140,
+        "fields": {
+            "action_time": "2023-10-11T00:51:49.652Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "56",
+            "object_repr": "OID000028",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 141,
+        "fields": {
+            "action_time": "2023-10-11T00:51:49.780Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "55",
+            "object_repr": "OID000025",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 142,
+        "fields": {
+            "action_time": "2023-10-11T00:51:49.897Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "54",
+            "object_repr": "OID000049",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 143,
+        "fields": {
+            "action_time": "2023-10-11T00:51:50.025Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "53",
+            "object_repr": "OID000052",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 144,
+        "fields": {
+            "action_time": "2023-10-11T00:51:50.142Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "51",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 145,
+        "fields": {
+            "action_time": "2023-10-11T00:51:50.247Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "50",
+            "object_repr": "OID00None",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 146,
+        "fields": {
+            "action_time": "2023-10-11T11:37:04.628Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "24",
+            "object_repr": "OID000075",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 147,
+        "fields": {
+            "action_time": "2023-10-11T11:37:36.480Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "22",
+            "object_repr": "OID000074",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 148,
+        "fields": {
+            "action_time": "2023-10-11T11:37:36.674Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "21",
+            "object_repr": "OID000074",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 149,
+        "fields": {
+            "action_time": "2023-10-11T11:37:36.790Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "20",
+            "object_repr": "OID000074",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 150,
+        "fields": {
+            "action_time": "2023-10-11T11:37:36.921Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "19",
+            "object_repr": "OID000074",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 151,
+        "fields": {
+            "action_time": "2023-10-11T11:37:37.045Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "18",
+            "object_repr": "OID000074",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 152,
+        "fields": {
+            "action_time": "2023-10-11T11:37:37.163Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "17",
+            "object_repr": "OID000074",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 153,
+        "fields": {
+            "action_time": "2023-10-11T11:37:37.290Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "16",
+            "object_repr": "OID000074",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 154,
+        "fields": {
+            "action_time": "2023-10-11T11:37:37.452Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "15",
+            "object_repr": "OID000073",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 155,
+        "fields": {
+            "action_time": "2023-10-11T11:37:37.568Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "14",
+            "object_repr": "OID000072",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 156,
+        "fields": {
+            "action_time": "2023-10-11T11:37:37.685Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "13",
+            "object_repr": "OID000059",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 157,
+        "fields": {
+            "action_time": "2023-10-11T11:37:37.880Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "12",
+            "object_repr": "OID000071",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 158,
+        "fields": {
+            "action_time": "2023-10-11T11:37:38.128Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "11",
+            "object_repr": "OID000064",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 159,
+        "fields": {
+            "action_time": "2023-10-11T11:37:38.310Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "10",
+            "object_repr": "OID000070",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 160,
+        "fields": {
+            "action_time": "2023-10-11T11:37:38.483Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "9",
+            "object_repr": "OID000060",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 161,
+        "fields": {
+            "action_time": "2023-10-11T11:37:38.698Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "8",
+            "object_repr": "OID000048",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 162,
+        "fields": {
+            "action_time": "2023-10-11T11:37:38.849Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "7",
+            "object_repr": "OID000046",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 163,
+        "fields": {
+            "action_time": "2023-10-11T11:37:39.053Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "6",
+            "object_repr": "OID000029",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 164,
+        "fields": {
+            "action_time": "2023-10-11T11:37:39.225Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "5",
+            "object_repr": "OID000028",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 165,
+        "fields": {
+            "action_time": "2023-10-11T11:37:39.773Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "4",
+            "object_repr": "OID000025",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 166,
+        "fields": {
+            "action_time": "2023-10-11T11:37:39.922Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "3",
+            "object_repr": "OID000049",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 167,
+        "fields": {
+            "action_time": "2023-10-11T11:37:40.062Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "2",
+            "object_repr": "OID000052",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 168,
+        "fields": {
+            "action_time": "2023-10-11T11:37:40.178Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "1",
+            "object_repr": "OID000024",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 169,
+        "fields": {
+            "action_time": "2023-10-11T11:41:03.543Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "25",
+            "object_repr": "OID000075",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 170,
+        "fields": {
+            "action_time": "2023-10-11T13:49:02.776Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "84",
+            "object_repr": "OID000084",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 171,
+        "fields": {
+            "action_time": "2023-10-11T13:49:02.892Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "83",
+            "object_repr": "OID000083",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 172,
+        "fields": {
+            "action_time": "2023-10-11T13:49:03.021Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "82",
+            "object_repr": "OID000081",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 173,
+        "fields": {
+            "action_time": "2023-10-11T13:49:03.148Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "80",
+            "object_repr": "OID000079",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 174,
+        "fields": {
+            "action_time": "2023-10-11T13:49:03.277Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "78",
+            "object_repr": "OID000077",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 175,
+        "fields": {
+            "action_time": "2023-10-11T13:49:03.394Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "76",
+            "object_repr": "OID000076",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 176,
+        "fields": {
+            "action_time": "2023-10-11T13:49:03.512Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "75",
+            "object_repr": "OID000075",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 177,
+        "fields": {
+            "action_time": "2023-10-11T13:49:17.597Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "34",
+            "object_repr": "OID000085",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 178,
+        "fields": {
+            "action_time": "2023-10-11T13:49:17.832Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "33",
+            "object_repr": "OID000084",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 179,
+        "fields": {
+            "action_time": "2023-10-11T13:49:17.950Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "32",
+            "object_repr": "OID000083",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 180,
+        "fields": {
+            "action_time": "2023-10-11T13:49:18.069Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "31",
+            "object_repr": "OID000081",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 181,
+        "fields": {
+            "action_time": "2023-10-11T13:49:18.207Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "30",
+            "object_repr": "OID000079",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 182,
+        "fields": {
+            "action_time": "2023-10-11T13:49:18.335Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "29",
+            "object_repr": "OID000077",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 183,
+        "fields": {
+            "action_time": "2023-10-11T13:49:18.463Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "28",
+            "object_repr": "OID000076",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 184,
+        "fields": {
+            "action_time": "2023-10-11T13:49:18.578Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "27",
+            "object_repr": "OID000075",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 185,
+        "fields": {
+            "action_time": "2023-10-11T13:49:18.695Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "26",
+            "object_repr": "OID000075",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 186,
+        "fields": {
+            "action_time": "2023-10-11T13:49:18.824Z",
+            "user": 1,
+            "content_type": 27,
+            "object_id": "23",
+            "object_repr": "OID000074",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 187,
+        "fields": {
+            "action_time": "2023-10-20T09:43:51.344Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "91",
+            "object_repr": "OID000091",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Paid\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 188,
+        "fields": {
+            "action_time": "2023-10-20T09:44:12.452Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "91",
+            "object_repr": "OID000091",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 189,
+        "fields": {
+            "action_time": "2023-10-20T12:05:53.959Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "91",
+            "object_repr": "OID000091",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 190,
+        "fields": {
+            "action_time": "2023-10-20T13:16:00.281Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "90",
+            "object_repr": "OID000090",
+            "action_flag": 2,
+            "change_message": "[{\"added\": {\"name\": \"placede oder item\", \"object\": \"farad--90--2023-10-14 13:36:57.038714+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 191,
+        "fields": {
+            "action_time": "2023-10-20T13:16:09.150Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "90",
+            "object_repr": "OID000090",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"name\": \"placede oder item\", \"object\": \"farad--90--2023-10-14 13:36:57.038714+00:00\", \"fields\": [\"Quantity\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 192,
+        "fields": {
+            "action_time": "2023-10-20T13:16:34.875Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "90",
+            "object_repr": "OID000090",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"name\": \"placede oder item\", \"object\": \"farad--90--2023-10-14 13:36:57.038714+00:00\", \"fields\": [\"Quantity\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 193,
+        "fields": {
+            "action_time": "2023-10-20T13:23:24.073Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "90",
+            "object_repr": "OID000090",
+            "action_flag": 2,
+            "change_message": "[{\"deleted\": {\"name\": \"placede oder item\", \"object\": \"farad--90--2023-10-14 13:36:57.038714+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 194,
+        "fields": {
+            "action_time": "2023-10-20T13:24:18.962Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "90",
+            "object_repr": "OID000090",
+            "action_flag": 2,
+            "change_message": "[{\"added\": {\"name\": \"placede oder item\", \"object\": \"farad--90--2023-10-14 13:36:57.038714+00:00\"}}, {\"added\": {\"name\": \"placede oder item\", \"object\": \"farad--90--2023-10-14 13:36:57.038714+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 195,
+        "fields": {
+            "action_time": "2023-10-20T13:24:26.678Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "90",
+            "object_repr": "OID000090",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"name\": \"placede oder item\", \"object\": \"farad--90--2023-10-14 13:36:57.038714+00:00\", \"fields\": [\"Quantity\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 196,
+        "fields": {
+            "action_time": "2023-10-20T13:42:03.986Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "1",
+            "object_repr": "Placed Oder Item Permissions",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 197,
+        "fields": {
+            "action_time": "2023-10-20T13:42:38.826Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "2",
+            "object_repr": "Placed Oder Permissions",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 198,
+        "fields": {
+            "action_time": "2023-10-20T13:42:55.321Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 199,
+        "fields": {
+            "action_time": "2023-10-20T13:50:31.872Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "3",
+            "object_repr": "Custom User -- Chane-View",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 200,
+        "fields": {
+            "action_time": "2023-10-20T13:51:18.684Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "4",
+            "object_repr": "Customer Address -- Chane-view",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 201,
+        "fields": {
+            "action_time": "2023-10-20T13:52:01.251Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "5",
+            "object_repr": "Product -- Chnage-View",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 202,
+        "fields": {
+            "action_time": "2023-10-20T13:52:10.989Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 203,
+        "fields": {
+            "action_time": "2023-10-20T14:04:06.707Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "5",
+            "object_repr": "Product -- Permissionss",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 204,
+        "fields": {
+            "action_time": "2023-10-20T14:07:12.775Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "4",
+            "object_repr": "Customer Address permissions",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 205,
+        "fields": {
+            "action_time": "2023-10-20T14:07:50.339Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "3",
+            "object_repr": "Custom User permission",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 206,
+        "fields": {
+            "action_time": "2023-10-20T14:11:03.546Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 207,
+        "fields": {
+            "action_time": "2023-10-21T03:09:48.766Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "95",
+            "object_repr": "OID00None",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"placede oder item\", \"object\": \"Gary--95--2023-10-21 03:09:48.756674+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 208,
+        "fields": {
+            "action_time": "2023-10-21T04:02:45.475Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "95",
+            "object_repr": "OID000095",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 209,
+        "fields": {
+            "action_time": "2023-10-21T10:11:33.039Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "96",
+            "object_repr": "OID000096",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"placede oder item\", \"object\": \"farad--96--2023-10-21 10:11:33.027504+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 210,
+        "fields": {
+            "action_time": "2023-10-21T10:11:50.195Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "97",
+            "object_repr": "OID000097",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"placede oder item\", \"object\": \"Ahmod--97--2023-10-21 10:11:50.186946+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 211,
+        "fields": {
+            "action_time": "2023-10-21T10:13:15.686Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "98",
+            "object_repr": "OID000098",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"placede oder item\", \"object\": \"Gary--98--2023-10-21 10:13:15.675891+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 212,
+        "fields": {
+            "action_time": "2023-10-21T10:16:08.629Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "98",
+            "object_repr": "OID000098",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 213,
+        "fields": {
+            "action_time": "2023-10-21T10:16:14.544Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "97",
+            "object_repr": "OID000097",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 214,
+        "fields": {
+            "action_time": "2023-10-21T10:16:18.869Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "96",
+            "object_repr": "OID000096",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 215,
+        "fields": {
+            "action_time": "2023-10-21T10:16:29.625Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "98",
+            "object_repr": "OID000098",
+            "action_flag": 2,
+            "change_message": "[{\"deleted\": {\"name\": \"placede oder item\", \"object\": \"Gary--98--2023-10-21 10:13:15.675891+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 216,
+        "fields": {
+            "action_time": "2023-10-21T10:16:40.253Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "98",
+            "object_repr": "OID000098",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 217,
+        "fields": {
+            "action_time": "2023-10-21T10:16:46.970Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "97",
+            "object_repr": "OID000097",
+            "action_flag": 2,
+            "change_message": "[{\"deleted\": {\"name\": \"placede oder item\", \"object\": \"Ahmod--97--2023-10-21 10:11:50.186946+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 218,
+        "fields": {
+            "action_time": "2023-10-21T10:16:56.985Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "97",
+            "object_repr": "OID000097",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 219,
+        "fields": {
+            "action_time": "2023-10-21T10:17:10.623Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "99",
+            "object_repr": "OID000099",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"placede oder item\", \"object\": \"Gary--99--2023-10-21 10:17:10.616395+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 220,
+        "fields": {
+            "action_time": "2023-10-22T01:42:24.478Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "99",
+            "object_repr": "OID000099",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 221,
+        "fields": {
+            "action_time": "2023-10-22T01:44:41.095Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "100",
+            "object_repr": "OID000100",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"placede oder item\", \"object\": \"Gary--100--2023-10-22 01:44:41.087631+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 222,
+        "fields": {
+            "action_time": "2023-10-22T01:44:54.173Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "100",
+            "object_repr": "OID000100",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 223,
+        "fields": {
+            "action_time": "2023-10-23T03:43:10.126Z",
+            "user": 1,
+            "content_type": 23,
+            "object_id": "101",
+            "object_repr": "OID000101",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"placede oder item\", \"object\": \"Gary--101--2023-10-23 03:43:10.117385+00:00\"}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 224,
+        "fields": {
+            "action_time": "2023-10-23T11:07:55.966Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 225,
+        "fields": {
+            "action_time": "2023-10-23T11:15:44.602Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 226,
+        "fields": {
+            "action_time": "2023-10-23T11:37:20.110Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "5",
+            "object_repr": "ahmodali@gmail.com",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"Is staff\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 227,
+        "fields": {
+            "action_time": "2023-10-23T13:24:16.370Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "6",
+            "object_repr": "staff@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 228,
+        "fields": {
+            "action_time": "2023-10-23T13:44:15.227Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "8",
+            "object_repr": "staff2@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 229,
+        "fields": {
+            "action_time": "2023-10-23T13:46:35.096Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "9",
+            "object_repr": "gary2@sawrush.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 230,
+        "fields": {
+            "action_time": "2023-10-23T13:57:41.415Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "10",
+            "object_repr": "jon.huk44@yahoo.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 231,
+        "fields": {
+            "action_time": "2023-10-23T14:48:31.533Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "11",
+            "object_repr": "staff3@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 232,
+        "fields": {
+            "action_time": "2023-10-23T14:53:34.706Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "11",
+            "object_repr": "staff3@gmail.com",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 233,
+        "fields": {
+            "action_time": "2023-10-23T14:54:09.174Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "12",
+            "object_repr": "staf4@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 234,
+        "fields": {
+            "action_time": "2023-10-23T14:58:18.828Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "12",
+            "object_repr": "staf4@gmail.com",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 235,
+        "fields": {
+            "action_time": "2023-10-23T14:59:02.196Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "13",
+            "object_repr": "jon.huk44@yahoo.com4",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 236,
+        "fields": {
+            "action_time": "2023-10-23T15:08:07.824Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 237,
+        "fields": {
+            "action_time": "2023-10-23T15:08:45.606Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "jahidali@gmail.com",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 238,
+        "fields": {
+            "action_time": "2023-10-23T15:14:58.112Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "14",
+            "object_repr": "jon.huk445@yahoo.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 239,
+        "fields": {
+            "action_time": "2023-10-23T15:23:48.889Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "15",
+            "object_repr": "jahidali2@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 240,
+        "fields": {
+            "action_time": "2023-10-24T03:22:20.338Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "16",
+            "object_repr": "staff5@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 241,
+        "fields": {
+            "action_time": "2023-10-24T03:29:13.747Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "17",
+            "object_repr": "staff6@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 242,
+        "fields": {
+            "action_time": "2023-10-24T03:38:39.024Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "18",
+            "object_repr": "staff7@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 243,
+        "fields": {
+            "action_time": "2023-10-24T03:51:11.468Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "10",
+            "object_repr": "jon.huk44@yahoo.com",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 244,
+        "fields": {
+            "action_time": "2023-10-24T03:51:11.706Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "13",
+            "object_repr": "jon.huk44@yahoo.com4",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 245,
+        "fields": {
+            "action_time": "2023-10-24T03:51:11.824Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "8",
+            "object_repr": "staff2@gmail.com",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 246,
+        "fields": {
+            "action_time": "2023-10-24T03:51:11.953Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "6",
+            "object_repr": "staff@gmail.com",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 247,
+        "fields": {
+            "action_time": "2023-10-24T03:51:12.091Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "7",
+            "object_repr": "test@gmail.com",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 248,
+        "fields": {
+            "action_time": "2023-10-24T04:45:18.758Z",
+            "user": 1,
+            "content_type": 24,
+            "object_id": "91",
+            "object_repr": "Gary--101--2023-10-23 03:43:10.117385+00:00",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Quantity\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 249,
+        "fields": {
+            "action_time": "2023-10-24T05:06:28.515Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "19",
+            "object_repr": "staff8@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 250,
+        "fields": {
+            "action_time": "2023-10-24T11:09:49.093Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "4",
+            "object_repr": "ZeroWater 22 Cup Ready-Read 5-Stage Water Filter Dispenser, NSF Certified to Reduce Lead and PFOA/PFOS, Instant TDS Read Out",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Stoc\", \"Out of stoc\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 251,
+        "fields": {
+            "action_time": "2023-10-24T11:19:05.023Z",
+            "user": 1,
+            "content_type": 3,
+            "object_id": "6",
+            "object_repr": "industry, cate, sub cate",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 252,
+        "fields": {
+            "action_time": "2023-10-24T11:45:44.452Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "20",
+            "object_repr": "staff9@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 253,
+        "fields": {
+            "action_time": "2023-10-24T11:47:33.765Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "11",
+            "object_repr": "Pets & Pet Supplies",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 254,
+        "fields": {
+            "action_time": "2023-10-24T14:22:41.795Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "21",
+            "object_repr": "staff10@gmail.com",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 4,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 4,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 4,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 4,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 5,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 5,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 5,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 5,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 6,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 6,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 6,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 6,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add slider area",
+            "content_type": 7,
+            "codename": "add_sliderarea"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change slider area",
+            "content_type": 7,
+            "codename": "change_sliderarea"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete slider area",
+            "content_type": 7,
+            "codename": "delete_sliderarea"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view slider area",
+            "content_type": 7,
+            "codename": "view_sliderarea"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add industry",
+            "content_type": 8,
+            "codename": "add_industry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change industry",
+            "content_type": 8,
+            "codename": "change_industry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete industry",
+            "content_type": 8,
+            "codename": "delete_industry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view industry",
+            "content_type": 8,
+            "codename": "view_industry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add categories",
+            "content_type": 9,
+            "codename": "add_categories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change categories",
+            "content_type": 9,
+            "codename": "change_categories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete categories",
+            "content_type": 9,
+            "codename": "delete_categories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view categories",
+            "content_type": 9,
+            "codename": "view_categories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add sub categories",
+            "content_type": 10,
+            "codename": "add_subcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change sub categories",
+            "content_type": 10,
+            "codename": "change_subcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete sub categories",
+            "content_type": 10,
+            "codename": "delete_subcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view sub categories",
+            "content_type": 10,
+            "codename": "view_subcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add sub categories",
+            "content_type": 11,
+            "codename": "add_subcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change sub categories",
+            "content_type": 11,
+            "codename": "change_subcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete sub categories",
+            "content_type": 11,
+            "codename": "delete_subcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view sub categories",
+            "content_type": 11,
+            "codename": "view_subcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add industry",
+            "content_type": 12,
+            "codename": "add_industry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change industry",
+            "content_type": 12,
+            "codename": "change_industry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete industry",
+            "content_type": 12,
+            "codename": "delete_industry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view industry",
+            "content_type": 12,
+            "codename": "view_industry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 49,
+        "fields": {
+            "name": "Can add categories",
+            "content_type": 13,
+            "codename": "add_categories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 50,
+        "fields": {
+            "name": "Can change categories",
+            "content_type": 13,
+            "codename": "change_categories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 51,
+        "fields": {
+            "name": "Can delete categories",
+            "content_type": 13,
+            "codename": "delete_categories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 52,
+        "fields": {
+            "name": "Can view categories",
+            "content_type": 13,
+            "codename": "view_categories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 53,
+        "fields": {
+            "name": "Can add display hot product in categories",
+            "content_type": 14,
+            "codename": "add_displayhotproductincategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 54,
+        "fields": {
+            "name": "Can change display hot product in categories",
+            "content_type": 14,
+            "codename": "change_displayhotproductincategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 55,
+        "fields": {
+            "name": "Can delete display hot product in categories",
+            "content_type": 14,
+            "codename": "delete_displayhotproductincategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 56,
+        "fields": {
+            "name": "Can view display hot product in categories",
+            "content_type": 14,
+            "codename": "view_displayhotproductincategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 57,
+        "fields": {
+            "name": "Can add product",
+            "content_type": 15,
+            "codename": "add_product"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 58,
+        "fields": {
+            "name": "Can change product",
+            "content_type": 15,
+            "codename": "change_product"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 59,
+        "fields": {
+            "name": "Can delete product",
+            "content_type": 15,
+            "codename": "delete_product"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 60,
+        "fields": {
+            "name": "Can view product",
+            "content_type": 15,
+            "codename": "view_product"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 61,
+        "fields": {
+            "name": "Can add popular categories",
+            "content_type": 16,
+            "codename": "add_popularcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 62,
+        "fields": {
+            "name": "Can change popular categories",
+            "content_type": 16,
+            "codename": "change_popularcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 63,
+        "fields": {
+            "name": "Can delete popular categories",
+            "content_type": 16,
+            "codename": "delete_popularcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 64,
+        "fields": {
+            "name": "Can view popular categories",
+            "content_type": 16,
+            "codename": "view_popularcategories"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 65,
+        "fields": {
+            "name": "Can add product image",
+            "content_type": 17,
+            "codename": "add_productimage"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 66,
+        "fields": {
+            "name": "Can change product image",
+            "content_type": 17,
+            "codename": "change_productimage"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 67,
+        "fields": {
+            "name": "Can delete product image",
+            "content_type": 17,
+            "codename": "delete_productimage"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 68,
+        "fields": {
+            "name": "Can view product image",
+            "content_type": 17,
+            "codename": "view_productimage"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 69,
+        "fields": {
+            "name": "Can add product aditional information",
+            "content_type": 18,
+            "codename": "add_productaditionalinformation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 70,
+        "fields": {
+            "name": "Can change product aditional information",
+            "content_type": 18,
+            "codename": "change_productaditionalinformation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 71,
+        "fields": {
+            "name": "Can delete product aditional information",
+            "content_type": 18,
+            "codename": "delete_productaditionalinformation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 72,
+        "fields": {
+            "name": "Can view product aditional information",
+            "content_type": 18,
+            "codename": "view_productaditionalinformation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 73,
+        "fields": {
+            "name": "Can add product details description",
+            "content_type": 19,
+            "codename": "add_productdetailsdescription"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 74,
+        "fields": {
+            "name": "Can change product details description",
+            "content_type": 19,
+            "codename": "change_productdetailsdescription"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 75,
+        "fields": {
+            "name": "Can delete product details description",
+            "content_type": 19,
+            "codename": "delete_productdetailsdescription"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 76,
+        "fields": {
+            "name": "Can view product details description",
+            "content_type": 19,
+            "codename": "view_productdetailsdescription"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 77,
+        "fields": {
+            "name": "Can add custom user",
+            "content_type": 20,
+            "codename": "add_customuser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 78,
+        "fields": {
+            "name": "Can change custom user",
+            "content_type": 20,
+            "codename": "change_customuser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 79,
+        "fields": {
+            "name": "Can delete custom user",
+            "content_type": 20,
+            "codename": "delete_customuser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 80,
+        "fields": {
+            "name": "Can view custom user",
+            "content_type": 20,
+            "codename": "view_customuser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 81,
+        "fields": {
+            "name": "Can add cart",
+            "content_type": 21,
+            "codename": "add_cart"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 82,
+        "fields": {
+            "name": "Can change cart",
+            "content_type": 21,
+            "codename": "change_cart"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 83,
+        "fields": {
+            "name": "Can delete cart",
+            "content_type": 21,
+            "codename": "delete_cart"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 84,
+        "fields": {
+            "name": "Can view cart",
+            "content_type": 21,
+            "codename": "view_cart"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 85,
+        "fields": {
+            "name": "Can add customer address",
+            "content_type": 22,
+            "codename": "add_customeraddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 86,
+        "fields": {
+            "name": "Can change customer address",
+            "content_type": 22,
+            "codename": "change_customeraddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 87,
+        "fields": {
+            "name": "Can delete customer address",
+            "content_type": 22,
+            "codename": "delete_customeraddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 88,
+        "fields": {
+            "name": "Can view customer address",
+            "content_type": 22,
+            "codename": "view_customeraddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 89,
+        "fields": {
+            "name": "Can add placed oder",
+            "content_type": 23,
+            "codename": "add_placedoder"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 90,
+        "fields": {
+            "name": "Can change placed oder",
+            "content_type": 23,
+            "codename": "change_placedoder"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 91,
+        "fields": {
+            "name": "Can delete placed oder",
+            "content_type": 23,
+            "codename": "delete_placedoder"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 92,
+        "fields": {
+            "name": "Can view placed oder",
+            "content_type": 23,
+            "codename": "view_placedoder"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 93,
+        "fields": {
+            "name": "Can add placede oder item",
+            "content_type": 24,
+            "codename": "add_placedeoderitem"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 94,
+        "fields": {
+            "name": "Can change placede oder item",
+            "content_type": 24,
+            "codename": "change_placedeoderitem"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 95,
+        "fields": {
+            "name": "Can delete placede oder item",
+            "content_type": 24,
+            "codename": "delete_placedeoderitem"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 96,
+        "fields": {
+            "name": "Can view placede oder item",
+            "content_type": 24,
+            "codename": "view_placedeoderitem"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 97,
+        "fields": {
+            "name": "Can add cupon code genaration",
+            "content_type": 25,
+            "codename": "add_cuponcodegenaration"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 98,
+        "fields": {
+            "name": "Can change cupon code genaration",
+            "content_type": 25,
+            "codename": "change_cuponcodegenaration"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 99,
+        "fields": {
+            "name": "Can delete cupon code genaration",
+            "content_type": 25,
+            "codename": "delete_cuponcodegenaration"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 100,
+        "fields": {
+            "name": "Can view cupon code genaration",
+            "content_type": 25,
+            "codename": "view_cuponcodegenaration"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 101,
+        "fields": {
+            "name": "Can add completed oder items",
+            "content_type": 26,
+            "codename": "add_completedoderitems"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 102,
+        "fields": {
+            "name": "Can change completed oder items",
+            "content_type": 26,
+            "codename": "change_completedoderitems"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 103,
+        "fields": {
+            "name": "Can delete completed oder items",
+            "content_type": 26,
+            "codename": "delete_completedoderitems"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 104,
+        "fields": {
+            "name": "Can view completed oder items",
+            "content_type": 26,
+            "codename": "view_completedoderitems"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 105,
+        "fields": {
+            "name": "Can add completed oder",
+            "content_type": 27,
+            "codename": "add_completedoder"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 106,
+        "fields": {
+            "name": "Can change completed oder",
+            "content_type": 27,
+            "codename": "change_completedoder"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 107,
+        "fields": {
+            "name": "Can delete completed oder",
+            "content_type": 27,
+            "codename": "delete_completedoder"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 108,
+        "fields": {
+            "name": "Can view completed oder",
+            "content_type": 27,
+            "codename": "view_completedoder"
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 1,
+        "fields": {
+            "name": "Placed Oder Item Permissions",
+            "permissions": [
+                93,
+                94,
+                95,
+                96
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 2,
+        "fields": {
+            "name": "Placed Oder Permissions",
+            "permissions": [
+                89,
+                90,
+                91,
+                92
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 3,
+        "fields": {
+            "name": "Custom User permission",
+            "permissions": [
+                77,
+                78,
+                79,
+                80
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 4,
+        "fields": {
+            "name": "Customer Address permissions",
+            "permissions": [
+                85,
+                86,
+                87,
+                88
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 5,
+        "fields": {
+            "name": "Product -- Permissionss",
+            "permissions": [
+                57,
+                58,
+                59,
+                60
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 6,
+        "fields": {
+            "name": "industry, cate, sub cate",
+            "permissions": [
+                49,
+                50,
+                51,
+                52,
+                45,
+                46,
+                47,
+                48,
+                41,
+                42,
+                43,
+                44
+            ]
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "home",
+            "model": "sliderarea"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "home",
+            "model": "industry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "home",
+            "model": "categories"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "home",
+            "model": "subcategories"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "products",
+            "model": "subcategories"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "products",
+            "model": "industry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 13,
+        "fields": {
+            "app_label": "products",
+            "model": "categories"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 14,
+        "fields": {
+            "app_label": "home",
+            "model": "displayhotproductincategories"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 15,
+        "fields": {
+            "app_label": "products",
+            "model": "product"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 16,
+        "fields": {
+            "app_label": "home",
+            "model": "popularcategories"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 17,
+        "fields": {
+            "app_label": "products",
+            "model": "productimage"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 18,
+        "fields": {
+            "app_label": "products",
+            "model": "productaditionalinformation"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 19,
+        "fields": {
+            "app_label": "products",
+            "model": "productdetailsdescription"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 20,
+        "fields": {
+            "app_label": "accounts",
+            "model": "customuser"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 21,
+        "fields": {
+            "app_label": "products",
+            "model": "cart"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 22,
+        "fields": {
+            "app_label": "products",
+            "model": "customeraddress"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 23,
+        "fields": {
+            "app_label": "products",
+            "model": "placedoder"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 24,
+        "fields": {
+            "app_label": "products",
+            "model": "placedeoderitem"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 25,
+        "fields": {
+            "app_label": "products",
+            "model": "cuponcodegenaration"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 26,
+        "fields": {
+            "app_label": "products",
+            "model": "completedoderitems"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 27,
+        "fields": {
+            "app_label": "products",
+            "model": "completedoder"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "5ns5s3aqrj9ad5639oyqfl2xpyev02ov",
+        "fields": {
+            "session_data": ".eJxVjEEOwiAQRe_C2hAoDBWX7j0DGWZAqgaS0q6Md7dNutDtf-_9twi4LiWsPc1hYnERVpx-t4j0THUH_MB6b5JaXeYpyl2RB-3y1ji9rof7d1Cwl63OmgHUOWfQyWuMRISZaRidM0oZD15ZdplMsgQRQbOiaAZP3o5268TnC_vwOC4:1quNSW:vXw-SOM_8ukuRpHB05hbk-rb-Jl0cQQ28WTi6Rb-RgI",
+            "expire_date": "2023-11-05T01:40:52.510Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "6imwh8wqv77ol0git8zptokv5i11gqvu",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlkY_9aU9DmDZe9ucADZUpxUiLuTSCmgnZn33iKmdSlx7TzHicRVWHH6ZTnhk-su6JHqvUlsdZmnLPdEHrbLoRG_bkf7d1BSL9sajb84NCMFCkg2kD-HgADKjRoNQzLGbcQaVJC1Yg3kkrfEwKBdQPH5AuHfN60:1qjvl4:gM-qClnmz-34FMg-YBwa2BGi1Y_GFq9DgW1OyZt9fW0",
+            "expire_date": "2023-10-07T06:04:50.897Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "8xzykqnu0bd02fwu9mjcbrmebbrose4l",
+        "fields": {
+            "session_data": ".eJxVjMEOgjAQRP-lZ9PAWna7Hr37DWTbbgU1JaFwMv67kHDQwySTeTPzNr2sy9CvVed-TOZiWjan3zBIfGrZSXpIuU82TmWZx2D3ij1otbcp6et6dP8OBqnDts7cYe6QAZkaaoBbDCwePcIm5JhdPoujLpJuLkQg8gopOiUPKubzBdcVN1Y:1qvA5K:3koNpiZ-5BxP-eY2mj0zUNIHd7WpdvpBgQ8bhGcYHQo",
+            "expire_date": "2023-11-07T05:36:10.279Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "dd2jb4g94ynnhxq1jf0lg7d2v97et86o",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlmbxF9Kes5g7a5tHEC2FCcV4u4QKQW0b2beSwTc1hK2npYwR3EWgzj9boT8SHUH8Y711iS3ui4zyV2RB-3y2mJ6Xg7376BgL986jxOAMgl9NJlGg6ApqwyeIjsE1Nl6p8BO6NgmRgeU_ZCsmiIwkxbvD_NcOIo:1qjCjC:sj4QPsRlS4W3jhqiGGGZNK48VuJvkDA-oXtGBmS_Bmg",
+            "expire_date": "2023-10-05T05:59:54.721Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "li6nb20gd77rajaifbp17ifhe9qp7c5i",
+        "fields": {
+            "session_data": ".eJxVjEEOwiAUBe_C2pB-igIu3fcMzeMDUjWQlHZlvLtt0oVu38y8txixLnlcW5zHKYirIHH63Tz4GcsOwgPlXiXXssyTl7siD9rkUEN83Q737yCj5a1OgCECX_iMaF2vE_VIjpVWpKLrNJio6zyILZFym2oMtDXJK-36ID5f6uA3rw:1qlpDJ:qQZUGZf9Fu0Pz_VCSaihZOXbLQOhGek3qo0_mmVY53A",
+            "expire_date": "2023-10-12T11:29:49.944Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "liamt8mr270gt797e87ash17ja64bz95",
+        "fields": {
+            "session_data": "e30:1quv0h:zXL6ZOCxDzcNpJ7NAH_wzAAn5q9K1KMkVlCpXLfxc5k",
+            "expire_date": "2023-11-06T13:30:23.693Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "tc61ddyn4e3r2irko90gqqz1v3gaom6l",
+        "fields": {
+            "session_data": ".eJxVjEEOwiAQRe_C2hAoDBWX7j0DGWZAqgaS0q6Md7dNutDtf-_9twi4LiWsPc1hYnERVpx-t4j0THUH_MB6b5JaXeYpyl2RB-3y1ji9rof7d1Cwl63OmgHUOWfQyWuMRISZaRidM0oZD15ZdplMsgQRQbOiaAZP3o5268TnC_vwOC4:1qtq8L:JF-u0HLIKl-f9qFXk111ZPANrNCg112TKXh9ABW1EbQ",
+            "expire_date": "2023-11-03T14:05:49.266Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "v1h86f871uwf78tg74au0tt97uheqpss",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSE8bGFcuu83kIEZpGogKe3K-O_apAvd3nPOfYmA21rC1nkJM4mLMFqcfseI6cF1J3THemsytbouc5S7Ig_a5dSIn9fD_Tso2Mu39tZR1oicLSUPnJ0xnGEYrUED2lkiUsZ6e-akRo2RIihyOAA49AOL9wceFzhz:1qvIJ3:gPrfuGp1L6_fQhaEk3EV9uJH4OyEYuINtJ9zjDhQbNs",
+            "expire_date": "2023-11-07T14:22:53.984Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "x0p3knwvwz0zfhua45xc3vr8he2p6v9q",
+        "fields": {
+            "session_data": ".eJxVjEEOwiAQRe_C2hAoDBWX7j0DGWZAqgaS0q6Md7dNutDtf-_9twi4LiWsPc1hYnERVpx-t4j0THUH_MB6b5JaXeYpyl2RB-3y1ji9rof7d1Cwl63OmgHUOWfQyWuMRISZaRidM0oZD15ZdplMsgQRQbOiaAZP3o5268TnC_vwOC4:1qu2FC:90OCHC5PhJvUJr9CjldoeAVhPqCc63L4dZ2niwpii2g",
+            "expire_date": "2023-11-04T03:01:42.004Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "z7f7vgyhrunsm9l0gknlvtwgqu4kx4eh",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSE8bGFcuu83kIEZpGogKe3K-O_apAvd3nPOfYmA21rC1nkJM4mLMFqcfseI6cF1J3THemsytbouc5S7Ig_a5dSIn9fD_Tso2Mu39tZR1oicLSUPnJ0xnGEYrUED2lkiUsZ6e-akRo2RIihyOAA49AOL9wceFzhz:1qvr9X:CsfRzOU-fq0AaS-0u2gxmvIhM5sykOwbMLe8ZJgjmCs",
+            "expire_date": "2023-11-09T03:35:23.505Z"
+        }
+    },
+    {
+        "model": "home.sliderarea",
+        "pk": 1,
+        "fields": {
+            "image": "media/02-slide-1.jpg",
+            "title": "Brilliant Lighting Effect",
+            "discount": 30,
+            "product_url": null
+        }
+    },
+    {
+        "model": "home.sliderarea",
+        "pk": 2,
+        "fields": {
+            "image": "media/02-slide-2.jpg",
+            "title": "SAMSUNG GALAXY BUDS",
+            "discount": 20,
+            "product_url": null
+        }
+    },
+    {
+        "model": "home.sliderarea",
+        "pk": 3,
+        "fields": {
+            "image": "media/02-slide-3.jpg",
+            "title": "Red Special Edition",
+            "discount": 40,
+            "product_url": null
+        }
+    },
+    {
+        "model": "home.displayhotproductincategories",
+        "pk": 1,
+        "fields": {
+            "image": "media/banner-10.jpg",
+            "title": "Thrilling Gaming Headphone",
+            "categories": 10,
+            "product_url": "-"
+        }
+    },
+    {
+        "model": "home.displayhotproductincategories",
+        "pk": 2,
+        "fields": {
+            "image": "media/banner-11.jpg",
+            "title": "Galaxy S20 Ultra",
+            "categories": 1,
+            "product_url": "-"
+        }
+    },
+    {
+        "model": "home.displayhotproductincategories",
+        "pk": 3,
+        "fields": {
+            "image": "media/banner-12.jpg",
+            "title": "Relax With Pleaser in Lounge",
+            "categories": 2,
+            "product_url": "-"
+        }
+    },
+    {
+        "model": "home.displayhotproductincategories",
+        "pk": 4,
+        "fields": {
+            "image": "media/banner-13.jpg",
+            "title": "Air Buds Pro 2.0",
+            "categories": 1,
+            "product_url": "-"
+        }
+    },
+    {
+        "model": "home.popularcategories",
+        "pk": 1,
+        "fields": {
+            "image": "media/cat-5_RJgzdfb.jpg",
+            "categories": 1,
+            "created_at": "2023-09-21T06:06:51.979Z"
+        }
+    },
+    {
+        "model": "home.popularcategories",
+        "pk": 2,
+        "fields": {
+            "image": "media/cat-4.jpg",
+            "categories": 3,
+            "created_at": "2023-09-21T06:07:17.787Z"
+        }
+    },
+    {
+        "model": "home.popularcategories",
+        "pk": 3,
+        "fields": {
+            "image": "media/cat-3.jpg",
+            "categories": 12,
+            "created_at": "2023-09-21T06:07:36.946Z"
+        }
+    },
+    {
+        "model": "home.popularcategories",
+        "pk": 4,
+        "fields": {
+            "image": "media/cat-2.jpg",
+            "categories": 10,
+            "created_at": "2023-09-21T06:07:52.897Z"
+        }
+    },
+    {
+        "model": "home.popularcategories",
+        "pk": 5,
+        "fields": {
+            "image": "media/cat-1.jpg",
+            "categories": 9,
+            "created_at": "2023-09-21T06:08:06.414Z"
+        }
+    },
+    {
+        "model": "home.popularcategories",
+        "pk": 6,
+        "fields": {
+            "image": "media/cat-6.jpg",
+            "categories": 18,
+            "created_at": "2023-09-21T06:08:17.511Z"
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$4kuwQRps1CHHHIvi5eXGrJ$6zxISqt6FQCGZ6TaPSenlfFJbHoRecKyPd9voIlBcUM=",
+            "last_login": "2023-10-24T11:25:25.922Z",
+            "is_superuser": true,
+            "email": "farad@gmail.com",
+            "first_name": "farad",
+            "last_name": "alam",
+            "mobile": 1706233445,
+            "date_joined": "2023-09-22T13:51:18.761Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": [
+                93,
+                94,
+                95,
+                89,
+                90,
+                91
+            ]
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 3,
+        "fields": {
+            "password": "gary123",
+            "last_login": null,
+            "is_superuser": true,
+            "email": "gary@sawrush.com",
+            "first_name": "Gary",
+            "last_name": "Withers",
+            "mobile": 7467645679,
+            "date_joined": "2023-09-22T14:02:25Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$UcK0YCYSr070LCN2tgMZNv$XLOz9LG5hg85ISXJfgTb3pf4OO/9dHQjTfygHA9ZLdY=",
+            "last_login": "2023-10-23T14:25:53.973Z",
+            "is_superuser": false,
+            "email": "jahidali@gmail.com",
+            "first_name": "jahid",
+            "last_name": "ali",
+            "mobile": 7467645679,
+            "date_joined": "2023-09-22T18:04:44Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "user_permissions": [
+                77,
+                78,
+                80,
+                85,
+                86,
+                88,
+                93,
+                94,
+                96,
+                89,
+                90,
+                92,
+                57,
+                58,
+                60
+            ]
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$Qtsu1kBOzVbTXoOUFJcY7y$LRvK2wWLh6rUqrdft2JiBQMcKf019HmqynzNkMsy6nQ=",
+            "last_login": "2023-10-23T11:37:37.062Z",
+            "is_superuser": false,
+            "email": "ahmodali@gmail.com",
+            "first_name": "Ahmod",
+            "last_name": "ali",
+            "mobile": 7467645679,
+            "date_joined": "2023-09-22T18:36:50Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 9,
+        "fields": {
+            "password": "faradalam",
+            "last_login": null,
+            "is_superuser": false,
+            "email": "gary2@sawrush.com",
+            "first_name": "Gary",
+            "last_name": "Withers",
+            "mobile": 7467645679,
+            "date_joined": "2023-10-23T13:46:35.092Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 14,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$oH7Mi0eAFYFHGPFOGSFfcB$o6s6suJa4aJimzlzHf+F8KU0eG8zX6RwR6hnA7LbGdg=",
+            "last_login": null,
+            "is_superuser": false,
+            "email": "jon.huk445@yahoo.com",
+            "first_name": "Jon",
+            "last_name": "HUk",
+            "mobile": 7467645679,
+            "date_joined": "2023-10-23T15:14:57.724Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 15,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$maSYsya2gMRsVUfWCicpER$WORVxjnxVgHdR1vAm07n4ZnHYP41+6yaJh1bU0PIlhA=",
+            "last_login": null,
+            "is_superuser": false,
+            "email": "jahidali2@gmail.com",
+            "first_name": "Gary",
+            "last_name": "Withers",
+            "mobile": 1706184282,
+            "date_joined": "2023-10-23T15:23:48.506Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 16,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$ZzqugdCu09b5UN1po1wvJA$r2aAn7dQ7g+OUjPOQV4h77fSpOffBeHMYpDruE1TfQg=",
+            "last_login": null,
+            "is_superuser": false,
+            "email": "staff5@gmail.com",
+            "first_name": "Staff 5",
+            "last_name": "five",
+            "mobile": 7467645679,
+            "date_joined": "2023-10-24T03:22:19.563Z",
+            "is_active": true,
+            "is_staff": false,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 17,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$BC7DZUe2o83MxQDAI07QmY$7fNKM5QMnAkAWBfr8xhWYShv64/l/OsE54g2tJV9+yg=",
+            "last_login": "2023-10-24T03:29:37.988Z",
+            "is_superuser": false,
+            "email": "staff6@gmail.com",
+            "first_name": "staff 6",
+            "last_name": "six",
+            "mobile": 1706184282,
+            "date_joined": "2023-10-24T03:29:13.290Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 18,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$d5FMuk60xFsh9ecO0evfTg$Xc7iI4nlbZ7czp2UWr07JvMQN2NQeetWlNdZ0WqcwjU=",
+            "last_login": "2023-10-24T03:39:08.636Z",
+            "is_superuser": false,
+            "email": "staff7@gmail.com",
+            "first_name": "staff 7",
+            "last_name": "seven",
+            "mobile": 7467645679,
+            "date_joined": "2023-10-24T03:38:38.606Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 19,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$kSzOKn5LKr2JnZNnRCitlC$E/flYOtWzyD3waho9L4Zqu9LsgiSFiAP1NMTYWx29Z8=",
+            "last_login": "2023-10-24T05:36:10.150Z",
+            "is_superuser": false,
+            "email": "staff8@gmail.com",
+            "first_name": "Staf 8",
+            "last_name": "eight",
+            "mobile": 7467645679,
+            "date_joined": "2023-10-24T05:06:28.117Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 20,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$OEIi0cC9Sews1c7GFJQZgD$zmlB6UpgjPXnFpmrm82vZ3Yccp5NHIUTVWjgnX+j+Ww=",
+            "last_login": "2023-10-24T11:46:33.475Z",
+            "is_superuser": false,
+            "email": "staff9@gmail.com",
+            "first_name": "dt9",
+            "last_name": "9",
+            "mobile": 7467645679,
+            "date_joined": "2023-10-24T11:45:43.988Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 21,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$Oa4UjH83bSeyA7V0VZHls9$nTgcQqYmUT+WB84iMbrNEfd1P++o4U8fl7g2XXk1u8E=",
+            "last_login": "2023-10-26T03:35:23.363Z",
+            "is_superuser": true,
+            "email": "staff10@gmail.com",
+            "first_name": "staf 10",
+            "last_name": "ten",
+            "mobile": 7467645679,
+            "date_joined": "2023-10-24T14:22:41.397Z",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 1,
+        "fields": {
+            "name": "Beauty & Fashion",
+            "slug": "beauty-fashion",
+            "created_at": "2023-09-20T13:54:38.571Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 2,
+        "fields": {
+            "name": "Electronics & Gadgets",
+            "slug": "electronics-gadgets",
+            "created_at": "2023-09-20T13:54:38.573Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 3,
+        "fields": {
+            "name": "Home & Furniture",
+            "slug": "home-furniture",
+            "created_at": "2023-09-20T13:54:38.573Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 4,
+        "fields": {
+            "name": "Sports & Fitness",
+            "slug": "sports-fitness",
+            "created_at": "2023-09-20T13:54:38.573Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 5,
+        "fields": {
+            "name": "Health & Wellness",
+            "slug": "health-wellness",
+            "created_at": "2023-09-20T13:54:38.574Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 6,
+        "fields": {
+            "name": "Toys & Games",
+            "slug": "toys-games",
+            "created_at": "2023-09-20T13:54:38.574Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 7,
+        "fields": {
+            "name": "Books & Media",
+            "slug": "books-media",
+            "created_at": "2023-09-20T13:54:38.574Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 8,
+        "fields": {
+            "name": "Jewelry & Accessories",
+            "slug": "jewelry-accessories",
+            "created_at": "2023-09-20T13:54:38.574Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 9,
+        "fields": {
+            "name": "Automotive & Tools",
+            "slug": "automotive-tools",
+            "created_at": "2023-09-20T13:54:38.575Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 10,
+        "fields": {
+            "name": "Food & Groceries",
+            "slug": "food-groceries",
+            "created_at": "2023-09-20T13:54:38.575Z"
+        }
+    },
+    {
+        "model": "products.industry",
+        "pk": 11,
+        "fields": {
+            "name": "Pets & Pet Supplies",
+            "slug": "pets-pet-suppliess",
+            "created_at": "2023-09-20T13:54:38.575Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 1,
+        "fields": {
+            "name": "Smartphones & Accessories",
+            "slug": "smartphones-accessories",
+            "industry": 2,
+            "created_at": "2023-09-20T13:54:38.576Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 2,
+        "fields": {
+            "name": "Furniture",
+            "slug": "furniture",
+            "industry": 3,
+            "created_at": "2023-09-20T13:54:38.576Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 3,
+        "fields": {
+            "name": "Home Decor",
+            "slug": "home-decor",
+            "industry": 3,
+            "created_at": "2023-09-20T13:54:38.577Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 4,
+        "fields": {
+            "name": "Fitness Equipment",
+            "slug": "fitness-equipment",
+            "industry": 4,
+            "created_at": "2023-09-20T13:54:38.577Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 5,
+        "fields": {
+            "name": "Sports Apparel",
+            "slug": "sports-apparel",
+            "industry": 4,
+            "created_at": "2023-09-20T13:54:38.577Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 6,
+        "fields": {
+            "name": "Vitamins & Supplements",
+            "slug": "vitamins-supplements",
+            "industry": 5,
+            "created_at": "2023-09-20T13:54:38.577Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 7,
+        "fields": {
+            "name": "Personal Care",
+            "slug": "personal-care",
+            "industry": 5,
+            "created_at": "2023-09-20T13:54:38.578Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 8,
+        "fields": {
+            "name": "Toys for Kids",
+            "slug": "toys-for-kids",
+            "industry": 6,
+            "created_at": "2023-09-20T13:54:38.578Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 9,
+        "fields": {
+            "name": "Outdoor & Sports Toys",
+            "slug": "outdoor-sports-toys",
+            "industry": 6,
+            "created_at": "2023-09-20T13:54:38.578Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 10,
+        "fields": {
+            "name": "Movies & Music",
+            "slug": "movies-music",
+            "industry": 7,
+            "created_at": "2023-09-20T13:54:38.578Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 11,
+        "fields": {
+            "name": "Books",
+            "slug": "books",
+            "industry": 7,
+            "created_at": "2023-09-20T13:54:38.579Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 12,
+        "fields": {
+            "name": "Fashion Accessories",
+            "slug": "fashion-accessories",
+            "industry": 8,
+            "created_at": "2023-09-20T13:54:38.579Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 13,
+        "fields": {
+            "name": "Fine Jewelry",
+            "slug": "fine-jewelry",
+            "industry": 8,
+            "created_at": "2023-09-20T13:54:38.579Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 14,
+        "fields": {
+            "name": "Auto Parts & Accessories",
+            "slug": "auto-parts-accessories",
+            "industry": 9,
+            "created_at": "2023-09-20T13:54:38.579Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 15,
+        "fields": {
+            "name": "Tools & Equipment",
+            "slug": "tools-equipment",
+            "industry": 9,
+            "created_at": "2023-09-20T13:54:38.580Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 16,
+        "fields": {
+            "name": "Pantry Staples",
+            "slug": "pantry-staples",
+            "industry": 10,
+            "created_at": "2023-09-20T13:54:38.580Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 17,
+        "fields": {
+            "name": "Fresh Produce",
+            "slug": "fresh-produce",
+            "industry": 10,
+            "created_at": "2023-09-20T13:54:38.580Z"
+        }
+    },
+    {
+        "model": "products.categories",
+        "pk": 18,
+        "fields": {
+            "name": "Computer & Accessories",
+            "slug": "computer-accessories",
+            "industry": 2,
+            "created_at": "2023-09-21T02:21:58.800Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 1,
+        "fields": {
+            "name": "Mobile Phones",
+            "slug": "mobile-phones",
+            "categories": 1,
+            "created_at": "2023-09-20T13:54:38.581Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 2,
+        "fields": {
+            "name": "Phone Cases & Covers",
+            "slug": "phone-cases-covers",
+            "categories": 1,
+            "created_at": "2023-09-20T13:54:38.581Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 3,
+        "fields": {
+            "name": "Chargers & Cables",
+            "slug": "chargers-cables",
+            "categories": 1,
+            "created_at": "2023-09-20T13:54:38.582Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 4,
+        "fields": {
+            "name": "Headphones & Earbuds",
+            "slug": "headphones-earbuds",
+            "categories": 1,
+            "created_at": "2023-09-20T13:54:38.582Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 5,
+        "fields": {
+            "name": "Living Room",
+            "slug": "living-room",
+            "categories": 2,
+            "created_at": "2023-09-20T13:54:38.582Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 6,
+        "fields": {
+            "name": "Bedroom",
+            "slug": "bedroom",
+            "categories": 2,
+            "created_at": "2023-09-20T13:54:38.582Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 7,
+        "fields": {
+            "name": "Dining Room",
+            "slug": "dining-room",
+            "categories": 2,
+            "created_at": "2023-09-20T13:54:38.583Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 8,
+        "fields": {
+            "name": "Wall Art",
+            "slug": "wall-art",
+            "categories": 3,
+            "created_at": "2023-09-20T13:54:38.583Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 9,
+        "fields": {
+            "name": "Lighting",
+            "slug": "lighting",
+            "categories": 3,
+            "created_at": "2023-09-20T13:54:38.583Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 10,
+        "fields": {
+            "name": "Rugs & Carpets",
+            "slug": "rugs-carpets",
+            "categories": 3,
+            "created_at": "2023-09-20T13:54:38.583Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 11,
+        "fields": {
+            "name": "Treadmills",
+            "slug": "treadmills",
+            "categories": 4,
+            "created_at": "2023-09-20T13:54:38.584Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 12,
+        "fields": {
+            "name": "Dumbbells",
+            "slug": "dumbbells",
+            "categories": 4,
+            "created_at": "2023-09-20T13:54:38.584Z"
+        }
+    },
+    {
+        "model": "products.subcategories",
+        "pk": 13,
+        "fields": {
+            "name": "Yoga Mats",
+            "slug": "yoga-mats",
+            "categories": 4,
+            "created_at": "2023-09-20T13:54:38.584Z"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "title": "Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard",
+            "slug": "redragon-s101-gaming-keyboard-m601-mouse-rgb-backlit-gaming-keyboard",
+            "regular_price": 100,
+            "stoc": 7,
+            "out_of_stoc": false,
+            "discounted_parcent": 20,
+            "description": "PC GAMING KEYBOARD AND GAMING MOUSE COMBO: Includes Redragon RGB Backlit Computer Gaming Keyboard and RGB",
+            "modle": "S101",
+            "categories": 18,
+            "tag": "keyboard, gaming",
+            "details_description": "1",
+            "created_at": "2023-09-21T02:24:47.179Z"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "title": "Skytech Gaming Chronos Mini Gaming PC Desktop � Intel Core i3 10100F 3.6 GHz, GTX 1650,",
+            "slug": "skytech-gaming-chronos-mini-gaming-pc-desktop-intel-core-i3-10100f-36-ghz-gtx-1650",
+            "regular_price": 699,
+            "stoc": 78,
+            "out_of_stoc": false,
+            "discounted_parcent": 15,
+            "description": "<p>4 x RGB Fans for Maximum Cooling Performance | Skytech Chronos Mini Gaming Case with Front Mesh - Black Edition</p>",
+            "modle": "B09R1V8X6F",
+            "categories": 18,
+            "tag": "pc, gaming",
+            "details_description": "<p>1</p>",
+            "created_at": "2023-09-21T02:26:47.620Z"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "title": "Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB",
+            "slug": "sceptre-curved-24-inch-gaming-monitor-1080p-r1500-98-srgb",
+            "regular_price": 590,
+            "stoc": 80,
+            "out_of_stoc": false,
+            "discounted_parcent": 25,
+            "description": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here,</p>",
+            "modle": "B09R1V8X6F",
+            "categories": 18,
+            "tag": "pc, gaming",
+            "details_description": "<p>1</p>",
+            "created_at": "2023-09-21T02:26:47.620Z"
+        }
+    }
+]

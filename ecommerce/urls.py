@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from AdminPanel.admin import custom_oderManagement_admin_site
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('custom-admin/oderManagement', custom_oderManagement_admin_site.urls),
     path('', include("accounts.urls") ),
     path('', include('products.urls')),
     path('', include('home.urls')),
