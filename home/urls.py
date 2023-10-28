@@ -6,4 +6,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.home, name='home'),
     path('categoris/<int:id>', views.display_categories_post, name='display_categories_post'),
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]

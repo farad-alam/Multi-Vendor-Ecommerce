@@ -34,12 +34,12 @@ class CustomUserAdmin(UserAdmin):
         model = CustomUser
 
     form = RegistrationForm
-    list_display = ('email', 'first_name', 'last_name', 'mobile','password', 'is_active', 'is_staff', 'is_superuser')
+    list_display = ('email', 'first_name', 'last_name', 'mobile','user_role','is_active', 'is_staff', 'is_superuser')
 
     fieldsets = (
-        (None, {'fields': ('email', 'password')}),
-        ('Personal Info', {'fields': ('first_name', 'last_name', 'mobile')}),
-        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        # (None, {'fields': ('email', 'password')}),
+        ('Personal Info', {'fields': ('first_name', 'last_name')}),
+        ('Permissions', {'fields': ( 'user_role','is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
     )
     
     add_fieldsets = (
@@ -48,27 +48,27 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('email', 'password1', 'password2'),
         }),
         ('Personal Info', {'fields': ('first_name', 'last_name', 'mobile')}),
-        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        ('Permissions', {'fields': ('user_role','is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
     )
     ordering = ('email',)
     search_fields = ("first_name", "last_name", "email")
 
-    def save_model(self, request, obj, form, change):
-        obj.save()
-        if change:  # Check if it's an update
-            # Capture the original email and password
-            original_email = obj.email
-            original_password = obj.password  # Ensure you have a mechanism to capture the original password securely
-            print(original_password)
-            # Call the parent class's save_model to handle the rest of the save process
-            super().save_model(request, obj, form, change)
+    # def save_model(self, request, obj, form, change):
+    #     obj.save()
+    #     if change:  # Check if it's an update
+    #         # Capture the original email and password
+    #         original_email = obj.email
+    #         original_password = obj.password  # Ensure you have a mechanism to capture the original password securely
+    #         print(original_password)
+    #         # Call the parent class's save_model to handle the rest of the save process
+    #         super().save_model(request, obj, form, change)
 
-            # Set the email and password back to their original values
-            obj.email = original_email
-            obj.password = original_password  # You may need to use a secure method to reset the password
+    #         # Set the email and password back to their original values
+    #         obj.email = original_email
+    #         obj.password = original_password  # You may need to use a secure method to reset the password
 
-            # Save the object again to ensure that the email and password remain unchanged
-            obj.save()
+    #         # Save the object again to ensure that the email and password remain unchanged
+    #         obj.save()
 
 admin.site.register(CustomUser, CustomUserAdmin)
 

@@ -17,12 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from AdminPanel.admin import custom_oderManagement_admin_site
+from Vendors.admin import vendor_admin_site
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('custom-admin/oderManagement', custom_oderManagement_admin_site.urls),
+    path('custom-admin/', custom_oderManagement_admin_site.urls),
+    path('vendor-dashboard/', vendor_admin_site.urls),
     path('', include("accounts.urls") ),
     path('', include('products.urls')),
     path('', include('home.urls')),
     path('', include('AdminPanel.urls')),
-]
+    path('', include('Vendors.urls')),
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'accounts',
     'products.apps.ProductsConfig',
     'AdminPanel',
+    'Vendors',
     'ckeditor',
 ]
 
