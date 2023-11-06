@@ -52,17 +52,21 @@ class SubCategories(models.Model):
 
 
 class Product(models.Model):
+    from Vendors.models import VendorStore
+
     title = models.CharField(max_length=300)
     slug = models.SlugField(unique=True, blank=True, max_length=250)
     regular_price = models.PositiveIntegerField()
-    stoc = models.PositiveIntegerField(default=10)
+    stoc = models.PositiveIntegerField(default=10, verbose_name="Available in Stock")
     out_of_stoc = models.BooleanField(default=False)
     discounted_parcent = models.PositiveIntegerField()
     description = RichTextField(max_length=2000)
     modle = models.CharField(max_length=50)
     categories = models.ForeignKey(Categories, on_delete=models.DO_NOTHING)
-    tag = models.CharField(max_length=50, help_text="enter your tag coma separated")
-    details_description = RichTextField(max_length=5000)
+    tag = models.CharField(max_length=50, help_text="Enter your tag coma separated")
+    # vendor_stores = models.ForeignKey(VendorStore, on_delete=models.CASCADE)
+    details_description = RichTextField(max_length=5000, 
+        help_text="Details product description display in the bottom of the product Page. It's help buyer to make deceion on your product")
     created_at = models.DateTimeField(auto_now_add=True)
 
     @property

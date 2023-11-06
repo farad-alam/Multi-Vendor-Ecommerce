@@ -1,10 +1,10 @@
 from django.db import models
 from django.utils.text import slugify
-
+from accounts.models import CustomUser
 # Create your models here.
 
 class VendorStore(models.Model):
-    user = models.ForeignKey("accounts.CustomUser", verbose_name=("vendor_user"), on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, verbose_name=("vendor_user"), on_delete=models.CASCADE)
     name = models.CharField(max_length=100, unique=True)
     slug = models.CharField(max_length=115,unique=True, blank=True)
     logo = models.ImageField( upload_to='media/vendoreStore/logo/', height_field=None, width_field=None, max_length=None,blank=True,null=True)

@@ -1,4 +1,3 @@
-from typing import Any
 from django.contrib import admin
 from django.urls.resolvers import URLPattern
 from .models import VendorStore
@@ -48,17 +47,62 @@ class ProductAditonalInformationTabular(admin.TabularInline):
     extra = 0
     
 class ProductModelAdmin(admin.ModelAdmin):
+
+    # def get_queryset(self, request):
+    #     # Override the queryset to filter products by the current user's vendor
+    #     qs = super().get_queryset(request)
+    #     qs = qs.filter(vendor_product__vendor=request.user)
+    #     return qs
     list_display = ('title','formated_stoc','discounted_price','categories','sort_descriptions')
+    list_editable = ('categories',)
+    readonly_fields = ['slug']
+
+    fieldsets = [
+        (
+            'Product Identety', {
+                'fields':['title','slug',]
+            }
+        ),
+        (
+            'Prices & Stoc', {
+            'classes': ('collapse',),
+            'fields':[('regular_price','discounted_parcent','stoc','out_of_stoc')]
+            }
+        ),
+        (
+            'Descriptions',{
+                'classes': ('collapse',),
+                'fields':[('modle','tag','categories'),'description']
+            }
+        ),
+        (
+            'Details Description',{
+                'fields':['details_description']
+            }
+        ),
+        
+    ]
+    
     inlines = (ProductImageTabular,ProductAditonalInformationTabular)
 
     @admin.display(description='Description')
     def sort_descriptions(self,obj):
-        return obj.description.replace('<p>','')[:30]
+        return obj.description.replace('<p>','').replace('</p>','')[:30]
 
     @admin.display(description='Stock Product')
     def formated_stoc(self,obj):
         return format_html('<strong style="color:#008000;">{}</strong>',obj.stoc)
     
+    formated_stoc.short_description = "Available in Stock"
+
+    def save_model(self, request, obj, form, change):
+        if request.user.user_role == '3':
+            obj.save()
+
+        return super().save_model(request, obj, form, change)
+    
 
 vendor_admin_site.register(VendorStore, VebdorStoreModelAdmin)
 vendor_admin_site.register(Product, ProductModelAdmin)
+
+admin.site.register(VendorStore)

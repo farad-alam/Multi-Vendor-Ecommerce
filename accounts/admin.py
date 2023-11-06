@@ -34,7 +34,7 @@ class CustomUserAdmin(UserAdmin):
         model = CustomUser
 
     form = RegistrationForm
-    list_display = ('email', 'first_name', 'last_name', 'mobile','user_role','is_active', 'is_staff', 'is_superuser')
+    list_display = ('email', 'id', 'first_name', 'last_name', 'mobile','user_role','is_active', 'is_staff', 'is_superuser')
 
     fieldsets = (
         # (None, {'fields': ('email', 'password')}),
