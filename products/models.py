@@ -64,7 +64,7 @@ class Product(models.Model):
     modle = models.CharField(max_length=50)
     categories = models.ForeignKey(Categories, on_delete=models.DO_NOTHING)
     tag = models.CharField(max_length=50, help_text="Enter your tag coma separated")
-    # vendor_stores = models.ForeignKey(VendorStore, on_delete=models.CASCADE)
+    vendor_stores = models.ForeignKey(VendorStore, on_delete=models.CASCADE, null=True, blank=True)
     details_description = RichTextField(max_length=5000, 
         help_text="Details product description display in the bottom of the product Page. It's help buyer to make deceion on your product")
     created_at = models.DateTimeField(auto_now_add=True)

@@ -1,4 +1,7 @@
+from typing import Any
 from django.contrib import admin
+from django.db.models.query import QuerySet
+from django.http.request import HttpRequest
 from django.urls.resolvers import URLPattern
 from .models import VendorStore
 from products.models import Product, ProductImage, ProductAditionalInformation
@@ -28,6 +31,11 @@ class VebdorStoreModelAdmin(admin.ModelAdmin):
         ),
     )
 
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        queryset = queryset.filter(user=request.user)
+        return queryset
+
     def save_model(self, request, obj, form, change):
         if VendorStore.objects.filter(user=request.user).__len__ () < 3:
             obj.user = request.user
@@ -47,20 +55,15 @@ class ProductAditonalInformationTabular(admin.TabularInline):
     extra = 0
     
 class ProductModelAdmin(admin.ModelAdmin):
-
-    # def get_queryset(self, request):
-    #     # Override the queryset to filter products by the current user's vendor
-    #     qs = super().get_queryset(request)
-    #     qs = qs.filter(vendor_product__vendor=request.user)
-    #     return qs
-    list_display = ('title','formated_stoc','discounted_price','categories','sort_descriptions')
-    list_editable = ('categories',)
+    
+    list_display = ('title','formated_stoc','discounted_price','categories', 'vendor_stores', 'sort_descriptions')
+    list_editable = ('categories','vendor_stores')
     readonly_fields = ['slug']
 
     fieldsets = [
         (
             'Product Identety', {
-                'fields':['title','slug',]
+                'fields':['title','slug','vendor_stores']
             }
         ),
         (
@@ -85,6 +88,22 @@ class ProductModelAdmin(admin.ModelAdmin):
     
     inlines = (ProductImageTabular,ProductAditonalInformationTabular)
 
+
+    def get_queryset(self, request):
+        # Override the queryset to filter products by the current user's vendor
+        qs = super().get_queryset(request)
+        
+        vendore_store_name = 'admin-store'
+        try:
+            # get the targeted vendor store instance
+            vendor_store = VendorStore.objects.get(name=vendore_store_name)
+        except VendorStore.DoesNotExist:
+            return qs.none()
+        
+        # Filter products by the specified VendorStore
+        qs = qs.filter(vendor_stores=vendor_store)
+        return qs
+    
     @admin.display(description='Description')
     def sort_descriptions(self,obj):
         return obj.description.replace('<p>','').replace('</p>','')[:30]
