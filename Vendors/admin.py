@@ -59,6 +59,8 @@ class ProductModelAdmin(admin.ModelAdmin):
     list_display = ('title','formated_stoc','discounted_price','categories', 'vendor_stores', 'sort_descriptions')
     list_editable = ('categories','vendor_stores')
     readonly_fields = ['slug']
+    list_filter = ('vendor_stores',)
+    # filter_vertical = ('vendor_stores',)
 
     fieldsets = [
         (
@@ -93,15 +95,14 @@ class ProductModelAdmin(admin.ModelAdmin):
         # Override the queryset to filter products by the current user's vendor
         qs = super().get_queryset(request)
         
-        vendore_store_name = 'admin-store'
         try:
-            # get the targeted vendor store instance
-            vendor_store = VendorStore.objects.get(name=vendore_store_name)
+            all_vendor_store = VendorStore.objects.filter(user=request.user)
         except VendorStore.DoesNotExist:
             return qs.none()
         
         # Filter products by the specified VendorStore
-        qs = qs.filter(vendor_stores=vendor_store)
+        qs = qs.filter(vendor_stores__in=all_vendor_store)
+        # qs = qs.filter(vendor_stores=all_vendor_store[1])
         return qs
     
     @admin.display(description='Description')

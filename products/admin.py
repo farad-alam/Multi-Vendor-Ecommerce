@@ -12,7 +12,8 @@ class ProductAditionalInformations(admin.TabularInline):
 
 class ProductAdmin(admin.ModelAdmin):
     inlines = (ProductImages,ProductAditionalInformations)
-    list_display = ['title','categories','regular_price']
+    list_display = ['title','categories','regular_price','vendor_stores']
+    list_editable =['vendor_stores']
 
 class CartModelAdmin(admin.ModelAdmin):
     list_display = ['product','user']
