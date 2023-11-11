@@ -95,30 +95,6 @@ class ProductModelAdmin(admin.ModelAdmin):
     
     inlines = (ProductImageTabular,ProductAditonalInformationTabular)
 
-    # def get_form(self, request, obj=None, **kwargs):
-    #         # Pass the currently logged-in user to the form
-    #         return super().get_form(request, obj, user=request.user, **kwargs)
-
-    # def get_form(self, request, obj=None, **kwargs):
-    #     # Pass the currently logged-in user to the form
-    #     form = super().get_form(request, obj, **kwargs)
-    #     print( 'just kwargs',kwargs)
-    #     form.user = request.user
-    #     return form
-    
-    # def get_queryset(self, request):
-    #     # Override the queryset to filter products by the current user's vendor
-    #     qs = super().get_queryset(request)
-        
-    #     try:
-    #         all_vendor_store = VendorStore.objects.filter(user=request.user)
-    #     except VendorStore.DoesNotExist:
-    #         return qs.none()
-        
-    #     # Filter products by the specified VendorStore
-    #     qs = qs.filter(vendor_stores__in=all_vendor_store)
-    #     # qs = qs.filter(vendor_stores=all_vendor_store[1])
-    #     return qs
 
     def get_form(self, request, obj=None, **kwargs):
         # Pass the currently logged-in user to the form

@@ -15,7 +15,7 @@ def registration_view(request):
         if form.is_valid():
             form.save()
             messages.success(request,'Your account created successfully!!!')
-            return redirect('registration_view')
+            return redirect('user_login')
     else:
         form = RegistrationForm()
     context = {
