@@ -1,8 +1,6 @@
 from typing import Any
 from django.contrib import admin
-from django.db.models.query import QuerySet
-from django.http.request import HttpRequest
-from django.urls.resolvers import URLPattern
+from .adminForms import ProductModelAdminForm
 from .models import VendorStore
 from products.models import Product, ProductImage, ProductAditionalInformation
 from django.contrib import messages
@@ -10,6 +8,8 @@ from django.shortcuts import redirect
 from django.utils.html import format_html
 # Register your models here.
 
+
+# Vendor Admin Site
 class CustomVendorAdminSite(admin.AdminSite):
     site_header = 'MVEC Seller Dashboard'
     site_title = 'Seller Dashboard'
@@ -21,6 +21,8 @@ class CustomVendorAdminSite(admin.AdminSite):
     
 vendor_admin_site = CustomVendorAdminSite(name='custom_vendor_admin_site')
 
+
+# ModelAdmin For VendorStore
 class VebdorStoreModelAdmin(admin.ModelAdmin):
     list_display = ('name', 'user','created_at')
     
@@ -46,6 +48,7 @@ class VebdorStoreModelAdmin(admin.ModelAdmin):
             return redirect('/vendor-dashboard/Vendors/vendorstore/')
 
 
+# TabularInline For Product Model
 class ProductImageTabular(admin.TabularInline):
     model = ProductImage
     extra = 0
@@ -53,9 +56,11 @@ class ProductImageTabular(admin.TabularInline):
 class ProductAditonalInformationTabular(admin.TabularInline):
     model = ProductAditionalInformation
     extra = 0
-    
+
+
+# Modle Admin For Product Model
 class ProductModelAdmin(admin.ModelAdmin):
-    
+    form = ProductModelAdminForm
     list_display = ('title','formated_stoc','discounted_price','categories', 'vendor_stores', 'sort_descriptions')
     list_editable = ('categories','vendor_stores')
     readonly_fields = ['slug']
@@ -90,19 +95,49 @@ class ProductModelAdmin(admin.ModelAdmin):
     
     inlines = (ProductImageTabular,ProductAditonalInformationTabular)
 
+    # def get_form(self, request, obj=None, **kwargs):
+    #         # Pass the currently logged-in user to the form
+    #         return super().get_form(request, obj, user=request.user, **kwargs)
+
+    # def get_form(self, request, obj=None, **kwargs):
+    #     # Pass the currently logged-in user to the form
+    #     form = super().get_form(request, obj, **kwargs)
+    #     print( 'just kwargs',kwargs)
+    #     form.user = request.user
+    #     return form
+    
+    # def get_queryset(self, request):
+    #     # Override the queryset to filter products by the current user's vendor
+    #     qs = super().get_queryset(request)
+        
+    #     try:
+    #         all_vendor_store = VendorStore.objects.filter(user=request.user)
+    #     except VendorStore.DoesNotExist:
+    #         return qs.none()
+        
+    #     # Filter products by the specified VendorStore
+    #     qs = qs.filter(vendor_stores__in=all_vendor_store)
+    #     # qs = qs.filter(vendor_stores=all_vendor_store[1])
+    #     return qs
+
+    def get_form(self, request, obj=None, **kwargs):
+        # Pass the currently logged-in user to the form
+        form = super().get_form(request, obj, **kwargs)
+        form.user = request.user
+        form.request = request
+        return form
 
     def get_queryset(self, request):
         # Override the queryset to filter products by the current user's vendor
         qs = super().get_queryset(request)
         
-        try:
-            all_vendor_store = VendorStore.objects.filter(user=request.user)
-        except VendorStore.DoesNotExist:
-            return qs.none()
+        if request.user.is_authenticated:
+            try:
+                vendor_store = VendorStore.objects.filter(user=request.user)
+                qs = qs.filter(vendor_stores__in=vendor_store)
+            except VendorStore.DoesNotExist:
+                return qs.none()
         
-        # Filter products by the specified VendorStore
-        qs = qs.filter(vendor_stores__in=all_vendor_store)
-        # qs = qs.filter(vendor_stores=all_vendor_store[1])
         return qs
     
     @admin.display(description='Description')

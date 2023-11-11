@@ -10,6 +10,7 @@ class VendorStore(models.Model):
     logo = models.ImageField( upload_to='media/vendoreStore/logo/', height_field=None, width_field=None, max_length=None,blank=True,null=True)
     cover_photo = models.ImageField( upload_to='media/vendoreStore/coverPhoto/', height_field=None, width_field=None, max_length=None,blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
