@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="row">
       <!--Display Trending Product-->
 
@@ -62,6 +62,7 @@
                 >{{product.title | truncatewords:5}}</a
               >
             </h6>
+            <strong>{{product.vendor_stores}}</strong>
             <div class="rating mb-5 mt-10">
               <ul>
                 <li>
@@ -99,23 +100,23 @@
               <span>Avilable Item: {{product.stoc}}</span>
             </div>
           </div>
-          
+
           {% if product.stoc != 0 %}
           <div class="product__add-cart text-center">
-            <a 
+            <a
               href="{% url 'add_to_cart' product.id %}"
               class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100"
             >
               Add to Cart
             </a>
           </div>
-          {% else %}            
+          {% else %}
           <div class="product__add-cart text-center">
-            <p 
+            <p
               class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100"
             >
               Out of Stock
-           </p>
+            </p>
           </div>
           {% endif %}
         </div>
