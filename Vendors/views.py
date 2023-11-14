@@ -3,6 +3,8 @@ from accounts.forms import RegistrationForm
 from django.contrib import messages
 from django.contrib.auth.models import Group
 
+from .models import VendorStore
+from products.models import Product
 # Create your views here.
 
 
@@ -25,5 +27,7 @@ def vendor_registration(request):
             return redirect("/vendor-dashboard/login/")
     else:
         form = RegistrationForm()
-    context = {"form": form}
-    return render(request, "accounts/vendor/vendor_registration.html", context)
+    context = {
+        'form': form
+    }
+    return render(request,'accounts/vendor/vendor_registration.html',context)

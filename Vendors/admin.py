@@ -96,6 +96,39 @@ class ProductModelAdmin(admin.ModelAdmin):
     inlines = (ProductImageTabular,ProductAditonalInformationTabular)
 
 
+    # def get_search_results(self, request, queryset, search_term):
+    #     queryset, use_distinct = super().get_search_results(request, queryset, search_term)
+
+    #     if request.user.is_authenticated:
+    #         vendor_stores = VendorStore.objects.filter(user=request.user)
+    #         queryset |= self.model.objects.filter(vendor_stores__in=vendor_stores)
+
+    #     return queryset, use_distinct
+
+
+    # def get_list_filter(self, request):
+    #     if request.user.is_authenticated:
+    #         return ('vendor_stores',)  # Assuming 'vendor_stores' is the related name in the Product model
+    #     return super().get_list_filter(request)
+
+
+    # def formfield_for_foreignkey(self, db_field, request, **kwargs):
+    #     if db_field.name == "vendor_stores" and request.user.is_authenticated:
+    #         kwargs["queryset"] = VendorStore.objects.filter(user=request.user)
+    #     return super().formfield_for_foreignkey(db_field, request, **kwargs)
+    # def lookups(self, request, model_admin):
+    #     if request.user.is_authenticated:
+    #         vendor_stores = VendorStore.objects.filter(user=request.user)
+    #         return [(store.id, store.name) for store in vendor_stores]
+    #     return []
+
+
+    # def queryset(self, request, queryset):
+    #     if request.user.is_authenticated and 'vendor_stores__name' in request.GET:
+    #         store_id = request.GET['vendor_stores__name']
+    #         return queryset.filter(vendor_stores__id=store_id)
+    #     return queryset
+
     def get_form(self, request, obj=None, **kwargs):
         # Pass the currently logged-in user to the form
         form = super().get_form(request, obj, **kwargs)
