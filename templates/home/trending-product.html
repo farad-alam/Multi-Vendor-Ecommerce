@@ -1,5 +1,9 @@
 {% load static %}
 
+<!--
+Profile code
+-->
+
 <section class="trending-product-area light-bg-s pt-25 pb-15">
   <div class="container custom-conatiner">
     <div class="row">
@@ -62,6 +66,7 @@
                 >{{product.title | truncatewords:5}}</a
               >
             </h6>
+            <strong><a href="{% url 'vendor_store_with_product' product.vendor_stores.id %}">{{product.vendor_stores}}</a></strong>
             <div class="rating mb-5 mt-10">
               <ul>
                 <li>

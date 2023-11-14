@@ -38,3 +38,6 @@ def display_categories_post(request,id):
         'products':products
     }
     return render(request,'categories-post.html',context)
+
+def test_page(request):
+    return render(request,'test.html')

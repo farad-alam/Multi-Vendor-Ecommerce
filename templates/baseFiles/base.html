@@ -44,6 +44,11 @@
     />
     <link rel="stylesheet" href="{% static 'assets/css/default.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    
+    {% block header-style %}
+      
+    {% endblock header-style %}
+      
   </head>
   <body>
     <!--[if lte IE 9]>
