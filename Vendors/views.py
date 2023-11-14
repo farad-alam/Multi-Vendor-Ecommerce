@@ -31,3 +31,14 @@ def vendor_registration(request):
         'form': form
     }
     return render(request,'accounts/vendor/vendor_registration.html',context)
+
+def vendor_store_with_product(request, store_id):
+    vendor_store_obj = VendorStore.objects.get(id=store_id)
+    vendor_store_products = Product.objects.filter(vendor_stores=vendor_store_obj)
+
+
+    context= {
+        'vendor_store_obj':vendor_store_obj,
+        'vendor_store_products':vendor_store_products
+    }
+    return render(request, 'accounts/vendor/vendor_store_with_product.html', context)
