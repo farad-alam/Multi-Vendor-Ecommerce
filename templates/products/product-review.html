@@ -1,0 +1,38 @@
+{% extends "baseFiles/base.html" %}
+{% load static %}
+
+
+{% block header-style %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .checked {
+        color: orange;
+      }
+</style>
+
+{% endblock header-style %}
+    
+
+{% block bodycontent %}
+<h1>Rating test</h1>
+
+<div class="container m-5">
+    <form action="" method="post"> {% csrf_token %}
+
+        <span class="fa fa-star star-for-review" id="1"></span>
+        <span class="fa fa-star star-for-review" id="2"></span>
+        <span class="fa fa-star star-for-review" id="3"></span>
+        <span class="fa fa-star star-for-review" id="4"></span>
+        <span class="fa fa-star star-for-review" id="5"></span>
+
+        <textarea class="form-control" name="customer-review" id="customer-review" cols="15" rows="5"></textarea>
+
+       <p class="btn btn-danger mt-3" type="submit" value="Submit Review" id="submit-review-button">Submit Review</p>
+       
+       
+    </form>
+
+</div>
+
+
+{% endblock bodycontent %}

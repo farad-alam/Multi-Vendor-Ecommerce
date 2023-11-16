@@ -3,30 +3,26 @@
 
 
 {% block header-style %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .checked {
+        color: orange;
+      }
+</style>
 
 {% endblock header-style %}
     
 
 {% block bodycontent %}
 <h1>Rating test</h1>
-<div class="wrapper">
-    <h3>Lorem ipsum dolor sit amet.</h3>
-    <form action="#">
-        <div class="rating">
-            <input type="number" name="rating" hidden>
-            <i class='bx bx-star star' style="--i: 0;"></i>
-            <i class='bx bx-star star' style="--i: 1;"></i>
-            <i class='bx bx-star star' style="--i: 2;"></i>
-            <i class='bx bx-star star' style="--i: 3;"></i>
-            <i class='bx bx-star star' style="--i: 4;"></i>
-        </div>
-        <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
-        <div class="btn-group">
-            <button type="submit" class="btn submit">Submit</button>
-            <button class="btn cancel">Cancel</button>
-        </div>
-    </form>
+<div class="container m-5">
+    <span class="fa fa-star" id="1"></span>
+    <span class="fa fa-star" id="2"></span>
+    <span class="fa fa-star" id="3"></span>
+    <span class="fa fa-star" id="4"></span>
+    <span class="fa fa-star" id="5"></span>
 </div>
+
 
 {% endblock bodycontent %}
     

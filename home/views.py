@@ -40,4 +40,4 @@ def display_categories_post(request,id):
     return render(request,'categories-post.html',context)
 
 def test_page(request):
-    return render(request,'test.html')
+    return render(request,'products/product-review.html')
