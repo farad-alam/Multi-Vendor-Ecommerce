@@ -7,10 +7,10 @@ from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from .models import (Product, Industry, Cart, 
                      CustomerAddress, PlacedOder, 
-                     PlacedeOderItem, CuponCodeGenaration)
+                     PlacedeOderItem, CuponCodeGenaration, ProductStarRatingAndReview)
 from . forms import CustomerAddressForm
 import json
-
+from accounts.models import CustomUser
 
 # Create your views here.
 
@@ -18,8 +18,8 @@ import json
 def product_details(request, slug):
     product = Product.objects.get(slug=slug)
     industry = Industry.objects.all()
-
-    context = {"product": product, "industry": industry}
+    product_reviews = ProductStarRatingAndReview.objects.filter(product=product)
+    context = {"product": product, "industry": industry,'product_reviews':product_reviews}
     return render(request, "products/product-details.html", context)
 
 
@@ -216,6 +216,7 @@ def placed_oder(request):
     }
     return render(request, 'accounts/user/user-profile.html',context)
 
+
 @login_required(login_url="user_login")
 def cupon_apply(request):
     if request.method =='POST':
@@ -234,4 +235,24 @@ def cupon_apply(request):
     return redirect('check_out')
 
 
+def add_product_review_and_rating(request):
+    if request.user.is_authenticated:
+        if request.method == 'POST':
 
+            data = request.body
+            data = json.loads(data)
+            product_id = int(data.get('product_id'))
+            stars = data.get('stars')
+            review_messages = data.get('review_messages')
+
+            # Geting the Product and User obj
+            product_obj = Product.objects.get(id=product_id)
+            user_obj = CustomUser.objects.get(id=request.user.id)
+
+            # Creting New Product Review
+            product_review_instance = ProductStarRatingAndReview(
+                product=product_obj, user=user_obj, stars=stars, review_message=review_messages
+            )
+            product_review_instance.save()
+
+            return JsonResponse({"status":200})

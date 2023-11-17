@@ -1,8 +1,8 @@
-from collections.abc import Iterable
 from django.db import models
 from django.utils.text import slugify
 from ckeditor.fields import RichTextField
-from django.core.validators import MinValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.exceptions import PermissionDenied
 
 # Create your models here.
 
@@ -108,6 +108,29 @@ class ProductAditionalInformation(models.Model):
 
     def __str__(self):
         return self.product.title
+
+class ProductStarRatingAndReview(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
+    stars = models.PositiveIntegerField(
+        validators=[
+            MinValueValidator(1),
+            MaxValueValidator(5)
+        ]
+    )
+    review_message = models.CharField(max_length=1000)
+    review_images = models.ImageField(upload_to=f"product-review-images/", blank=True)
+
+    def __str__(self):
+        # if self.review_message[10]:
+        #     return self.user.email + self.review_message[10]
+        return self.user.email
+    
+    def save(self, *args, **kwargs):
+        if self.user.user_role != '1': # if not Customer 
+            raise PermissionDenied('Only Customer can Add Review')
+        super().save(*args, **kwargs)
+    
 
 
 class CuponCodeGenaration(models.Model):

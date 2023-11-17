@@ -1,6 +1,16 @@
 {% extends "baseFiles/base.html" %}
 {% load static %}
 
+{% block header-style %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .checked {
+        color: orange;
+      }
+</style>
+
+{% endblock header-style %}
+
 
 {% block bodycontent %}
     
@@ -188,8 +198,8 @@
 
                 <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
                     <div class="product__details-review">
-                        <div class="row">
-                            <div class="col-xl-4">
+                        <div class="">
+                            <div class="col-4">
                                 <div class="review-rate">
                                     <h5>5.00</h5>
                                     <div class="review-star">
@@ -202,14 +212,21 @@
                                     <span class="review-count">01 Review</span>
                                 </div>
                             </div>
-                            <div class="col-xl-8">
+                            <div class="">
                                 <div class="review-des-infod">
-                                    <h6>1 review for "<span>Wireless Bluetooth Over-Ear Headphones</span>"</h6>
+                                    <h6>{{product_reviews.count}} review for "<span>{{product.title}}</span>"</h6>
                                     <div class="review-details-des">
+                                        {% comment %} <div class="author-image mr-15">
+                                            <a href="#"><img class="rounded-circle" src="{% static 'assets/img/author/author-sm-1.jpg' %}" alt=""></a>
+                                        </div> {% endcomment %}
+                                    </div>
+
+                                    {% for review in product_reviews %}
+
                                         <div class="author-image mr-15">
-                                            <a href="#"><img src="assets/img/author/author-sm-1.jpg" alt=""></a>
+                                            <a href="#"><img src="{% static 'assets/img/author/author-sm-1.jpg' %}" alt=""></a>
                                         </div>
-                                        <div class="review-details-content">
+                                        <div class="row review-details-content">
                                             <div class="str-info">
                                                 <div class="review-star mr-15">
                                                     <a href="#"><i class="fas fa-star"></i></a>
@@ -218,16 +235,16 @@
                                                     <a href="#"><i class="fas fa-star"></i></a>
                                                     <a href="#"><i class="fas fa-star"></i></a>
                                                 </div>
-                                                <div class="add-review-option">
-                                                    <a href="#">Add Review</a>
-                                                </div>
+
                                             </div>
-                                            <div class="name-date mb-30">
-                                                <h6> admin – <span> May 27, 2021</span></h6>
+                                            <div class="name-date mb-3">
+                                                <h6> {{review.user.first_name}} – <span> May 27, 2021</span></h6>
                                             </div>
-                                            <p>A light chair, easy to move around the dining table and about the room. Duis aute irure dolor in reprehenderit in <br> voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                            <p>{{review.review_message}}</p>
                                         </div>
-                                    </div>
+
+                                    {% endfor %}
+
                                 </div>
                             </div>
                         </div>
@@ -249,38 +266,22 @@
                                        </ul>
                                     </div>
                                     <div class="comment-input-box">
-                                       <form action="#">
-                                          <div class="row">
-                                            <div class="col-xxl-6 col-xl-6">
-                                                <div class="comment-input">
-                                                   <input type="text" placeholder="Your Name">
-                                                </div>
-                                             </div>
-                                             <div class="col-xxl-6 col-xl-6">
-                                                <div class="comment-input">
-                                                   <input type="email" placeholder="Your Email">
-                                                </div>
-                                             </div>
-                                             <div class="col-xxl-12">
-                                                   <textarea placeholder="Your review" class="comment-input comment-textarea"></textarea>
-                                             </div>
-                                             <div class="col-xxl-12">
-                                                <div class="comment-agree d-flex align-items-center mb-25">
-                                                   <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                      <label class="form-check-label" for="flexCheckDefault">
-                                                       Save my name, email, and website in this browser for the next time I comment.
-                                                      </label>
-                                                    </div>
-                                                </div>
-                                             </div>
-                                             <div class="col-xxl-12">
-                                                <div class="comment-submit">
-                                                   <button type="submit" class="cart-btn">Submit</button>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </form>
+
+                                        <form action="" method="post"> {% csrf_token %}
+
+                                            <span class="fa fa-star star-for-review" id="1"></span>
+                                            <span class="fa fa-star star-for-review" id="2"></span>
+                                            <span class="fa fa-star star-for-review" id="3"></span>
+                                            <span class="fa fa-star star-for-review" id="4"></span>
+                                            <span class="fa fa-star star-for-review" id="5"></span>
+                                    
+                                            <textarea class="form-control" name="customer-review" id="customer-review" cols="15" rows="5"></textarea>
+                                            <input type="hidden" name="product-id" id="product-id" value="{{product.id}}">
+                                           <p class="btn btn-danger mt-3" type="submit" value="Submit Review" id="submit-review-button">Submit Review</p>
+                                           
+                                           
+                                        </form>
+
                                     </div>
                                  </div>
                             </div>
