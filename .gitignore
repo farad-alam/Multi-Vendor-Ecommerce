@@ -3,6 +3,7 @@
 media/
 ecommerce/staticfiles/
 
+ecommerce\tasks.txt
 # IDE/Editor specific
 .vscode/
 .idea/

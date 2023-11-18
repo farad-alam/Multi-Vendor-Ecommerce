@@ -3,7 +3,7 @@ from django.utils.text import slugify
 from ckeditor.fields import RichTextField
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.core.exceptions import PermissionDenied
-
+import time
 # Create your models here.
 
 
@@ -120,6 +120,7 @@ class ProductStarRatingAndReview(models.Model):
     )
     review_message = models.CharField(max_length=1000)
     review_images = models.ImageField(upload_to=f"product-review-images/", blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         # if self.review_message[10]:

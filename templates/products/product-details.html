@@ -163,7 +163,7 @@
                                 <button class="nav-link" id="aditional-tab" data-bs-toggle="tab" data-bs-target="#aditional" type="button" role="tab" aria-controls="aditional" aria-selected="false">Additional information</button>
                               </li>
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="false">Reviews (1) </button>
+                              <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="false">Reviews ({{product_reviews.count}}) </button>
                             </li>
                           </ul>
                     </div>
@@ -209,7 +209,7 @@
                                         <a href="#"><i class="fas fa-star"></i></a>
                                         <a href="#"><i class="fas fa-star"></i></a>
                                     </div>
-                                    <span class="review-count">01 Review</span>
+                                    <span class="review-count">{{product_reviews.count}} Review</span>
                                 </div>
                             </div>
                             <div class="">
@@ -223,7 +223,7 @@
 
                                     {% for review in product_reviews %}
 
-                                        <div class="author-image mr-15">
+                                        <div class="author-image mr-15 mt-3">
                                             <a href="#"><img src="{% static 'assets/img/author/author-sm-1.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="row review-details-content">
@@ -237,8 +237,8 @@
                                                 </div>
 
                                             </div>
-                                            <div class="name-date mb-3">
-                                                <h6> {{review.user.first_name}} – <span> May 27, 2021</span></h6>
+                                            <div class="name-date ">
+                                                <h6> {{review.user.first_name}} – <span>{{review.created_at}}</span></h6>
                                             </div>
                                             <p>{{review.review_message}}</p>
                                         </div>
@@ -250,13 +250,14 @@
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
-                                <div class="product__details-comment ">
+                                <div class="product__details-comment mt-5">
+                                    <hr>
                                     <div class="comment-title mb-20">
                                        <h3>Add a review</h3>
-                                       <p>Your email address will not be published. Required fields are marked *</p>
+                                       {% comment %} <p>Your email address will not be published. Required fields are marked *</p> {% endcomment %}
                                     </div>
                                     <div class="comment-rating mb-20">
-                                       <span>Overall ratings</span>
+                                       {% comment %} <span>Overall ratings</span> {% endcomment %}
                                        <ul>
                                           <li><a href="#"><i class="fas fa-star"></i></a></li>
                                           <li><a href="#"><i class="fas fa-star"></i></a></li>
@@ -268,14 +269,14 @@
                                     <div class="comment-input-box">
 
                                         <form action="" method="post"> {% csrf_token %}
-
-                                            <span class="fa fa-star star-for-review" id="1"></span>
-                                            <span class="fa fa-star star-for-review" id="2"></span>
-                                            <span class="fa fa-star star-for-review" id="3"></span>
-                                            <span class="fa fa-star star-for-review" id="4"></span>
-                                            <span class="fa fa-star star-for-review" id="5"></span>
+                                            <p class="h6">Give your Star Rating:</p>
+                                            <span class="fa fa-star fa-2x star-for-review" id="1"></span>
+                                            <span class="fa fa-star fa-2x star-for-review" id="2"></span>
+                                            <span class="fa fa-star fa-2x star-for-review" id="3"></span>
+                                            <span class="fa fa-star fa-2x star-for-review" id="4"></span>
+                                            <span class="fa fa-star fa-2x star-for-review" id="5"></span>
                                     
-                                            <textarea class="form-control" name="customer-review" id="customer-review" cols="15" rows="5"></textarea>
+                                            <textarea class="form-control mt-2" placeholder="Your Feedback Here......" name="customer-review" id="customer-review" cols="15" rows="5"></textarea>
                                             <input type="hidden" name="product-id" id="product-id" value="{{product.id}}">
                                            <p class="btn btn-danger mt-3" type="submit" value="Submit Review" id="submit-review-button">Submit Review</p>
                                            

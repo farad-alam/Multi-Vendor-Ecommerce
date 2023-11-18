@@ -1,0 +1,3 @@
+
+login validation in customer log in:
+-- only customer can login, no vendor or editor

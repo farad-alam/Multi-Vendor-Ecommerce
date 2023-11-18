@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.db.models import Q
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
@@ -236,7 +236,7 @@ def cupon_apply(request):
 
 
 def add_product_review_and_rating(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated and request.user.user_role == '1':
         if request.method == 'POST':
 
             data = request.body
@@ -248,11 +248,18 @@ def add_product_review_and_rating(request):
             # Geting the Product and User obj
             product_obj = Product.objects.get(id=product_id)
             user_obj = CustomUser.objects.get(id=request.user.id)
+            if user_obj.user_role == '1':                   
+                # Creting New Product Review
+                product_review_instance = ProductStarRatingAndReview(
+                    product=product_obj, user=user_obj, stars=stars, review_message=review_messages
+                )
+                product_review_instance.save()
 
-            # Creting New Product Review
-            product_review_instance = ProductStarRatingAndReview(
-                product=product_obj, user=user_obj, stars=stars, review_message=review_messages
-            )
-            product_review_instance.save()
-
-            return JsonResponse({"status":200})
+                return JsonResponse({"status":200})
+    else:
+        messages.info(request,f"{request.user.first_name} is not a customer!!!")
+        # print(request.META)
+        current_page_url = request.META.get('HTTP_REFERER')
+        print(current_page_url)
+        # return product_details(request,current_page_url)
+        return redirect('/')

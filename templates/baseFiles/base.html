@@ -5,13 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>
-      
-      {% block pagetitle %}
-        
-      {% endblock pagetitle %}
-        
-    </title>
+    <title>{% block pagetitle %} {% endblock pagetitle %}</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Place favicon.ico in the root directory -->
@@ -44,11 +38,8 @@
     />
     <link rel="stylesheet" href="{% static 'assets/css/default.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
-    
-    {% block header-style %}
-      
-    {% endblock header-style %}
-      
+
+    {% block header-style %} {% endblock header-style %}
   </head>
   <body>
     <!--[if lte IE 9]>
@@ -246,7 +237,9 @@
                   <div class="ovic-menu-wrapper">
                     <ul>
                       <li><a href="about.html">About Us</a></li>
-                      <li><a href="{% url 'user_dashboard' %}">Order Tracking</a></li>
+                      <li>
+                        <a href="{% url 'user_dashboard' %}">Order Tracking</a>
+                      </li>
                       <li><a href="contact.html">Contact Us</a></li>
                       <li><a href="faq.html">FAQs</a></li>
                     </ul>
@@ -264,14 +257,15 @@
               <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
                 <div class="header__info">
                   <div class="logo">
-                    <a href="{% url 'home' %}" class="logo-image"
-                      >
-                      {% comment %} <img
+                    <a href="{% url 'home' %}" class="logo-image">
+                      {% comment %}
+                      <img
                         src="{% static 'assets/img/logo/sit-logo.png' %}"
                         alt="logo"
-                    /> {% endcomment %}
-                    <h4 class='text-white fw-bold'>MultiVendorEshop</h4>
-                  </a>
+                      />
+                      {% endcomment %}
+                      <h4 class="text-white fw-bold">MultiVendorEshop</h4>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -291,11 +285,10 @@
                     <div class="header__search-cat">
                       <select>
                         <option>All Categories</option>
-                        
+
                         {% for name in industry %}
                         <option value="{{name}}">{{name}}</option>
-                        {% endfor %}                         
-                        
+                        {% endfor %}
                       </select>
                     </div>
                   </form>
@@ -332,14 +325,18 @@
                               <span>({{carts.count}} Item in Cart)</span>
                             </div>
                           </li>
-                          
+
                           {% for item in carts %}
 
                           <li>
-                            <div class="cart__item d-flex justify-content-between align-items-center">
+                            <div
+                              class="cart__item d-flex justify-content-between align-items-center"
+                            >
                               <div class="cart__inner d-flex">
                                 <div class="cart__thumb">
-                                  <a href="{% url 'product_details' item.product.slug %}">
+                                  <a
+                                    href="{% url 'product_details' item.product.slug %}"
+                                  >
                                     <img
                                       src="{{item.product.productimage_set.first.image}}"
                                       alt=""
@@ -348,8 +345,10 @@
                                 </div>
                                 <div class="cart__details">
                                   <h6>
-                                    <a href="{% url 'product_details' item.product.slug %}">
-                                     {{item.product.title}}
+                                    <a
+                                      href="{% url 'product_details' item.product.slug %}"
+                                    >
+                                      {{item.product.title}}
                                     </a>
                                   </h6>
                                   <div class="cart__price">
@@ -368,13 +367,16 @@
                               class="cart__sub d-flex justify-content-between align-items-center"
                             >
                               <h6>Subtotal</h6>
-                              <span class="cart__sub-total">${{sub_total}}</span>
+                              <span class="cart__sub-total"
+                                >${{sub_total}}</span
+                              >
                             </div>
                           </li>
-                          
 
                           <li>
-                            <a href="{% url 'show_cart' %}" class="wc-cart mb-10"
+                            <a
+                              href="{% url 'show_cart' %}"
+                              class="wc-cart mb-10"
                               >View cart</a
                             >
                             <a href="{% url 'check_out' %}" class="wc-checkout"
@@ -385,9 +387,9 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   {% else %}
-                    
+
                   <div class="block-userlink">
                     <a class="icon-link" href="{% url 'user_login' %}">
                       <i class="flaticon-user"></i>
@@ -399,7 +401,6 @@
                   </div>
 
                   {% endif %}
-                  
                 </div>
               </div>
             </div>
@@ -418,36 +419,31 @@
                   <div class="cat__menu">
                     <nav id="mobile-menu" style="display: block">
                       <ul>
-                     {% for i in industry %}
+                        {% for i in industry %}
 
                         <li>
                           <a href=""
-                            >{{i.name}}
-                            <i class="far fa-angle-down"></i
+                            >{{i.name}} <i class="far fa-angle-down"></i
                           ></a>
                           <ul class="mega-menu mega-menu-2">
                             <li>
-                                
-                                {% for categories in i.categories_set.all %}
-                                    <a href="{% url 'display_categories_post' categories.id %}">{{categories.name}}</a>
-                                    <ul class="mega-item">
-                                        
-                                        {% for subcate in categories.subcategories_set.all %}
-                                            <li>
-                                             <a href="#"
-                                                >{{subcate.name}}</a>
-                                            </li>
-                                        {% endfor %}
-
-                                    </ul>
-
+                              {% for categories in i.categories_set.all %}
+                              <a
+                                href="{% url 'display_categories_post' categories.id %}"
+                                >{{categories.name}}</a
+                              >
+                              <ul class="mega-item">
+                                {% for subcate in categories.subcategories_set.all %}
+                                <li>
+                                  <a href="#">{{subcate.name}}</a>
+                                </li>
                                 {% endfor %}
+                              </ul>
 
-
-
-                            </li>  
+                              {% endfor %}
+                            </li>
                           </ul>
-                        </li> 
+                        </li>
 
                         {% endfor %}
                       </ul>
@@ -661,9 +657,7 @@
                             </li>
                             <li
                               class="mega-image hover-effect"
-                              style="
-                                background-image: url({% static 'assets/img/bg/menu-item.jpg' %});
-                              "
+                              style="background-image: url({% static 'assets/img/bg/menu-item.jpg' %});"
                             >
                               <ul>
                                 <li>
@@ -795,7 +789,11 @@
                       <div class="footer__widget-content">
                         <div class="footer__link">
                           <ul>
-                            <li><a href="{% url 'vendor_registration' %}">Become a Seller</a></li>
+                            <li>
+                              <a href="{% url 'vendor_registration' %}"
+                                >Become a Seller</a
+                              >
+                            </li>
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Report Abuse</a></li>
                             <li><a href="#">Submit a Dispute</a></li>
@@ -843,7 +841,11 @@
                                 <ul>
                                   <li><a href="#">Store Location</a></li>
                                   <li><a href="#">My account</a></li>
-                                  <li><a href="{% url 'user_dashboard' %}">Order Tracking</a></li>
+                                  <li>
+                                    <a href="{% url 'user_dashboard' %}"
+                                      >Order Tracking</a
+                                    >
+                                  </li>
                                   <li><a href="#">FAQs</a></li>
                                 </ul>
                               </div>
@@ -974,7 +976,8 @@
     <script src="{% static 'assets/js/imagesloaded-pkgd.js' %}"></script>
     <script src="{% static 'assets/js/ajax-form.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
-    <script src="{% static 'cart/cart.js' %}"></script>
+    <script src="{% static 'customjs/cart.js' %}"></script>
+    <script src="{% static 'customjs/product-rating-review.js' %}"></script>
   </body>
 
   <!-- Mirrored from themepure.net/template/dukamarket/dukamarket/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Feb 2022 17:22:33 GMT -->
