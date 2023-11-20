@@ -7,6 +7,19 @@
     .checked {
         color: orange;
       }
+      .notification {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #4CAF50; /* Green */
+        color: white;
+        border-radius: 5px;
+        z-index: 9999;
+    }
+    
 </style>
 
 {% endblock header-style %}
@@ -231,7 +244,7 @@
                                                 
                                                 <div class="str-info" >
                                                     <input type="hidden" name="review-id">
-                                                    
+
                                                     <div class="review-star mr-15" id="str-info-{{review.id}}">
 
                                                         {% comment %} <a href="#"><i class="fa fa-star"></i></a> {% endcomment %}
@@ -277,6 +290,9 @@
                                           <li><a href="#"><i class="fas fa-star"></i></a></li>
                                        </ul>
                                     </div>
+
+                                    <div class="notification"></div>
+
                                     <div class="comment-input-box">
 
                                         <form action="" method="post"> {% csrf_token %}

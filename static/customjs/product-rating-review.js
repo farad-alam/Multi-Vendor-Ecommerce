@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const allReviewStars = document.querySelectorAll('.stars-number'); // Fetch the number of stars from Django template
 
     allReviewStars.forEach(reviewStars => {
-        console.log('all star review foreach')
-        console.log(reviewStars.value.split("-"))
+        // console.log('all star review foreach')
+        // console.log(reviewStars.value.split("-"))
         const reviewStarsNumber = reviewStars.value.split("-")[0]
         const reviewStarsId = reviewStars.value.split("-")[1]
 
@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
  } );
 
  
- 
+
+ // GETING STAR from user
+
  // Js Script for Product review
 
  const stars = document.querySelectorAll('.star-for-review');
@@ -76,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
  });
  
 
+// GETING REVIEW AND SAVE TO DATA BASE
 
 // getting the submit button and CLICK event
 const submitButton = document.getElementById('submit-review-button')
@@ -83,17 +86,32 @@ const submitButton = document.getElementById('submit-review-button')
 
 submitButton.addEventListener('click', function() {
     var productReviewText = document.getElementById('customer-review').value;
-    // console.log('submit click')
-    // console.log(productReviewText)
     var csrf_token = document.getElementsByName('csrfmiddlewaretoken')
     var productId = document.getElementById('product-id').value;
-    // console.log(productId)
     var xhr = new XMLHttpRequest()
 
     xhr.onload = function (){
-        var response = xhr.responseText;
+        // var response = xhr.responseText;
         // console.log(response)
+
+        // Empty the text area
+        document.getElementById('customer-review').value = '';
+
+        // Remove selecting star after submiting the review
+        stars.forEach(star => {
+            star.classList.remove('checked');           
+            });
+
+        // Display a notification for 3 seconds after submission
+        var notification = document.querySelector('.notification');
+        notification.textContent = 'Your review was submitted';
+        notification.style.display = 'block';
+
+        setTimeout(function() {
+            notification.style.display = 'none';
+        }, 4000);
     }
+    
     xhr.open(
         'POST',
         '/add-product-review/',
