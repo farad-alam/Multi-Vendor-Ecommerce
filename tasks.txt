@@ -1,3 +1,7 @@
 
 login validation in customer log in:
 -- only customer can login, no vendor or editor
+
+
+-isplay Star Rating those are user gives
+-Calculate Avarae review of Product review:

@@ -196,7 +196,7 @@
                      </div>
                 </div>
 
-                <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                <div class="tab-pane fade"  id="review" role="tabpanel" aria-labelledby="review-tab">
                     <div class="product__details-review">
                         <div class="">
                             <div class="col-4">
@@ -227,16 +227,27 @@
                                             <a href="#"><img src="{% static 'assets/img/author/author-sm-1.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="row review-details-content">
-                                            <div class="str-info">
-                                                <div class="review-star mr-15">
-                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                </div>
+                                            <input type="hidden" name="stars-number" class="stars-number" id="stars-number" value="{{review.stars}}-{{review.id}}">
+                                                
+                                                <div class="str-info" >
+                                                    <input type="hidden" name="review-id">
+                                                    
+                                                    <div class="review-star mr-15" id="str-info-{{review.id}}">
 
-                                            </div>
+                                                        {% comment %} <a href="#"><i class="fa fa-star"></i></a> {% endcomment %}
+                                                        {% comment %} <a href="#"><i class="fas fa-star"></i></a>
+                                                        <span class="fas fa-star fa-2x" id="1"></span>
+                                                        <span class="fas fa-star" ></span> {% endcomment %}
+                                                        
+                                                        {% comment %} <a href="#"><i class="fas fa-star"></i></a>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                        <a href="#"><i class="fas fa-star"></i></a> {% endcomment %}
+                                                    </div>
+
+                                                </div>
+                                           
+ 
                                             <div class="name-date ">
                                                 <h6> {{review.user.first_name}} – <span>{{review.created_at}}</span></h6>
                                             </div>

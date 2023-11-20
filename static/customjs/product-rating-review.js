@@ -1,4 +1,42 @@
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const allReviewStars = document.querySelectorAll('.stars-number'); // Fetch the number of stars from Django template
+
+    allReviewStars.forEach(reviewStars => {
+        console.log('all star review foreach')
+        console.log(reviewStars.value.split("-"))
+        const reviewStarsNumber = reviewStars.value.split("-")[0]
+        const reviewStarsId = reviewStars.value.split("-")[1]
+
+        // Add stars based on reviewStarsNumber
+        for (let i = 0; i < reviewStarsNumber; i++) {
+            var starsContainer = document.getElementById('str-info-'+reviewStarsId)
+            const star = document.createElement('a');
+            star.href = '#';
+            star.innerHTML = '<i class="fas fa-star"></i>';
+            starsContainer.appendChild(star);
+        }
+
+        // Calculate the number of additional stars needed to reach a total of 5
+        const additionalStars = 5 - reviewStarsNumber;
+
+        // Add additional stars if needed
+        for (let i = 0; i < additionalStars; i++) {
+        var starsContainer = document.getElementById('str-info-'+reviewStarsId)
+        const star = document.createElement('span');
+        // star.href = '#';
+        // star.innerHTML = '<span class="fa fa-star" ></span>';
+        star.classList.add('fa', 'fa-star')
+        starsContainer.appendChild(star);
+        }
+
+    });
+
+ } );
+
+ 
+ 
  // Js Script for Product review
 
  const stars = document.querySelectorAll('.star-for-review');
@@ -14,7 +52,8 @@
      });
  
      star.addEventListener('mouseout', function() {
-         if (starId !== starSelectedValue) {
+          const starId = parseInt(star.id);
+         if (starId !== starSelectedValue ) {
              stars.forEach(s => {
                  s.classList.remove('checked');
              });
