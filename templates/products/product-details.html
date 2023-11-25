@@ -37,8 +37,8 @@
                     <div class="breadcrumb__wrapper">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                              <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                              {% comment %} <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Shop</li> {% endcomment %}
                             </ol>
                           </nav>
                     </div>
@@ -94,6 +94,7 @@
                 <div class="col-xl-6">
                     <div class="product__details-content">
                         <h6>{{product.title}}</h6>
+                        
                         <div class="pd-rating mb-10">
                             <ul class="rating">
                                 <li><a href="#"><i class="fal fa-star"></i></a></li>
@@ -102,7 +103,7 @@
                                 <li><a href="#"><i class="fal fa-star"></i></a></li>
                                 <li><a href="#"><i class="fal fa-star"></i></a></li>
                             </ul>
-                            <span>(01 review)</span>
+                            <span>({{product_reviews.count}})</span>
                             <span><a href="#">Add your review</a></span>
                         </div>
                         <div class="price mb-10">
@@ -214,7 +215,8 @@
                         <div class="">
                             <div class="col-4">
                                 <div class="review-rate">
-                                    <h5>5.00</h5>
+                                    <p class="h5" >Avarage Review:</p>
+                                    <h5>{{product.avarage_review.avarage|floatformat:'1'}}</h5>
                                     <div class="review-star">
                                         <a href="#"><i class="fas fa-star"></i></a>
                                         <a href="#"><i class="fas fa-star"></i></a>

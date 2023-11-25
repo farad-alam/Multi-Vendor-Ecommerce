@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Avg
 from django.utils.text import slugify
 from ckeditor.fields import RichTextField
 from django.core.validators import MinValueValidator, MaxValueValidator
@@ -76,7 +77,19 @@ class Product(models.Model):
         )
         # format(price, ".2f")
         return price
+    
+    @property
+    def avarage_review(self):
+        all_reviews = ProductStarRatingAndReview.objects.filter(product=self.id).aggregate(avarage=Avg('stars'))
+        print(all_reviews)
+        return all_reviews
+    
 
+    @property
+    def total_review_of_product(self):
+        total_reviews = ProductStarRatingAndReview.objects.filter(product=self.id)
+        return total_reviews
+    
     def save(self, *args, **kwargs):
         if not self.slug:
             base_slug = slugify(self.title)
@@ -127,6 +140,8 @@ class ProductStarRatingAndReview(models.Model):
         #     return self.user.email + self.review_message[10]
         return self.user.email
     
+
+
     def save(self, *args, **kwargs):
         if self.user.user_role != '1': # if not Customer 
             raise PermissionDenied('Only Customer can Add Review')
