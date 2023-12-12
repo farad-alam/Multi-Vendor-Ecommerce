@@ -1,9 +1,10 @@
 # Django specific
 *.sqlite3
 media/
-ecommerce/staticfiles/
+staticfiles/
 
-ecommerce\tasks.txt
+tasks.txt
+templates/test.html
 # IDE/Editor specific
 .vscode/
 .idea/

@@ -41,6 +41,7 @@
 
         </div>
         <div class="container ">
+            
             <form class='mt-10' action="" method='POST'>
                 {% csrf_token %}
                 <div class="row">
@@ -203,7 +204,7 @@
                                         </tr>
                                         <tr class="order-total">
                                             <th>Order Total</th>
-                                            <td><strong><span class="amount">$215.00</span></strong>
+                                            <td><strong><span class="amount">${{sub_total | floatformat:2}}</span></strong>
                                             </td>
                                         </tr>
                                     </tfoot>
@@ -214,19 +215,28 @@
                                 <div class="order-button-payment mt-20">
                                     <button type="submit" class="tp-btn-h1">Place order</button>
                                 </div>
+                                <p><a class="btn btn-danger" href="{% url 'display_payment_details' %}">make payment</a></p>
+
                             </div>
-                            
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
             </form> 
-            <div class="row">
-                <div class="col-6 left">
+
+
+            <hr>
+            <br>
+            <div class="container row">
+                <div class="col-3">
 
                 </div>
-                <div class="col-6 right">
+                <div class="col-6 pl-10">
+                    
+                </div>
+
+                <div class="col-3 border-2">
                     <div class="coupon-info">                       
                         {% if cupon %}
                             <form action="" method='GET'>

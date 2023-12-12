@@ -38,6 +38,7 @@
     />
     <link rel="stylesheet" href="{% static 'assets/css/default.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'customcss/style.css' %}" />
 
     {% block header-style %} {% endblock header-style %}
   </head>
@@ -976,8 +977,13 @@
     <script src="{% static 'assets/js/imagesloaded-pkgd.js' %}"></script>
     <script src="{% static 'assets/js/ajax-form.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
+
+    <!--Static Files added by Me-->
     <script src="{% static 'customjs/cart.js' %}"></script>
     <script src="{% static 'customjs/product-rating-review.js' %}"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{% static 'customjs/strip.js' %}" defer></script>
+    
   </body>
 
   <!-- Mirrored from themepure.net/template/dukamarket/dukamarket/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Feb 2022 17:22:33 GMT -->
