@@ -263,12 +263,18 @@ class PlacedOder(models.Model):
 
             for item in oder_items:
                 oder_items_list = []
-                print(item.product.title)
-                image = item.product.productimage_set.first().image
+                # print(item.product.title)
+                # Checking if product image exists before accessing it
+                product_image = item.product.productimage_set.first()
+                if product_image:
+                    image = product_image.image
+                    oder_items_list.append(image)
+                else:
+                    # Append None or any default image if no image is found
+                    oder_items_list.append('https://placehold.co/200x200')
                 title = item.product.title
                 quantity = item.quantity
                 total_price = item.total_price
-                oder_items_list.append(image)
                 oder_items_list.append(title)
                 oder_items_list.append(quantity)
                 oder_items_list.append(total_price)

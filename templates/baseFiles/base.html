@@ -976,8 +976,12 @@
     <script src="{% static 'assets/js/imagesloaded-pkgd.js' %}"></script>
     <script src="{% static 'assets/js/ajax-form.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
-    <script src="{% static 'customjs/cart.js' %}"></script>
-    <script src="{% static 'customjs/product-rating-review.js' %}"></script>
+
+    
+    {% block staticfiles_js %}
+      
+    {% endblock staticfiles_js %}
+      
   </body>
 
   <!-- Mirrored from themepure.net/template/dukamarket/dukamarket/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Feb 2022 17:22:33 GMT -->
