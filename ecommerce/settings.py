@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'AdminPanel',
     'Vendors',
     'ckeditor',
+    'payments',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,5 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend', 
 ]
+
+APPEND_SLASH=False

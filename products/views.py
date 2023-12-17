@@ -11,6 +11,7 @@ from .models import (Product, Industry, Cart,
 from . forms import CustomerAddressForm
 import json
 from accounts.models import CustomUser
+import stripe
 
 # Create your views here.
 
@@ -263,3 +264,6 @@ def add_product_review_and_rating(request):
         print(current_page_url)
         # return product_details(request,current_page_url)
         return redirect('/')
+
+
+# SRTIPE PAYMENTS VIEWS ---------------------->>

@@ -1,0 +1,79 @@
+{% extends "baseFiles/base.html" %}
+{% load static %}
+
+
+{% block bodycontent %}
+    
+<div class="container ">
+    <div class="row mt-30 mb-30">
+
+        <div class="col-6 products-details">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                       <tr> 
+                          <th class="cart-product-name">Product</th>
+                          <th class="product-price">Unit Price</th>
+                          <th class="product-quantity">Quantity</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% if cart_products %}   
+                        {% for product in cart_products %}
+    
+                       <tr>
+                          <td class="product-name"><a href="#">{{product.product.title}}</a></td>
+                          <td class="product-price"><span class="amount">${{product.product.discounted_price}}</span></td>
+                          <td class="product-quantity">
+                                <div class="d-inline-flex">
+                                    <p class="mx-2 cart-quantity" id="" >{{product.quantity}}</p>                                    
+                                </div>
+                          </td>
+                       </tr>
+                       {% endfor %}
+                       <tr><td class="fw-bold" >Payable: ${{payable}}</td></tr>
+                       {% endif %}
+                    </tbody>
+              </table>
+            </div>   
+        </div>
+
+        <div class="col-6 making-payment">
+            <div>
+                <p class='h3'>
+                    Enter your payment details:
+                </p>
+            </div>
+            <!-- Display a payment form -->
+            <form action="{% url 'strip_checkout' %}" method="POST" id="payment-form"> 
+                {% csrf_token %}
+        
+                <input type="hidden" name="payable-ammount" id="payable-ammount" value="{{sub_total | floatformat:2}}">                            
+                <div id="payment-element">
+                
+                <!--Stripe.js injects the Payment Element-->
+                </div>
+                <button id="submit">
+                <div class="spinner hidden" id="spinner"></div>
+                <span id="button-text">Pay now</span>
+                </button>
+                <div id="payment-message" class="hidden"></div>
+            </form>
+                    
+        </div>
+    </div>
+</div>
+
+{% endblock bodycontent %}
+
+
+{% block staticfiles_js %}
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{% static 'customjs/strip.js' %}"></script>
+
+    
+{% endblock staticfiles_js %}
+    
+    

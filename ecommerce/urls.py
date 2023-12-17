@@ -31,4 +31,5 @@ urlpatterns = [
     path('', include('home.urls')),
     path('', include('AdminPanel.urls')),
     path('', include('Vendors.urls')),
+    path('', include('payments.urls')),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

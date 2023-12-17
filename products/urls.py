@@ -10,4 +10,5 @@ urlpatterns = [
     path('cupon-apply/', views.cupon_apply, name='cupon_apply'),
     path('add-product-review/', views.add_product_review_and_rating, name='add_product_review_and_rating'),
     
+    
 ]
