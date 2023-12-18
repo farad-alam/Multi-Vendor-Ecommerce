@@ -313,7 +313,7 @@
                       <span class="count">{{carts.count}}</span>
                       <span class="text">
                         <span class="sub">Your Cart:</span>
-                        $00.00
+                        
                       </span>
                     </a>
                     <div class="cart">
@@ -352,7 +352,7 @@
                                     </a>
                                   </h6>
                                   <div class="cart__price">
-                                    <span>${{item.total_product_price}}</span>
+                                    <span>${{item.total_product_price | floatformat:2}}</span>
                                   </div>
                                 </div>
                               </div>
