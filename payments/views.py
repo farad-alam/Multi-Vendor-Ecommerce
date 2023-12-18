@@ -7,7 +7,7 @@ import json
 from products.models import Cart
 # Create your views here.
 
-stripe.api_key = '----------'
+stripe.api_key = '---------------'
 
 
 def create_checkout_session(request):

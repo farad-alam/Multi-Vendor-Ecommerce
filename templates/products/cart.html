@@ -82,7 +82,7 @@
                                    <h2>Cart totals</h2>
                                    <ul class="mb-20">
                                       <li>Subtotal <span id='sub_total_price'>${{sub_total | floatformat:2}}</span></li>
-                                      <li>Total <span>${{sub_total | floatformat:2}}</span></li>
+                                      {% comment %} <li>Total <span>${{sub_total | floatformat:2}}</span></li> {% endcomment %}
                                    </ul>
                                    <a class="tp-btn-h1" href="{% url 'check_out' %}">Proceed to checkout</a>
                                 </div>
