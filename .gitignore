@@ -1,5 +1,4 @@
 # Django specific
-*.sqlite3
 media/
 staticfiles/
 
