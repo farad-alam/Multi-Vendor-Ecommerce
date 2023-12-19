@@ -11,7 +11,6 @@ from .models import (Product, Industry, Cart,
 from . forms import CustomerAddressForm
 import json
 from accounts.models import CustomUser
-import stripe
 
 # Create your views here.
 
@@ -106,6 +105,7 @@ def increase_cart(request):
 @login_required(login_url="user_login")
 def check_out(request):
     user_cart = Cart.objects.filter(user=request.user)
+    all_shipping_address = CustomerAddress.objects.filter(user=request.user)
     if user_cart:
         industry = Industry.objects.all()
         existing_address = CustomerAddress.objects.filter(user=request.user)
@@ -203,7 +203,8 @@ def check_out(request):
 
         context ={'address_form':address_form,'cupon':cupon,'carts':carts,
                 'sub_total':sub_total,
-                'industry':industry
+                'industry':industry,
+                'all_shipping_address':all_shipping_address
                 }
         return render(request,'products/checkout.html',context)
     else:
@@ -267,3 +268,12 @@ def add_product_review_and_rating(request):
 
 
 # SRTIPE PAYMENTS VIEWS ---------------------->>
+
+def save_shipping_address(request):
+    if request.method == 'POST':
+        new_address = CustomerAddressForm(data=request.POST)
+        if new_address.is_valid():
+            temp_new_address = new_address.save(commit=False)
+            temp_new_address.user = request.user
+            temp_new_address.save()
+    return redirect('check_out')

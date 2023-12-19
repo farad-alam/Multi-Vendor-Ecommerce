@@ -41,6 +41,153 @@
 
         </div>
         <div class="container ">
+
+            <!-- Add Shiping Address trigger button -->
+            <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#showAllShippingAddress"
+            >
+                Add Shiping Address
+            </button>
+            
+            <!--Add Shiping Address Modal  -->
+            <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+            <div
+                class="modal fade"
+                id="showAllShippingAddress"
+                tabindex="-1"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                
+                role="dialog"
+                aria-labelledby="modalTitleId"
+                aria-hidden="true"
+            >
+                <div
+                    class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+                    role="document"
+                >
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitleId">
+                                Shiping Addresses
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+
+                        <!--SHIPING ADDRESS BODY GOES HERE-->
+                        <div class="modal-body">
+                            <div class="addresses">
+                                
+                                {% if all_shipping_address %}                              
+                                {% for shipping_address in all_shipping_address %}
+                                    <div class="pb-2 pt-2">
+                                        <p class="h6" >{{shipping_address}}</p>
+                                    </div>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+
+                            {% comment %} <div class="checkout-form-list">
+                                {{address_form.as_p}}
+                            </div> {% endcomment %}
+
+                            <div class="btn bnt-danger">
+                                <!--New Address Button trigger modal -->
+                                <button
+                                type="button"
+                                class="btn btn-primary btn-lg"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalId"
+                            >
+                                Add New Address
+                            </button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                            >
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <!--New Address Add Modal -->
+            <div
+                class="modal fade"
+                id="modalId"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="modalTitleId"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitleId">
+                                Modal title
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                            <div class="checkout-form-list">
+                                <form action="{% url 'save_shipping_address' %}" method="post"> {% csrf_token %}
+                                    {{address_form.as_p}}
+                                    <button type="submit" class="btn btn-info">Save Address</button>
+                                </form>
+                                
+                            </div> 
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                            >
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% comment %} <script>
+                var modalId = document.getElementById('modalId');
+            
+                modalId.addEventListener('show.bs.modal', function (event) {
+                      // Button that triggered the modal
+                      let button = event.relatedTarget;
+                      // Extract info from data-bs-* attributes
+                      let recipient = button.getAttribute('data-bs-whatever');
+            
+                    // Use above variables to manipulate the DOM
+                });
+            </script> {% endcomment %}
+            
             
             <form class='mt-10' action="" method='POST'>
                 {% csrf_token %}

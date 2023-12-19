@@ -53,23 +53,6 @@ class CustomUserAdmin(UserAdmin):
     ordering = ('email',)
     search_fields = ("first_name", "last_name", "email")
 
-    # def save_model(self, request, obj, form, change):
-    #     obj.save()
-    #     if change:  # Check if it's an update
-    #         # Capture the original email and password
-    #         original_email = obj.email
-    #         original_password = obj.password  # Ensure you have a mechanism to capture the original password securely
-    #         print(original_password)
-    #         # Call the parent class's save_model to handle the rest of the save process
-    #         super().save_model(request, obj, form, change)
-
-    #         # Set the email and password back to their original values
-    #         obj.email = original_email
-    #         obj.password = original_password  # You may need to use a secure method to reset the password
-
-    #         # Save the object again to ensure that the email and password remain unchanged
-    #         obj.save()
-
 admin.site.register(CustomUser, CustomUserAdmin)
 
 
