@@ -215,7 +215,7 @@ class CustomerAddress(models.Model):
 
     def __str__(self):
         # return f"{self.state}"
-        return f"{self.user.first_name} - {self.street_address}, {self.city}, {self.state}, {self.zip_code}"
+        return f"{self.street_address}, {self.zip_code}, {self.city}, {self.state}"
 
 
 class PlacedOder(models.Model):
