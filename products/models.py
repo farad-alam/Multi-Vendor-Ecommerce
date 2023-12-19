@@ -159,6 +159,20 @@ class CuponCodeGenaration(models.Model):
     def __str__(self):
         return self.name
 
+class CustomerAddress(models.Model):
+    user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
+    state = models.CharField(max_length=60)
+    city = models.CharField(max_length=60)
+    zip_code = models.PositiveIntegerField()
+    street_address = models.CharField(max_length=250)
+    mobile = models.PositiveIntegerField()
+    is_billing = models.BooleanField(default=True)
+    is_shipping = models.BooleanField(default=True)
+
+    def __str__(self):
+        # return f"{self.state}"
+        return f"{self.street_address}, {self.zip_code}, {self.city}, {self.state}"
+
 
 class Cart(models.Model):
     user = models.ForeignKey(
@@ -168,6 +182,7 @@ class Cart(models.Model):
     )
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
+    shipping_address = models.ForeignKey(CustomerAddress, on_delete=models.CASCADE, null=True, blank=True)
     cupon_applaied = models.BooleanField(default=False)
     cupon_code = models.ForeignKey(
         CuponCodeGenaration,
@@ -203,19 +218,6 @@ class Cart(models.Model):
         return self.product.title
 
 
-class CustomerAddress(models.Model):
-    user = models.ForeignKey("accounts.CustomUser", on_delete=models.CASCADE)
-    state = models.CharField(max_length=60)
-    city = models.CharField(max_length=60)
-    zip_code = models.PositiveIntegerField()
-    street_address = models.CharField(max_length=250)
-    mobile = models.PositiveIntegerField()
-    is_billing = models.BooleanField(default=True)
-    is_shipping = models.BooleanField(default=True)
-
-    def __str__(self):
-        # return f"{self.state}"
-        return f"{self.street_address}, {self.zip_code}, {self.city}, {self.state}"
 
 
 class PlacedOder(models.Model):

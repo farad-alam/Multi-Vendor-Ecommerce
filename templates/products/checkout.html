@@ -69,6 +69,22 @@
                                             Edit <i class='fas fa-edit'></i>
                                         </button>
                                         </p>
+
+                                    {% else %}
+
+                                    <div class="btn bnt-danger">
+                                        <!--New Address Button trigger modal -->
+                                        <button
+                                        type="button"
+                                        class="btn btn-primary btn-lg"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalId"
+                                    >
+                                        Add New Address
+                                    </button>
+                                    </div>
+
+
                                     {% endif %}
                                         
                                 </div>

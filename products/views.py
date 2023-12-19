@@ -223,26 +223,42 @@ def increase_cart(request):
 def check_out(request):
     user_cart = Cart.objects.filter(user=request.user)
     all_shipping_address = CustomerAddress.objects.filter(user=request.user)
-    selected_shipping_address = CustomerAddress.objects.filter(user=request.user).last()
+    user_shipping_address = CustomerAddress.objects.filter(user=request.user)
+    first_cart_item = user_cart.first()
+    
+    if user_shipping_address and first_cart_item.shipping_address:
+        selected_shipping_address = first_cart_item.shipping_address
+        #saveing the address to the first cart item
+        # user_cart[0].shipping_address = selected_shipping_address
+        # user_cart.save()
+    elif user_shipping_address:
+        selected_shipping_address = user_shipping_address.last()
+        #saveing the address to the first cart item
+        first_cart_item.shipping_address = selected_shipping_address
+        first_cart_item.save()
+    else:
+        selected_shipping_address = None
     
     if user_cart:
         industry = Industry.objects.all()
         if request.method == 'POST':
-            user = request.user
             selected_shipping_address_id = request.POST.get('selected_address_id')
             selected_shipping_address = CustomerAddress.objects.get(id=selected_shipping_address_id)
+            #saveing the address to the first cart item
+            first_cart_item = user_cart.first()
+            first_cart_item.shipping_address = selected_shipping_address
+            first_cart_item.save()
 
         # Removing Cupon Code
         data = request.GET.get('remove_cupon')
-        carts = Cart.objects.filter(user=request.user)
         if data: 
-            for item in carts:
+            for item in user_cart:
                 item.cupon_applaied = False
                 item.cupon_code = None
                 item.save()
 
         cupon = False
-        if carts and carts[0].cupon_applaied:
+        if user_cart and user_cart[0].cupon_applaied:
             cupon = True
 
         #Calculate the subtotal after Removing the cupon code
@@ -251,7 +267,7 @@ def check_out(request):
         #checking the existing address and retur it to the template as form      
         address_form = CustomerAddressForm()
 
-        context ={'address_form':address_form,'cupon':cupon,'carts':carts,
+        context ={'address_form':address_form,'cupon':cupon,'carts':user_cart,
                 'sub_total':sub_total,
                 'industry':industry,
                 'all_shipping_address':all_shipping_address,
@@ -333,4 +349,8 @@ def save_shipping_address(request):
             temp_new_address = new_address.save(commit=False)
             temp_new_address.user = request.user
             temp_new_address.save()
+            user_cart = Cart.objects.filter(user=request.user)
+            first_cart_item = user_cart.first()
+            first_cart_item.shipping_address = temp_new_address
+            first_cart_item.save()
     return redirect('check_out')
