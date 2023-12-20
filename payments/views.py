@@ -3,11 +3,13 @@ from django.core.serializers.json import DjangoJSONEncoder
 from django.shortcuts import render
 import stripe
 import json
-
+import os
+from dotenv import load_dotenv
 from products.models import Cart
-# Create your views here.
 
-stripe.api_key = '---------------'
+# Create your views here.
+load_dotenv()
+stripe.api_key = os.getenv('SECRET_KEY')
 
 
 def create_checkout_session(request):

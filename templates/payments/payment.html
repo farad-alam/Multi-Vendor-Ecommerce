@@ -38,7 +38,7 @@
                           </td>
                        </tr>
                        {% endfor %}
-                       <tr><td class="fw-bold" >Payable: ${{payable}}</td></tr>
+                       <tr><td class="fw-bold" >Payable: ${{payable | floatformat:2}}</td></tr>
                        {% endif %}
                     </tbody>
               </table>
