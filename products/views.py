@@ -280,16 +280,36 @@ def check_out(request):
 
 
 
-
-
-
-
+@login_required(login_url="user_login")
 def placed_oder(request):
 
-    context ={
+    #getting the user cart
+    user_cart = Cart.objects.filter(user=request.user)
+    sub_total_price = Cart.subtotal_product_price(request.user)
 
-    }
-    return render(request, 'accounts/user/user-profile.html',context)
+    # Creting new PlacedOder for adding in it PlacedOderItem
+    user_placedOder = PlacedOder.objects.create(
+        user=request.user,
+        shipping_address = user_cart.first().shipping_address,
+        sub_total_price = sub_total_price,
+        paid = True
+    )
+    user_placedOder.save()
+
+    # Itarate the user_cart and add this item to the PladeOderIteam
+
+    for item in user_cart:
+        PlacedeOderItem.objects.create(
+            placed_oder=user_placedOder,
+            product = item.product,
+            quantity = item.quantity,
+            total_price = item.total_product_price
+        )
+        item.delete()
+
+    messages.success(request,'Oder Placed Succesfully')
+
+    return redirect('user_dashboard')
 
 
 @login_required(login_url="user_login")
