@@ -309,7 +309,7 @@ def placed_oder(request):
 
     messages.success(request,'Oder Placed Succesfully')
 
-    return redirect('user_dashboard')
+    return user_placedOder
 
 
 @login_required(login_url="user_login")

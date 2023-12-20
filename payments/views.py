@@ -57,10 +57,14 @@ def display_payment_details(request):
     return render(request,'payments/payment.html', context)
 
 
+from products.views import placed_oder
+
 def payment_success(request):
     payment_intent_id= request.GET.get('payment_intent')
     email = request.user.email
-    print(email)
+    # print(email)
+    # After make payment placed the oder
+    oder_placed = placed_oder(request)
     get_customer = stripe.Customer.search(query=f'email:"{email}"')
     if get_customer:
         customer = get_customer['data'][0]
@@ -75,7 +79,7 @@ def payment_success(request):
     # updating the wxisting payment intent
     payment_intent = stripe.PaymentIntent.modify(
         payment_intent_id,
-        metadata = {'update':'successfully updated'},
+        metadata = {'oder_id': oder_placed},
         customer = customer
        
     )
