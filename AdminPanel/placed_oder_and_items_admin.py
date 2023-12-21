@@ -7,7 +7,6 @@ from django.shortcuts import redirect
 
 
 
-
 class PlacedOderItemTabularAdmin(admin.TabularInline):
     model = PlacedeOderItem
     extra = 0
