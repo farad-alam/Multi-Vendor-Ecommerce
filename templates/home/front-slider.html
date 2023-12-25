@@ -70,7 +70,7 @@
                     >{{hot_product.title}}</a
                   >
                 </h6>
-                <p>{{hot_product.categories}}</p>
+                <p> <a href="{% url 'display_categories_post' hot_product.categories.id %}">{{hot_product.categories}}</a> </p>
               </div>
             </div>
           </div>

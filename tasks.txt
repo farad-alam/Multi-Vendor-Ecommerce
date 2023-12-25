@@ -8,4 +8,8 @@ login validation in customer log in:
 
 
 Payments:
-- get secrate key using env
+- Payment Succed Page
+
+-home page categories
+
+

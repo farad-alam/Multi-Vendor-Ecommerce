@@ -1,11 +1,8 @@
 from django.shortcuts import render 
-from django.http import JsonResponse
 from .models import SliderArea, DisplayHotProductInCategories, PopularCategories
 from products.models import Industry, Product, Categories, Cart
-from accounts.models import CustomUser
 from django.views.decorators.csrf import csrf_exempt
-import stripe
-import json
+from products.models import Categories
 # Create your views here.
 
 

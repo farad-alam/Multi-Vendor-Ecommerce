@@ -1,32 +1,11 @@
-# from django.contrib import admin
-# from . models import CustomUser
-# # Register your models here.
-
-
-# class CustomUserAdmin(admin.ModelAdmin):
-#     list_display = ('email', 'first_name', 'last_name', 'mobile')
-#     fieldsets = (
-#         (None, {'fields': ('email', 'password')}),
-#         ('Personal Info', {'fields': ('first_name', 'last_name', 'mobile')}),
-#         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser')}),
-#     )
-#     add_fieldsets = (
-#         (None, {
-#             'classes': ('wide',),
-#             'fields': ('email', 'password1', 'password2'),
-#         }),
-#     )
-
-# admin.site.register(CustomUser, CustomUserAdmin)
-
-
-from django import forms
 from django.contrib import admin
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.admin import UserAdmin
 from .models import CustomUser
 from django.utils.translation import gettext_lazy as _
 from accounts.forms import RegistrationForm
+from products.admin import super_admin_site
+
 
 class CustomUserAdmin(UserAdmin):
 
@@ -53,36 +32,7 @@ class CustomUserAdmin(UserAdmin):
     ordering = ('email',)
     search_fields = ("first_name", "last_name", "email")
 
-admin.site.register(CustomUser, CustomUserAdmin)
-
-
-# class CustomUserAdminForm(forms.ModelForm):
-#     class Meta:
-#         model = CustomUser
-#         fields = ('first_name', 'last_name', 'mobile', 'is_active', 'is_staff', 'is_superuser','email',)
-
-# class CustomUserChangeForm(UserChangeForm):
-#     class Meta(UserChangeForm.Meta):
-#         model = CustomUser
-#         fields = ('first_name', 'last_name', 'mobile', 'is_active', 'is_staff', 'is_superuser','email',)
-#         field_classes = {"username": 'email'}
-
-
-# class CustomUserAdmin(UserAdmin):
-#     form = CustomUserChangeForm
-#     add_fieldsets = (
-#         (None, {
-#             'classes': ('wide',),
-#             'fields': ('email', 'password1', 'password2'),
-#         }),
-#         ('details',{
-#             'classes':('wide',),
-#             'fields': ('first_name', 'last_name', 'mobile', 'is_active', 'is_staff', 'is_superuser')
-#         }),
-#     )
-#     ordering = ('email',)
-#     search_fields = ("first_name", "last_name", "email")
-#     list_display = ('email', 'first_name', 'last_name', 'mobile', 'is_active', 'is_staff', 'is_superuser')
+super_admin_site.register(CustomUser, CustomUserAdmin)
 
 
 

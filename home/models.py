@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils.text import slugify
-import uuid
 # Create your models here.
 
 #Front Big Slider

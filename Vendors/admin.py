@@ -13,13 +13,13 @@ from django.utils.html import format_html
 class CustomVendorAdminSite(admin.AdminSite):
     site_header = 'MVEC Seller Dashboard'
     site_title = 'Seller Dashboard'
-    index_title = 'Track Your Performence'
+    index_title = 'List Your Product And Earn Money'
 
     def has_permission(self, request):
         # Check if the user is authenticated and has the role "Vendor" (user_role == 3)
         return request.user.is_authenticated and request.user.user_role == '3'
     
-vendor_admin_site = CustomVendorAdminSite(name='custom_vendor_admin_site')
+vendor_admin_site = CustomVendorAdminSite(name='vendor_admin_site')
 
 
 # ModelAdmin For VendorStore

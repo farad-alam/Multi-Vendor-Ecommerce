@@ -16,15 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from AdminPanel.admin import custom_oderManagement_admin_site
+from AdminPanel.admin import employee_Management_admin_site
 from Vendors.admin import vendor_admin_site
+from products.admin import super_admin_site
 from django.conf.urls.static import static
 from django.conf import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('custom-admin/', custom_oderManagement_admin_site.urls),
+    path('super-admin/', super_admin_site.urls),
+    path('employee-dashboard/', employee_Management_admin_site.urls),
     path('vendor-dashboard/', vendor_admin_site.urls),
     path('', include("accounts.urls") ),
     path('', include('products.urls')),
