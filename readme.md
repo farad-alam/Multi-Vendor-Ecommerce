@@ -12,6 +12,9 @@ Welcome to our Multi Vendor Ecommerce project! This repository contains a powerf
 ### Products
 Vendors' added products are displayed on the home page. Customers can easily add items to their cart, adjust quantities, proceed to the checkout page, add shipping details, and make payments.
 
+### Product Review
+Users can provide feedback on products using a star rating system. Reviews are displayed alongside the product, showcasing the average review count.
+
 ### Payments
 The ecommerce platform is integrated with Stripe payments, allowing customers to conveniently pay with cards, ensuring secure and swift transactions.
 
