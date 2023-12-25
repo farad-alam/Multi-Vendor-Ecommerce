@@ -1,0 +1,17 @@
+asgiref==3.7.2
+certifi==2023.11.17
+charset-normalizer==3.3.2
+Django==5.0
+django-adminlte2==0.4.3
+django-ckeditor==6.7.0
+django-js-asset==2.1.0
+idna==3.5
+Pillow==10.0.1
+python-dotenv==1.0.0
+PyYAML==6.0.1
+requests==2.31.0
+sqlparse==0.4.4
+stripe==7.6.0
+typing_extensions==4.7.1
+tzdata==2023.3
+urllib3==2.1.0

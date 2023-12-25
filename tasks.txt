@@ -2,5 +2,29 @@
 login validation in customer log in:
 -- only customer can login, no vendor or editor
 
+i am a django developer, i make a Multi Vendor Ecommerce project. and push it to my git hub.
+now i want to make reamd.me filw so when people come to my this repo they can understand what projet about for.
+
+Write a readme for me with below provided info and also use your own creativity.
+
+Features:
+User Role:
+it have four type of user.
+1. Super User - Who can control whole site. It has it separate admin dashbord with login systeam.
+2. Employee Use - Only SuperUser Can Add Employee, Empoyee have separate dashbord to login. Employe can manage Placed Oders, Completed Oders and many more
+3. Vendor User - Any one Can register as vendor, then can login in Vendor dashbord, vendore can Creates Product Store or Shop and Under Ther Store or Shop they can Add Product. They also have separate dashbord.
+4. Normal User or Customer -  Prople who can buy product, before buy product they need to register on site.
+
+Products:
+Products those are added by vendore are displyed in home page, a Customer Can add product to curt, they can increse or decrese product quantity. then go to checkout page, add Shipping addredd them make payment.
+
+Product Review:
+user can give a review to a product with star rating. and it display under the produtc with avarage review count.
+
+Payments:
+this ecommerce is intrigated with stripe payments. customer can pay with cards.\
+
+
+
 
 
