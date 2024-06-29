@@ -333,7 +333,6 @@ def cupon_apply(request):
 def add_product_review_and_rating(request):
     if request.user.is_authenticated and request.user.user_role == '1':
         if request.method == 'POST':
-
             data = request.body
             data = json.loads(data)
             product_id = int(data.get('product_id'))

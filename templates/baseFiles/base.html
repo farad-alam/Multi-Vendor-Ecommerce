@@ -302,6 +302,16 @@
                       <i class="flaticon-user"></i>
                       <span class="text">
                         <span class="sub">Logout </span>
+                        {% comment %} {{request.user.first_name}} {% endcomment %}
+                      </span>
+                    </a>
+                  </div>
+
+                  <div class="block-userlink">
+                    <a class="icon-link" href="{% url 'user_dashboard' %}">
+                      <i class="flaticon-user"></i>
+                      <span class="text">
+                        <span class="sub">Profile</span>
                         {{request.user.first_name}}
                       </span>
                     </a>
@@ -396,6 +406,16 @@
                       <span class="text">
                         <span class="sub">Login </span>
                         My Account
+                      </span>
+                    </a>
+                  </div>
+
+                  <div class="block-userlink">
+                    <a class="icon-link" href="{% url 'registration_view' %}">
+                      <i class="flaticon-user"></i>
+                      <span class="text">
+                        <span class="sub">Sing Up</span>
+                        Create Account
                       </span>
                     </a>
                   </div>
