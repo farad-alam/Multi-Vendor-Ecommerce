@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from . models import CustomUser
-from .forms import RegistrationForm
+from .forms import RegistrationForm, CustomUserEditForm
 from products.models import PlacedOder, CompletedOder
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
@@ -67,7 +67,24 @@ def user_logout(request):
     logout(request)
     return redirect('home')
 
+
 @login_required(login_url='user_login')
 def user_profile(request):
     
     return render(request, 'accounts/user/user-profile.html')
+
+@login_required(login_url='user_login')
+def user_profile(request):
+    if request.method == 'POST':
+        form = CustomUserEditForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('user_profile')  # Change 'profile' to the appropriate redirect URL
+    else:
+        form = CustomUserEditForm(instance=request.user)
+
+    context={
+        "form":form
+    }
+    
+    return render(request, 'accounts/user/user-profile.html', context)
