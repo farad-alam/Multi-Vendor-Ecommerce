@@ -1,7 +1,8 @@
 {% load custom_filters %}
 <div class="container">
-
-     
+    
+     <h2>Placed Oder:-</h2>
+     <hr>
     {% for key, value in placed_oders_by_oder_id.items %}
     <div class="row"> 
         <div class="col-8">
@@ -66,6 +67,46 @@
     </div>
     <hr>
     {% endfor %}
+
+
+    <h2>Completed Oders:</h2>
+    <hr>
+    
+    {% for oders in completed_order %}
+    <div
+        class="table-responsive"
+    >
+    <h4>Oder {{forloop.counter}}</h4>
+        <table
+            class="table table-secondary"
+        >
+            <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Sub Total Price</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Oder Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td scope="row">
+                        {% for item in oders.delivered_items.all %}
+                        <p>{{forloop.counter}} {{ item.product.title }}</p>
+                        {% comment %} <p>Quantity: {{ item.quantity }}</p>
+                        <p>Price: {{ item.total_price }}</p> {% endcomment %}
+                      {% endfor %}
+                    </td>
+                    <td>{{oders.sub_total_price}}</td>
+                    <td>{{oders.sub_total_price}}</td>
+                    <td>{{oders.oder_number}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    {% endfor %}
+        
     
 
 

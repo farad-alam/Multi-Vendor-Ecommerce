@@ -235,7 +235,7 @@
                 </div>
               </div>
               <div class="col-xl-6 col-lg-5 d-none d-lg-block">
-                <div class="header-inner-end text-md-end">
+                {% comment %} <div class="header-inner-end text-md-end">
                   <div class="ovic-menu-wrapper">
                     <ul>
                       <li><a href="about.html">About Us</a></li>
@@ -244,7 +244,7 @@
                       <li><a href="faq.html">FAQs</a></li>
                     </ul>
                   </div>
-                </div>
+                </div> {% endcomment %}
               </div>
             </div>
           </div>
@@ -310,6 +310,16 @@
                       <span class="text">
                         <span class="sub">Logout </span>
                         My Account
+                      </span>
+                    </a>
+                  </div>
+
+                  <div class="block-userlink">
+                    <a class="icon-link" href="{% url 'user_profile' %}">
+                      <i class="flaticon-user"></i>
+                      <span class="text">
+                        <span class="sub">Profile</span>
+                        {{request.user.first_name}}
                       </span>
                     </a>
                   </div>

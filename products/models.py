@@ -323,7 +323,7 @@ class CompletedOderItems(models.Model):
     completed_oder = models.ForeignKey(
         CompletedOder, on_delete=models.CASCADE, related_name="delivered_items"
     )
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="delivered_product")
     quantity = models.PositiveIntegerField()
     total_price = models.FloatField()
 

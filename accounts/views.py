@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from . models import CustomUser
 from .forms import RegistrationForm
-from products.models import PlacedOder
+from products.models import PlacedOder, CompletedOder
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
@@ -52,10 +52,13 @@ def user_dashboard(request):
         shipping_addess = placede_oder_obj[0].shipping_address
     else:
         shipping_addess = None
+    
+    completed_order= CompletedOder.objects.filter(user=request.user)
 
     context = {
         'placed_oders_by_oder_id':placed_oders_by_oder_id,
         "shipping_addesss":shipping_addess,
+        "completed_order":completed_order,
     }
     return render(request,'accounts/user/user-dashboard.html', context)
 
@@ -64,3 +67,7 @@ def user_logout(request):
     logout(request)
     return redirect('home')
 
+@login_required(login_url='user_login')
+def user_profile(request):
+    
+    return render(request, 'accounts/user/user-profile.html')
